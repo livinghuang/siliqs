@@ -1,10 +1,10 @@
 # Table of Contents
 
 * [IoT PCB Project](README.mdx)
-* [SILIQS MAIN BOARD Project](mainboard.mdx)
+* [MAIN BOARD Project](mainboard.mdx)
   * [SQ001](sq001.mdx)
   <!-- * [SQ002](sq001.mdx) -->
-* [SILIQS PERIPHERAL BOARD Project](peripheral.mdx)
+* [PERIPHERAL BOARD Project](peripheral.mdx)
   *[SQS001](sqs001.mdx)
   <!-- *[SQS280](sqs280.mdx)
   *[SQS31865](sqs31865.mdx)
