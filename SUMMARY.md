@@ -4,6 +4,7 @@
 * [SILIQS - SILIQS MAIN BOARD Project](mainboard.mdx)
   * [SQ001](sq001.mdx)
 * [SILIQS - SILIQS PERIPHERAL BOARD Project](peripheral.mdx)
+  *[SQS001](sqs001.mdx)
   *[SQS280](sqs280.mdx)
   *[SQS31865](sqs31865.mdx)
   *[SQS4510](sqs4510.mdx)
@@ -16,4 +17,3 @@
   *[SQCNBIOT](sqcnbiot.mdx)
   *[SQC4G](sqc4g.mdx)
   *[SQSH001](sqsh001.mdx)
-
