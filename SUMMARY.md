@@ -3,10 +3,9 @@
 * [IoT PCB Project](README.mdx)
 * [MAIN BOARD Project](mainboard.mdx)
   * [SQ001](sq001.mdx)
-  <!-- * [SQ002](sq001.mdx) -->
 * [PERIPHERAL BOARD Project](peripheral.mdx)
-  * [SQS001](sqs001.mdx)
-  * [SQS280](sqs280.mdx)
+  * [SQS001](sqs001.md)
+  * [SQS280](sqs280.md)
   * [SQS31865](sqs31865.mdx)
   * [SQS4510](sqs4510.mdx)
   * [SQS6040](sqs6040.mdx)
