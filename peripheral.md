@@ -17,7 +17,7 @@ Explore our range of peripheral boards designed to enhance your IoT projects. Th
 | [SQS31865](sqs31865.mdx) | Platinum RTDs (PT100 to PT1000) Sensor Board |
 | [SQS4510](sqs4510.mdx) | Air quality NO2 & O3 |
 | [SQS6040](sqs6040.mdx) | Color Sensor Board |
-| [SQS6675](.sqs6675.mdx) | Thermocouple Sensor Board |
+| [SQS6675](sqs6675.mdx) | Thermocouple Sensor Board |
 | [SQS6DS3](sqs6ds3.mdx) | 6 axis Sensor Board  |
 | [SQSCD40](sqscd40.mdx) | CO2 gas Sensor Board |
 | [SQC485](sqc485.mdx) | Integrated RS485 communication |
