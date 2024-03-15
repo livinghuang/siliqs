@@ -21,20 +21,21 @@ Peripheral boards designed for sensor applications are named starting with "SQSx
 
 | Board Name       | Description                                 |
 | ---------------- | ------------------------------------------- |
-| [SQS001](./sqs001/sqs001.mdx) | Humidity, Temperature, and Air Pressure Sensor Board |
-| [SQS1080](./sqs1080/sqs1080.mdx) | Humidity, Temperature Sensor Board |
-| [SQS280](./sqs280/sqs280.mdx) | Temperature, and Air Pressure Sensor Board |
-| [SQS31865](./sqs31865/sqs31865.mdx) | Platinum RTDs (PT100 to PT1000) Sensor Board |
-| [SQS4510](./sqs4510/sqs4510.mdx) | Air quality NO2 & O3 |
-| [SQS6040](./sqs6040/sqs6040.mdx) | Color Sensor Board |
-| [SQS6675](./sqs6675/sqs6675.mdx) | Thermocouple Sensor Board |
-| [SQS6DS3](./sqs6ds3/sqs6ds3.mdx) | 6 axis Sensor Board  |
-| [SQSCD40](./sqscd40/sqscd40.mdx) | CO2 gas Sensor Board |
-| [SQC485](./sqc485/sqc485.mdx) | Integrated RS485 communication |
-| [SQCuSD](./sqcusd/sqcusd.mdx) | Integrated mirco SD Card |
-| [SQCNBIOT](./sqcnbiot/sqcnbiot.mdx) | Integrated NBIOT communication |
-| [SQC4G](./sqc4g/sqc4g.mdx) | Integrated 4G communication |
-| [SQSH001](./sqsh001/sqsh001.mdx) | Serves as a versatile housing, accommodating SMA Antennas, IPEX1 Antennas, Li-ion Batteries, and USB connectors. |
+| [SQS001](./sqs001/sqs001.md) | Humidity, Temperature, and Air Pressure Sensor Board |
+| [SQS002](./sqs002/sqs002.md) | Humidity, Temperature, and Air Pressure Sensor Board |
+| [SQS1080](./sqs1080/sqs1080.md) | Humidity, Temperature Sensor Board |
+| [SQS280](./sqs280/sqs280.md) | Temperature, and Air Pressure Sensor Board |
+| [SQS31865](./sqs31865/sqs31865.md) | Platinum RTDs (PT100 to PT1000) Sensor Board |
+| [SQS4510](./sqs4510/sqs4510.md) | Air quality NO2 & O3 |
+| [SQS6040](./sqs6040/sqs6040.md) | Color Sensor Board |
+| [SQS6675](./sqs6675/sqs6675.md) | Thermocouple Sensor Board |
+| [SQS6DS3](./sqs6ds3/sqs6ds3.md) | 6 axis Sensor Board  |
+| [SQSCD40](./sqscd40/sqscd40.md) | CO2 gas Sensor Board |
+| [SQC485](./sqc485/sqc485.md) | Integrated RS485 communication |
+| [SQCuSD](./sqcusd/sqcusd.md) | Integrated mirco SD Card |
+| [SQCNBIOT](./sqcnbiot/sqcnbiot.md) | Integrated NBIOT communication |
+| [SQC4G](./sqc4g/sqc4g.md) | Integrated 4G communication |
+| [SQSH001](./sqsh001/sqsh001.md) | Serves as a versatile housing, accommodating SMA Antennas, IPEX1 Antennas, Li-ion Batteries, and USB connectors. |
 
 ## Peripheral Boards for Communication
 
