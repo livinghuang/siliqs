@@ -1,0 +1,32 @@
+/Users/living/code/github/siliqs/build_sq001/libraries/LoraWan102/loramac/region/Region.c.o: \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/Region.c \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../LoRaMac.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../../driver/timer.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../../driver/../loramac/utilities.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../../loramac/LoRaMacCrypto.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../../radio/radio.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../region/Region.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/esp_hw_support/include/esp_sleep.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/esp_common/include/esp_err.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/esp_common/include/esp_compiler.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/hal/include/hal/touch_sensor_types.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/esp_common/include/esp_attr.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/soc/esp32c3/include/soc/soc.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/esp_common/include/esp_assert.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/esp_common/include/esp_bit_defs.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/soc/esp32c3/include/soc/soc_caps.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/hal/include/hal/gpio_types.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/soc/include/soc/gpio_periph.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/soc/esp32c3/include/soc/io_mux_reg.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/soc/esp32c3/include/soc/gpio_struct.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/soc/esp32c3/include/soc/gpio_reg.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/tools/sdk/esp32c3/include/soc/esp32c3/include/soc/gpio_sig_map.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../region/../../driver/timer.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../region/../../driver/debug.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../region/../../driver/../loramac/utilities.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../region/../LoRaMac.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../region/../utilities.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../region/../../radio/radio.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/../../driver/timer.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/Region.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/1.0.0/libraries/LoraWan102/src/loramac/region/RegionAS923.h
