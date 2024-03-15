@@ -11,4 +11,4 @@ Main boards are designed for communication and include a unique identifier in th
 
 | Board Name       | Description                                 |
 | ---------------- | ------------------------------------------- |
-| [SQ001S](./sq001/sq001s.md) | A versatile IoT development platform with RISC-V power and Arduino compatibility. |
+| [SQ001S](https://living-huang.gitbook.io/siliqs/mainboard/sq001s)  | A versatile IoT development platform with RISC-V power and Arduino compatibility. |
