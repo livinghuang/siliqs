@@ -5,6 +5,7 @@
   * [SQ001S](sq001s.md)
 * [PERIPHERAL BOARD Project](peripheral.md)
   * [SQS001](sqs001.md)
+  * [SQS002](sqs002.md)
   * [SQS1080](sqs1080.md)
   * [SQS280](sqs280.md)
   * [SQS31865](sqs31865.md)
