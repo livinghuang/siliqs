@@ -1,4 +1,4 @@
-# Table of contents
+# Table of Contents
 
 * [IoT PCB Project](README.md)
 * [MAIN BOARD Project](mainboard.md)
@@ -9,7 +9,7 @@
   * [SQS280](sqs280.md)
   * [SQS31865](sqs31865.md)
   * [SQS4510](sqs4510.md)
-  * [SQS6040](peripheral/sqs6040.md)
+  * [SQS6040](sqs6040.md)
   * [SQS6675](sqs6675.md)
   * [SQS6DS3](sqs6ds3.md)
   * [SQSCD40](sqscd40.md)
@@ -17,4 +17,4 @@
   * [SQCuSD](sqcusd.md)
   * [SQCNBIOT](sqcnbiot.md)
   * [SQC4G](sqc4g.md)
-  * [SQSH001](peripheral/sqsh001.md)
+  * [SQSH001](sqsh001.md)
