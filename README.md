@@ -23,7 +23,6 @@ Peripheral boards designed for sensor applications are named starting with "SQSx
 | ---------------- | ------------------------------------------- |
 | [SQS001](./sqs001/sqs001.md) | Humidity, Temperature, and Air Pressure Sensor Board |
 | [SQS002](./sqs002/sqs002.md) | Humidity, Temperature, and Air Pressure Sensor Board |
-| [SQS002](./sqs003/sqs003.md) | Humidity, Temperature, and Air Pressure Sensor Board |
 | [SQS1080](./sqs1080/sqs1080.md) | Humidity, Temperature Sensor Board |
 | [SQS280](./sqs280/sqs280.md) | Temperature, and Air Pressure Sensor Board |
 | [SQS31865](./sqs31865/sqs31865.md) | Platinum RTDs (PT100 to PT1000) Sensor Board |
