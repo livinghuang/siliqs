@@ -2,7 +2,7 @@
 
 * [IoT PCB Project](README.md)
 * [MAIN BOARD Project]
-  * [SQ001S]
+  * [SQ001S](./sq001/readme.md)
 * [PERIPHERAL BOARD Project]
   * [SQS001]
   * [SQS002]
