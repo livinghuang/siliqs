@@ -4,7 +4,7 @@
 
 This innovative development board is designed for enthusiasts and professionals seeking a robust platform for advanced communication and development, particularly in the realms of IoT and environmental technology. It's built around a powerful main chip and offers an array of features to support a wide range of applications.
 
-![SQ001 Development Board](https://github.com/livinghuang/siliqs/blob/main/sq001/SQ001S.png?raw=true?raw=true)
+![SQ001 Development Board](https://github.com/livinghuang/siliqs/blob/main/sq001s/SQ001S.png?raw=true?raw=true)
 
 ## Features
 
@@ -17,7 +17,7 @@ This innovative development board is designed for enthusiasts and professionals 
 - **Connectivity**: Features two 2.54-10 connectors for standard breadboard compatibility, and one 1.25-4 connector for external communication with sensors and other devices.
 
 ## Schematic
-![SQ001 Schematic](https://github.com/livinghuang/siliqs/blob/main/sq001/schematic_sq001s.png?raw=true)
+![SQ001 Schematic](https://github.com/livinghuang/siliqs/blob/main/sq001s/schematic_sq001s.png?raw=true)
 
 ## Applications
 
