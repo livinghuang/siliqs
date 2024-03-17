@@ -13,7 +13,7 @@ Main boards are designed for communication and include a unique identifier in th
 
 | Board Name       | Description                                 |
 | ---------------- | ------------------------------------------- |
-| [SQ001S](./sq001/readme.md) | A versatile IoT development platform with RISC-V power and Arduino compatibility. |
+| [SQ001S](./sq001s/readme.md) | A versatile IoT development platform with RISC-V power and Arduino compatibility. |
 
 ## Peripheral Boards for Sensors
 
