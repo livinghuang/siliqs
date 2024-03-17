@@ -1,0 +1,5 @@
+{
+    "configuration": "LORAWAN_REGION=0,CPUFreq=160,UploadSpeed=921600,DebugLevel=none,LoRaWanDebugLevel=0,LORAWAN_DEVEUI=0,LORAWAN_PREAMBLE_LENGTH=0",
+    "board": "Heltec-esp32:esp32:wireless_mini_shell",
+    "sketch": "sq001s/sq001s.ino"
+}
