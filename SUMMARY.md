@@ -1,9 +1,9 @@
 # Table of Contents
 
 * [IoT PCB Project](README.md)
-* [MAIN BOARD Project]
+* [MAIN BOARD Project](mainboards.md)
   * [SQ001S](./sq001s/readme.md)
-* [PERIPHERAL BOARD Project]
+* [PERIPHERAL BOARD Project](peripherals.md)
   * [SQS001](./sqs001/readme.md)
   * [SQS002](./sqs002/readme.md)
   * [SQS1080](./sqs1080/readme.md)
