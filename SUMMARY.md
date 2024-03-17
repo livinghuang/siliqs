@@ -4,18 +4,19 @@
 * [MAIN BOARD Project]
   * [SQ001S](./sq001s/readme.md)
 * [PERIPHERAL BOARD Project]
-  * [SQS001]
-  * [SQS002]
-  * [SQS1080]
-  * [SQS280]
-  * [SQS31865]
-  * [SQS4510]
-  * [SQS6040]
-  * [SQS6675]
-  * [SQS6DS3]
-  * [SQSCD40]
-  * [SQC485]
-  * [SQCuSD]
-  * [SQCNBIOT]
-  * [SQC4G]
-  * [SQSH001]
+  * [SQS001](./sqs001/readme.md)
+  * [SQS002](./sqs002/readme.md)
+  * [SQS1080](./sqs1080/readme.md)
+  * [SQS280](./sqs280/readme.md)
+  * [SQS31865](./sqs31865/readme.md)
+  * [SQS4510](./sqs4510/readme.md)
+  * [SQS6040](./sqs6040/readme.md)
+  * [SQS6675](./sqs6675/readme.md)
+  * [SQS6DS3](./sqs6ds3/readme.md)
+  * [SQSCD40](./sqscd40/readme.md)
+  * [SQC485](./sqc485/readme.md)
+  * [SQCuSD](./sqcusd/readme.md)
+  * [SQCNBIOT](./sqcnbiot/readme.md)
+  * [SQC4G](./sqc4g/readme.md)
+  * [SQSH001](./sqsh001/readme.md)
+
