@@ -51,7 +51,7 @@ The SQC485 is a robust module designed for efficient communication and power dis
 
 ## Additional Resources
 
-- [MAX485 Datasheet](https://www.example.com/MAX485-datasheet "Datasheet for the MAX485 chip")
-- [SQC485 Integration Guide](https://www.example.com/SQC485-integration-guide "Guide for integrating SQC485 into systems")
+- [MAX485 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqc485/MAX3485ESA.pdf "Datasheet for the MAX485 chip")
+- [AP3012KTR Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqc485/AP3012KTR-E1.pdf "Datasheet for the AP3012KTR chip")
 
 For detailed technical specifications and more comprehensive integration guidance, refer to the datasheets and resources provided above.
