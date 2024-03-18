@@ -11,6 +11,14 @@ The SQC485 is a robust module designed for efficient communication and power dis
 - **Robust Design**: Crafted to withstand the demands of industrial environments, ensuring reliable performance under challenging conditions.
 - **Versatile Applications**: Ideal for a multitude of applications, including but not limited to, industrial automation, control systems, and device networking.
 
+## Pinout
+
+![SQC485 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqc485/pinout.png?raw=true)
+
+## Schematic
+
+![SQC485 Schematic Diagram](https://github.com/livinghuang/siliqs/blob/main/sqc485/schematic.png?raw=true)
+
 ## Functionalities
 
 1. **RS485 Communication**: Leverages the MAX485 chip to facilitate robust RS485 communication, ensuring efficient data transfer over long distances and in electrically noisy environments.
