@@ -18,14 +18,7 @@ The SQS002 is a versatile peripheral board designed to provide precise measureme
 
 ## Pinout
 
-![SQS002 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs002/SQS002.png?raw=true)
-
-## Resources
-
-- [Datasheet for HDC1080](https://github.com/livinghuang/siliqs/blob/main/sqs001/hdc1080.pdf)
-- [Datasheet for DPS310](https://github.com/livinghuang/siliqs/blob/main/sqs002/BST_BMP280_DS001-1509562.pdf)
-
-For more information and detailed specifications, please refer to the datasheets linked above.
+![SQS002 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs002/pinout.png?raw=true)
 
 ## Usage
 
@@ -37,10 +30,12 @@ For more information and detailed specifications, please refer to the datasheets
 
 4. **Alert Function (Optional)**: You can configure the ALERT pin to trigger an interrupt when specific conditions are met, providing additional control over your application.
 
-## use with SQ001s develop board
+## Additional Resources
+
+- [HDC1080 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqs001/hdc1080.pdf "Datasheet for the HDC1080 chip")
+- [DPS310 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqs002/Infineon-DPS310-DataSheet-v01_02-EN.pdf "Datasheet for the DPS310 chip")
 
 ### connection
 
-1. Directly connect 1.25-4 connector with SQ001S.
-
-2. Directly connect 2.54-5 header with SQ001S.
+1. Directly connect 1.25-4 connector with SQ002S.
+2. Directly connect 2.54-5 header with SQ002S.
