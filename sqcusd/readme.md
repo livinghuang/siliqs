@@ -44,7 +44,6 @@ The SQCuSD module is designed to seamlessly integrate microSD card functionality
 
 ## Additional Resources
 
-- [MicroSD Card Specification](https://www.example.com/microSD-specification "Specification for microSD cards")
-- [SQCuSD Module Integration Guide](https://www.example.com/SQCuSD-integration-guide "Guide for integrating the SQCuSD module into systems")
+- [MicroSD Card Specification](https://github.com/livinghuang/siliqs/blob/main/sqcusd/Yuandi-TF-01A.pdf "Specification for microSD cards")
 
 For detailed technical specifications, integration guidelines, and additional information on utilizing the SQCuSD module for your storage needs, refer to the resources provided above.
