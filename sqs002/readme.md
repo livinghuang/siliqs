@@ -20,7 +20,6 @@ The SQS002 is a versatile peripheral board designed to provide precise measureme
 
 ![SQS002 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs002/pinout.png?raw=true)
 
-
 ## Schematic
 
 ![SQS002 Schematic Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs002/schematic.png?raw=true)
