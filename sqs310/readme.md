@@ -48,6 +48,6 @@ The SQS310 module features the DPS310 chip, a compact digital barometric air pre
 
 ### Schematic
 
-![SQS310 Schematic Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs310/schematic.png?raw=true)
+![SQS310 Schematic Diagram](./schematic.png?raw=true)
 
 This markdown template provides a detailed overview of the SQS310 module, emphasizing its pressure and temperature measurement features. For further technical specifications and integration assistance, refer to the datasheet and additional resources provided above.

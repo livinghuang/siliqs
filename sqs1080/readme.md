@@ -45,7 +45,16 @@ The SQS1080 module integrates the HDC1080 sensor to offer precise measurements o
 
 ## Additional Resources
 
-- [HDC1080 Datasheet](https://www.example.com/HDC1080-datasheet "Datasheet for the HDC1080 sensor")
-- [SQS1080 Module Integration Guide](https://www.example.com/SQS1080-integration-guide "Guide for integrating the SQS1080 module into systems")
+### Pinout
+
+![SQS310 Pinout Diagram](./pinout.png?raw=true)
+
+### Schematic
+
+![SQS310 Schematic Diagram](./schematic.png?raw=true)
+
+### Datasheet
+
+- [HDC1080 Datasheet](./hdc1080.pdf "Datasheet for the HDC1080 sensor")
 
 This template provides detailed guidelines and specifications for the SQS1080 module, ensuring users have the necessary information for successful integration and application. For further details, refer to the datasheets and resources provided above.
