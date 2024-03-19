@@ -2,6 +2,7 @@
 
 ## Overview
 
+(under planning)
 The SQSCD40 module, leveraging the capabilities of the SCD40-D-R1 chip, is a state-of-the-art solution designed for accurate monitoring of indoor air quality, with a particular emphasis on carbon dioxide (CO2) concentration levels. This module is an integral component for developing systems that aim to maintain a healthy and productive indoor environment by ensuring optimal air quality through precise CO2 measurement.
 
 ## Key Features

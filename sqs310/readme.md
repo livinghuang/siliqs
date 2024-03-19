@@ -2,6 +2,7 @@
 
 ## Overview
 
+(Ready For M.P)
 The SQS310 module features the DPS310 chip, a compact digital barometric air pressure sensor known for its high accuracy and low power consumption. This module is designed for a wide range of applications requiring precise atmospheric pressure and temperature measurements, from weather stations to altitude tracking and indoor navigation systems.
 
 ## Key Features

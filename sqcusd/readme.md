@@ -2,6 +2,7 @@
 
 ## Overview
 
+(under planning)
 The SQCuSD module is designed to seamlessly integrate microSD card functionality into a wide range of electronic projects and devices. Featuring a microSD (uSD) slot, this module allows for easy reading and writing to microSD cards, facilitating data logging, storage, and transfer applications.
 
 ## Key Features

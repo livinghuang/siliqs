@@ -2,6 +2,7 @@
 
 ## Overview
 
+(under planning)
 The SQC4G module, powered by the SIM800C chip, is designed to enable quad-band GSM/GPRS communication in a wide range of applications. This module supports the GSM850, EGSM900, DCS1800, and PCS1900 MHz frequency bands, making it highly versatile for global cellular communication needs. It's ideal for projects requiring mobile communication such as SMS, data, and voice calls.
 
 ## Key Features

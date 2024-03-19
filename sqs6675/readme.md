@@ -2,6 +2,7 @@
 
 ## Overview
 
+(under planning)
 The SQS6675 module, utilizing the MAX6675ISA+T chip, is engineered to convert the analog signals from a K-type thermocouple to digital data with cold-junction compensation. This module is ideal for applications requiring precise temperature measurements under varying thermal environments, such as industrial processing, scientific research, and high-temperature monitoring.
 
 ## Key Features
