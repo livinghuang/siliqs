@@ -8,6 +8,7 @@
   * [SQS002](./sqs002/readme.md)
   * [SQS1080](./sqs1080/readme.md)
   * [SQS280](./sqs280/readme.md)
+  * [SQS310](./sqs310/readme.md)
   * [SQS31865](./sqs31865/readme.md)
   * [SQS4510](./sqs4510/readme.md)
   * [SQS6040](./sqs6040/readme.md)
