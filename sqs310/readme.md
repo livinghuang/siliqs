@@ -44,7 +44,7 @@ The SQS310 module features the DPS310 chip, a compact digital barometric air pre
 
 ### Pinout
 
-![SQS310 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs310/pinout.png?raw=true)
+![SQS310 Pinout Diagram](./pinout.png?raw=true)
 
 ### Schematic
 
