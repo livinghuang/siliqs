@@ -2,6 +2,7 @@
 
 ## Overview
 
+(Mass Production)
 The SQC485 is a robust module designed for efficient communication and power distribution in industrial environments. Built around the MAX485 chip, it facilitates reliable RS485 communication and offers the capability to add a 24V power source for driving external devices, making it an essential component for a wide range of industrial automation and control applications.
 
 ## Key Features

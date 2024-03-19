@@ -2,6 +2,7 @@
 
 ## Overview
 
+(Ready For M.P)
 The SQS1080 module integrates the HDC1080 sensor to offer precise measurements of humidity and temperature, making it a key component for environmental monitoring, HVAC systems, and any application requiring accurate climate control. Its high accuracy, low power consumption, and easy integration make it ideal for a wide range of projects.
 
 ## Key Features

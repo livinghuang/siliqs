@@ -2,6 +2,7 @@
 
 ## Overview
 
+(under planning)
 The SQCNBIoT is a cutting-edge module designed to leverage Narrow Band Internet of Things (NB-IoT) technology for reliable, low-power communication over cellular networks. Powered by the SIM7080 chip, it provides an efficient solution for transferring data in IoT applications, extending connectivity to devices even in remote areas with minimal power consumption.
 
 ## Key Features

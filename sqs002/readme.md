@@ -4,6 +4,7 @@
 
 ## Overview
 
+(Mass Production)
 The SQS002 is a versatile peripheral board designed to provide precise measurements of humidity, temperature, and air pressure. It integrates two essential sensors, the HDC1080 and DPS310, to fulfill these critical functions.
 
 ## Key Features
@@ -38,8 +39,8 @@ The SQS002 is a versatile peripheral board designed to provide precise measureme
 
 ### Datasheet
 
-- [HDC1080 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqs001/hdc1080.pdf "Datasheet for the HDC1080 chip")
-- [DPS310 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqs002/Infineon-DPS310-DataSheet-v01_02-EN.pdf "Datasheet for the DPS310 chip")
+- [HDC1080 Datasheet](./hdc1080.pdf "Datasheet for the HDC1080 chip")
+- [DPS310 Datasheet](./dps310.pdf "Datasheet for the DPS310 chip")
 
 ### connection
 

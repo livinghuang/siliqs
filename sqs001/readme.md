@@ -4,6 +4,7 @@
 
 ## Overview
 
+(Mass Production)
 The SQS001 is a versatile peripheral board designed to provide precise measurements of humidity, temperature, and air pressure. It integrates two essential sensors, the HDC1080 and BMP280, to fulfill these critical functions.
 
 ## Key Features

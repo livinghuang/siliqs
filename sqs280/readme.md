@@ -2,6 +2,7 @@
 
 ## Overview
 
+(Ready For M.P)
 The SQS280 module leverages the capabilities of the BMP280 chip to provide accurate and reliable measurements of air pressure and temperature. Designed for a wide range of applications, from weather monitoring to indoor climate control, this module is an essential tool for projects requiring environmental data.
 
 ## Key Features

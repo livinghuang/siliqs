@@ -2,6 +2,7 @@
 
 ## Overview
 
+(Mass Production)
 The SQS31865 module is designed around the MAX31865 chip, an advanced RTD-to-Digital converter that offers precise temperature measurements. This module is ideal for applications requiring accurate temperature readings over a wide range, such as industrial processes, scientific research, and temperature monitoring systems.
 
 ## Key Features

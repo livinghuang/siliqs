@@ -2,6 +2,7 @@
 
 ## Overview
 
+(under planning)
 The SQS4510 is an advanced air quality sensor module designed for the detection of air quality in both indoor and outdoor environments. Utilizing the ZMOD4510AI1R chip, this module combines a gas sense element and a CMOS signal conditioning IC within a compact 12-pin LGA package (3.0 × 3.0 × 0.7 mm). Its sensing mechanism is based on a heater element on a silicon-based MEMS structure and a metal-oxide (MOx) chemiresistor. The signal conditioner meticulously controls the sensor temperature and measures the MOx resistance, correlating it directly with gas concentration levels. The SQS4510 is particularly adept at monitoring Outdoor Air Quality (OAQ), with the capability to detect nitrogen dioxide (NO2) and ozone (O3) concentrations.
 
 ## Key Features

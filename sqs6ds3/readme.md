@@ -2,6 +2,7 @@
 
 ## Overview
 
+(under planning)
 The SQS6DS3 module is built around the LSM6DS3TR-C system-in-package, which combines a 3D digital accelerometer and a 3D digital gyroscope in a single compact package. Designed for efficiency, it operates at just 0.90 mA in high-performance mode, while also supporting always-on, low-power features. This module is optimized for consumer applications requiring sophisticated motion detection and tracking capabilities with minimal power consumption.
 
 ## Key Features
