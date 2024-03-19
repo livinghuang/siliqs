@@ -11,14 +11,6 @@ The SQS31865 module is designed around the MAX31865 chip, an advanced RTD-to-Dig
 - **Flexible RTD Support**: Supports various types of RTDs, making it adaptable to different measurement requirements and standards.
 - **Easy Integration**: Designed for straightforward integration with microcontrollers and computer systems, facilitating easy setup and operation.
 
-## Pinout
-
-![SQS31865 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs31865/pinout.png?raw=true)
-
-## Schematic
-
-![SQS31865 Schematic Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs31865/schematic.png?raw=true)
-
 ## Functionalities
 
 1. **Precise Temperature Measurement**: Converts RTD resistance measurements to digital temperature readings with high accuracy.
@@ -55,6 +47,16 @@ The SQS31865 module is designed around the MAX31865 chip, an advanced RTD-to-Dig
 
 ## Additional Resources
 
-- [MAX31865 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqs31865/MAX31865ATP.pdf "Datasheet for the MAX31865 chip")
+### Pinout
+
+![SQS31865 Pinout Diagram](./pinout.png?raw=true)
+
+### Schematic
+
+![SQS31865 Schematic Diagram](./schematic.png?raw=true)
+
+### Datasheet
+
+- [MAX31865 Datasheet](./MAX31865ATP.pdf "Datasheet for the MAX31865 chip")
 
 This markdown template is structured to offer a detailed overview of the SQS31865 module's functionalities and integration process. For more comprehensive technical specifications and guidance, refer to the provided datasheets and resources.

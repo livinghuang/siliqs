@@ -16,14 +16,6 @@ The SQS002 is a versatile peripheral board designed to provide precise measureme
 
 - **Versatile Applications**: The SQS002 can be used in various applications, including weather monitoring, indoor climate control, and environmental sensing.
 
-## Pinout
-
-![SQS002 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs002/pinout.png?raw=true)
-
-## Schematic
-
-![SQS002 Schematic Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs002/schematic.png?raw=true)
-
 ## Usage
 
 1. **Power Supply**: Connect the VCC and GND pins to a 3.3V power source.
@@ -35,6 +27,16 @@ The SQS002 is a versatile peripheral board designed to provide precise measureme
 4. **Alert Function (Optional)**: You can configure the ALERT pin to trigger an interrupt when specific conditions are met, providing additional control over your application.
 
 ## Additional Resources
+
+### Pinout
+
+![SQS002 Pinout Diagram](./pinout.png?raw=true)
+
+### Schematic
+
+![SQS002 Schematic Diagram](./schematic.png?raw=true)
+
+### Datasheet
 
 - [HDC1080 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqs001/hdc1080.pdf "Datasheet for the HDC1080 chip")
 - [DPS310 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqs002/Infineon-DPS310-DataSheet-v01_02-EN.pdf "Datasheet for the DPS310 chip")
