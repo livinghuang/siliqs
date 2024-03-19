@@ -11,14 +11,6 @@ The SQC485 is a robust module designed for efficient communication and power dis
 - **Robust Design**: Crafted to withstand the demands of industrial environments, ensuring reliable performance under challenging conditions.
 - **Versatile Applications**: Ideal for a multitude of applications, including but not limited to, industrial automation, control systems, and device networking.
 
-## Pinout
-
-![SQC485 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqc485/pinout.png?raw=true)
-
-## Schematic
-
-![SQC485 Schematic Diagram](https://github.com/livinghuang/siliqs/blob/main/sqc485/schematic.png?raw=true)
-
 ## Functionalities
 
 1. **RS485 Communication**: Leverages the MAX485 chip to facilitate robust RS485 communication, ensuring efficient data transfer over long distances and in electrically noisy environments.
@@ -51,7 +43,17 @@ The SQC485 is a robust module designed for efficient communication and power dis
 
 ## Additional Resources
 
-- [MAX485 Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqc485/MAX3485ESA.pdf "Datasheet for the MAX485 chip")
-- [AP3012KTR Datasheet](https://github.com/livinghuang/siliqs/blob/main/sqc485/AP3012KTR-E1.pdf "Datasheet for the AP3012KTR chip")
+### Pinout
+
+![SQC485 Pinout Diagram](./pinout.png?raw=true)
+
+### Schematic
+
+![SQC485 Schematic Diagram](./schematic.png?raw=true)
+
+### Datasheet
+
+- [MAX485 Datasheet](./MAX3485ESA.pdf "Datasheet for the MAX485 chip")
+- [AP3012KTR Datasheet](./AP3012KTR-E1.pdf "Datasheet for the AP3012KTR chip")
 
 For detailed technical specifications and more comprehensive integration guidance, refer to the datasheets and resources provided above.

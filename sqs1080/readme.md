@@ -47,11 +47,11 @@ The SQS1080 module integrates the HDC1080 sensor to offer precise measurements o
 
 ### Pinout
 
-![SQS310 Pinout Diagram](./pinout.png?raw=true)
+![SQS1080 Pinout Diagram](./pinout.png?raw=true)
 
 ### Schematic
 
-![SQS310 Schematic Diagram](./schematic.png?raw=true)
+![SQS1080 Schematic Diagram](./schematic.png?raw=true)
 
 ### Datasheet
 
