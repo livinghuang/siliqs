@@ -1,52 +1,34 @@
----
-title: Peripheral Boards - SILIQS Project
-description: Overview and documentation for the peripheral boards in the SILIQS LPWAN IoT PCB project, including sensor and communication modules.
----
+# SILIQS Project Peripheral Overview
 
-# Peripheral Boards - SILIQS Project
+**Description:** A detailed guide to the peripherals compatible with the SILIQS LPWAN IoT PCB initiative, emphasizing the versatility and integration capabilities for enhancing IoT solutions.
 
-This document provides an overview and documentation for the various peripheral boards available in the SILIQS project. These boards are designed to extend the capabilities of our main boards with additional sensor and communication functionalities.
+## Introduction to SILIQS Project Peripherals
 
-## Sensor Boards
+In the expansive ecosystem of the SILIQS project, peripherals play a pivotal role in extending the functionality and application scope of our IoT solutions. Designed to seamlessly integrate with our mainboards, these peripherals offer additional sensing, control, and communication capabilities, enriching the IoT experience.
 
-Our sensor boards, designated with "SQS" followed by a unique identifier, offer a range of sensing capabilities, including temperature, humidity, air pressure, gas concentration, and more.
+## Purpose of the Peripherals
 
-### SQS001 - Humidity, Temperature, and Air Pressure Sensor Board
+The peripherals within the SILIQS project are carefully selected and developed to complement our mainboards, providing enhanced functionalities and enabling a wider range of IoT applications. From environmental sensors to connectivity modules, each peripheral is aimed at empowering developers to build more sophisticated and responsive IoT systems.
 
-- **Sensors:** Integrated sensors for humidity, temperature, and air pressure measurements.
-- **Applications:** Suitable for weather stations, indoor climate monitoring, etc.
+## Standardized Peripheral Pinout
 
-[More Details](./sqs001/readme.md)
+![Peripherals Overview](./peripherals_pinout.png?raw=true)
 
-...
+To facilitate easy integration and compatibility across our ecosystem, the SILIQS project adopts standardized guidelines for peripheral connectivity:
 
-### SQS6675 - Thermocouple Sensor Board
+- **Modular Design:** Peripherals feature a modular design for quick plug-and-play integration with mainboards.
+- **Communication Standards:** Utilizes standard communication protocols (SPI, I2C, UART) for seamless data exchange with mainboards.
+- **Power Management:** Efficient power management protocols to ensure peripherals do not drain the system's battery life unnecessarily.
+- **Scalability:** Peripherals are designed with scalability in mind, allowing for future upgrades without necessitating major changes to the mainboard.
 
-- **Sensor:** Supports various types of thermocouples for high-precision temperature measurements.
-- **Applications:** Ideal for industrial temperature monitoring.
+These guidelines ensure that peripherals can be easily added, removed, or swapped, enhancing the modularity and flexibility of SILIQS project IoT solutions.
 
-[More Details](./sqs6675/readme.md)
+## Expanding the Ecosystem
 
-## Communication Boards
+The SILIQS project is committed to continually expanding its range of supported peripherals, thus broadening the horizons of what our IoT solutions can achieve. Developers are encouraged to explore the use of various peripherals to discover new possibilities and applications within their projects.
 
-Our communication boards, starting with "SQC", provide various methods of connectivity, including RS485, NBIOT, and 4G, enhancing the IoT capabilities of your projects.
+## Contributing and Collaboration
 
-### SQC485 - Integrated RS485 Communication
+We welcome contributions from the community in the form of new peripheral designs, integration guides, and compatibility improvements. By collaborating, we can forge a more comprehensive and versatile IoT ecosystem together.
 
-- **Communication:** Enables RS485 communication for industrial applications.
-- **Features:** Robust design suitable for long-distance communication in harsh environments.
-
-[More Details](./sqc485/readme.md)
-
-...
-
-### SQC4G - Integrated 4G Communication
-
-- **Communication:** Offers 4G LTE connectivity for high-speed internet access.
-- **Features:** Suitable for applications requiring remote connectivity.
-
-[More Details](./sqc4g/readme.md)
-
----
-
-These peripherals are designed to be modular and compatible with our main boards, allowing for easy integration and customization of your IoT projects. For additional support or to contribute, visit our [community forum](#) or [GitHub repository](#).
+For further details on our peripheral offerings or to contribute towards the development of new peripherals, connect with us through our [Community Forum](#) or [GitHub Repository](#).

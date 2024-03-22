@@ -1,37 +1,30 @@
----
-title: Main Boards - SILIQS Project
-description: Documentation and overview of the main communication boards in the SILIQS LPWAN IoT PCB project.
----
+# SILIQS Project Mainboard Overview
 
-# Main Boards - SILIQS Project
+**Description:** An overview of the primary function and the standardized pin-out rules for main communication boards in the SILIQS LPWAN IoT PCB initiative, fostering easy interchangeability and expansion.
 
-Welcome to the Main Boards documentation for the SILIQS project. Our main boards are designed with communication capabilities to serve as the heart of your IoT projects.
+## Introduction to SILIQS Project Mainboards
 
-## SQ001S - Versatile IoT Development Platform
+The SILIQS project's mainboards are engineered as the foundational components of our IoT solutions, designed to seamlessly integrate into a variety of IoT applications. These boards are central to our vision of creating a versatile, expandable, and user-friendly IoT ecosystem.
 
-The SQ001S board is a versatile IoT development platform that combines RISC-V processing power with Arduino compatibility, making it a powerful choice for a wide range of IoT applications.
+## Purpose of the Mainboards
 
-### Specifications
+Each mainboard within the SILIQS project is crafted to serve as the backbone of IoT devices, facilitating communication and operational efficiency. While detailed specifications of individual boards vary, the collective aim is to provide a reliable platform for developing and deploying IoT solutions that can adapt and scale with technological advancements and application requirements.
 
-- **Processor:** RISC-V
-- **Compatibility:** Arduino
-- **Communication:** Includes built-in support for various communication protocols.
-- **Power:** Designed for low power consumption, suitable for battery-operated projects.
+## Standardized Pin-Out Rules
 
-### Getting Started
+![mainboards Overview](./mainboards_pinout.png?raw=true)
 
-1. **Setup:** Instructions on initial setup and configuration.
-2. **Programming:** Guide to programming the board using Arduino IDE or other supported tools.
-3. **Examples:** Sample projects and code to get you started.
+To ensure compatibility and ease of swapping between mainboards, the SILIQS project has adopted a set of standardized pin-out rules:
 
-### Use Cases
+- **Power Supply:** Defined pins for power supply inputs, supporting a range of voltages for flexibility in battery and power sourcing.
+- **Communication Interfaces:** Standardized positions for key communication interface pins, such as SPI, I2C, and UART, to support a wide array of peripheral devices and modules.
+- **Digital and Analog IO:** Specific slots allocated for digital and analog input/output to cater to various sensors and actuators.
+- **Expansion Port:** An allocated expansion port designed with future growth in mind, enabling the addition of new modules and capabilities without redesigning the mainboard.
 
-- Smart home devices
-- Environmental monitoring systems
-- Wearable technology
+These rules are crafted to maximize interoperability between boards, ensuring that upgrades or replacements can be made with minimal disruption to the existing infrastructure. This approach not only enhances the flexibility of the SILIQS ecosystem but also encourages innovation and evolution within the project.
 
-For more information, visit the [SQ001S detailed documentation](./sq001s/readme.md).
+## Looking Forward
 
----
+As we continue to develop and expand the SILIQS project, these guidelines will play a crucial role in maintaining a cohesive and forward-compatible ecosystem. By adhering to these standardized pin-out rules, we lay the groundwork for future expansions and innovations, ensuring that the SILIQS project remains at the forefront of IoT development.
 
-For additional support or to contribute to our project, please visit our [community forum](#) or [GitHub repository](#).
+For further engagement or to contribute towards the evolution of our project, we invite you to connect with us through our [Community Forum](#) or [GitHub Repository](#).
