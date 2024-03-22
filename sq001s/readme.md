@@ -1,47 +1,58 @@
-# MAIN BOARD : SQ001S
+# MAIN BOARD: SQ001S
 
-## Development Board Overview
+## Overview of the Development Board
 
-(Mass Production)
-This innovative development board is designed for enthusiasts and professionals seeking a robust platform for advanced communication and development, particularly in the realms of IoT and environmental technology. It's built around a powerful main chip and offers an array of features to support a wide range of applications.
+Designed with the needs of both hobbyists and professionals in mind, this cutting-edge development board is tailored for advanced projects in the realms of the Internet of Things (IoT) and environmental technologies. Anchored by a powerful central processing unit, it delivers a comprehensive set of capabilities suitable for a wide array of applications.
 
-![SQ001 Development Board](https://github.com/livinghuang/siliqs/blob/main/sq001s/SQ001S.png?raw=true?raw=true)
+![SQ001S Overview](./overview.png?raw=true)
 
-## Features
+## Key Features
 
-- **Main Chip**: RISC-V at 160MHz, offering high performance for computing and processing tasks.
-- **Arduino Platform Compatibility**: Fully compatible with the Arduino platform, providing flexibility and ease of programming for developers.
-- **On-Board PCB Antenna**: Supports WiFi and BLE communications, enhancing connectivity and data transmission capabilities.
-- **WS2812B LED Integration**: Adds the capability for RGB LED control, perfect for custom lighting and signaling.
-- **Li-ion Battery Management**: Incorporates management circuitry for Li-ion batteries, ensuring safe and efficient power usage.
-- **Solar Charger Circuit**: An innovative design that allows the use of solar panels to charge batteries, boosting output to 5V.
-- **Connectivity**: Features two 2.54-10 connectors for standard breadboard compatibility, and one 1.25-4 connector for external communication with sensors and other devices.
+- **Central Processing Unit**: Employs a RISC-V processor at 160MHz, ensuring robust computational and processing power.
+- **Arduino Compatibility**: Fully supports the Arduino ecosystem, enabling effortless programming and project development for users.
+- **Integrated PCB Antenna**: Features support for WiFi and BLE, offering advanced connectivity and data transmission options.
+- **Index LED Feature**: Designed for custom lighting and signaling, enhancing user interaction and feedback.
+- **Li-ion Battery Management**: Includes sophisticated circuitry for managing Li-ion batteries, promoting safe and efficient energy use.
+- **Solar Charging Capability**: Equipped with a unique solar charger circuit, allowing for the charging of batteries via solar panels and boosting the output to 5V.
+- **Boost Power Management Circuit**: Enhances the power source capability by boosting input from as low as 1.0V to 5.0V, significantly increasing the range of power sources that can be used.
+- **Extensive Connectivity**: Comes with two 2.54-10 connectors for breadboard integration and a 1.25-4 connector for external sensors and devices.
 
-## Schematic
-![SQ001 Schematic](https://github.com/livinghuang/siliqs/blob/main/sq001s/schematic_sq001s.png?raw=true)
+## Additional Resources
 
-## Applications
+### Pinout
 
-The board is ideal for a range of applications, including but not limited to:
-- IoT solutions
-- Remote sensing
+![SQ001S Pinout Diagram](./pinout.png?raw=true)
+
+### Schematic
+
+![SQ001S Schematic Diagram](./schematic.png?raw=true)
+
+### Datasheet
+
+- [HT_CT62 Datasheet](./HTCT62.pdf "Datasheet for the HT-CT62 chip")
+
+## Potential Applications
+
+This board is excellently suited for diverse applications, notably:
+- IoT infrastructure development
+- Remote sensing operations
 - Environmental monitoring
-- Smart agriculture
+- Enhancements in smart agriculture
 
-## Getting Started
+## Getting Started Guide
 
-To begin using the development board:
-1. Install the latest Arduino IDE for your development environment.
-2. Connect the board to your computer using a USB cable.
-3. Install necessary drivers and libraries as instructed.
-4. Explore and experiment with sample projects.
+Initiate your journey with the SQ001S development board by:
+1. Installing the latest version of the Arduino IDE suitable for your operating system.
+2. Connecting the board to your computer using a USB cable.
+3. Following instructions to install necessary drivers and libraries.
+4. Exploring the board's possibilities through sample projects.
 
-## Community Engagement and Support
+## Community Contributions and Support
 
-We encourage community contributions and offer support through various channels:
-- **Contributions**: For those interested in contributing, guidelines are available.
-- **Support**: For any issues or inquiries, contact our support team or use our GitHub issue tracker.
+We foster community involvement and offer various support options:
+- **Contributions**: Guidelines for those looking to contribute are readily available.
+- **Support Channels**: Reach out to our support team or use our GitHub issue tracker for assistance or to report issues.
 
-## License
+## License Information
 
-The development board is released under the MIT License, providing freedom and flexibility in development and distribution.
+This development board is made available under the MIT License, affording a wide latitude for development and distribution in both personal and commercial projects.
