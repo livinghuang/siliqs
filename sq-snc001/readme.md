@@ -197,15 +197,15 @@ SQ-SNC001 支持兩個 Modbus/RS485 通信端口。默認情況下，使用標�
 
 #### 通過 RS485 外部線纜總線連接天氣傳感器
 
-![Wiring Diagram](./weather_sensor.png?raw=true)
+![Wiring Diagram](./weather_sensor_connect.png?raw=true)
 
 #### 通過外部線纜總線連接太陽能板
 
-![Wiring Diagram](./solar_power.png?raw=true)
+![Wiring Diagram](./solar_power_connect.png?raw=true)
 
 #### 通過內部線纜總線連接鉛酸電池
 
-![Wiring Diagram](./lead_acid.png?raw=true)
+![Wiring Diagram](./lead_acid_connect.png?raw=true)
 
 #### SD 卡插槽
 
