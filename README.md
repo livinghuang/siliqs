@@ -37,6 +37,7 @@ Peripheral boards designed for sensor applications are named starting with "SQSx
 | [SQCNBIOT](./sqcnbiot/readme.md) | Integrated NBIOT communication |
 | [SQC4G](./sqc4g/readme.md) | Integrated 4G communication |
 | [SQSH001](./sqsh001/readme.md) | Serves as a versatile housing, accommodating SMA Antennas, IPEX1 Antennas, Li-ion Batteries, and USB connectors. |
+| [SQS-LUV800](./sqs-luv800/readme.md) | 8-in-1 Weather Sensor |
 
 ## Peripheral Boards for Communication
 
