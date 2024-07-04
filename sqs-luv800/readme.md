@@ -405,6 +405,8 @@ By following these steps, you will ensure that the SQS-LUV800 sensor is properly
 
 # SQS-LUV800: 8合1氣象傳感器
 
+![SQS-LUV800](./SQS-LUV800.png?raw=true)
+
 ## 概述
 
 SQS-LUV800 是一款8合1氣象傳感器，集成了氣壓、溫度、二氧化碳、PM2.5、PM10、濕度、風向和風速等多種功能。它提供了一個緊湊的解決方案，用於綜合環境監測，並通過RS485輸出數據。
@@ -785,13 +787,13 @@ SQS-LUV800 感測器的響應緩衝區包含了以特定格式編碼的環境數
 
 請參考下方的連接圖以確保正確連接：
 
-![連接圖](path_to_wiring_diagram_image)
+![連接圖](./wires.png?raw=true)
 
 #### 實施
 
 為了準確設置，請確保感測器正確對準，指定的點需面向北方。請參考下圖以獲得正確定位的指導：
 
-![北向設置圖](path_to_north_point_setup_image)
+![北向設置圖](./point_to_north.png?raw=true)
 
 按照這些步驟操作，您將確保 SQS-LUV800 感測器正確連接和定位，以達到最佳性能。
 
