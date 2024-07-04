@@ -4,14 +4,14 @@
 
 ## Overview
 
-The SQ-SNC001 is a multifunction weather station data collection device. It can collect sensor data via RS485/Modbus, record it on a local SD card, and forward it to a web cloud platform. It supports multiple communication methods, including WiFi and NB-IoT.
+The SQ-SNC001 is a versatile weather station data collection device designed to gather sensor data via RS485/Modbus, store it locally on an SD card, and forward it to a web cloud platform. It supports multiple communication methods, including WiFi and NB-IoT, and is powered by a solar panel with an internal battery charger for lead-acid batteries.
 
 ## Key Features
 
 - Collect sensor data via RS485/Modbus
 - Publish data to MQTT server via WiFi or NB-IoT
-- Powered by a solar panel (+18V)
-- Internal battery charger function for lead-acid batteries
+- Solar-powered with an internal battery charger for lead-acid batteries
+- Local storage on an SD card (up to 32GB)
 
 ## Application Scenarios
 
@@ -27,7 +27,7 @@ The SQ-SNC001 is a multifunction weather station data collection device. It can 
 - **Battery Port:** Lead-acid battery (+12V) port x2
 - **Communication Port:** RS485/Modbus port with power driving (+12V) x1
 - **Connectivity:** NB-IoT, WiFi
-- **Storage:** SD Card (support max. 32GB)
+- **Storage:** SD Card (supports max. 32GB)
 - **GPS:** Reserved
 
 ## Usage Guide
@@ -48,7 +48,7 @@ Install your lead-acid battery in the main battery port near the solar power int
 
 #### 12V Power Output
 
-The 12V power output is reserved for future usage. Leave it open if not needed.
+The 12V power output is reserved for future use. Leave it open if not needed.
 
 ![External Power Output](./external_power_output.png?raw=true)
 
@@ -70,23 +70,23 @@ Reserved for future use.
 
 ### Setup
 
-#### Connection for Weather Sensor via RS485 Outside Cable Bus 
+#### Connecting Weather Sensor via RS485 Outside Cable Bus
 
 ![Wiring Diagram](./weather_sensor_connect.png?raw=true)
 
-#### Connection for Solar Panel via Outside Cable Bus 
+#### Connecting Solar Panel via Outside Cable Bus
 
 ![Wiring Diagram](./solar_power_connect.png?raw=true)
 
-#### Connection for Lead-Acid Battery via Inside Cable Bus 
+#### Connecting Lead-Acid Battery via Inside Cable Bus
 
 ![Wiring Diagram](./lead_acid_connect.png?raw=true)
 
-#### SD Card Slot  
+#### SD Card Slot
 
 ![Wiring Diagram](./sd_card.png?raw=true)
 
-#### SIM Card Slot  
+#### SIM Card Slot
 
 ![Wiring Diagram](./sim_card.png?raw=true)
 
@@ -117,131 +117,167 @@ Read the SD card on your computer. It should contain a file named `sensor_data.c
 
 ![Sensor Data Diagram](./sensor_data.png?raw=true)
 
+## INDEX LEDS
+
+The SQ-SNC001 supports 2 * 3-color-LED indicators for system information. LED1 is the default indicator. LED2 is reserved.
+
+![Leds Diagram](./leds.png?raw=true)
+
+### LED1
+
+Supports 3 independent LEDs with red, blue, and green colors.
+
+#### Indications
+
+1. **System Power Normal:** Green stays on
+2. **System Error:** Red blinks
+   1. **Network Error:** Blue blinks quickly (0.2 sec cycle)
+   2. **SD Card Error:** Blue blinks slowly (1 sec cycle)
+   3. **Sensor Data Error:** Blue stays on
+
 ## Additional Resources
 
 (Include links or references to additional resources, manuals, or support documents.)
 
 # ===
 
-# SQ-SNC001: 天氣站數據收集與記錄器
+# SQ-SNC001: 氣象站數據收集與記錄器
 
 ![SQ-SNC001](./sq_snc001.png?raw=true)
 
 ## 概述
 
-SQ-SNC001 是一款多功能天氣站數據收集設備。它可以通過 RS485/Modbus 收集傳感器數據，將其記錄在本地 SD 卡上，並轉發到雲端平台。它支持多種通信方式，包括 WiFi 和 NB-IoT。
+SQ-SNC001是一款多功能氣象站數據收集設備，能夠通過RS485/Modbus收集傳感器數據，將其存儲在本地SD卡上，並將數據轉發到雲平台。它支持多種通信方式，包括WiFi和NB-IoT，並由太陽能面板供電，內部配有鉛酸電池充電功能。
 
-## 主要功能
+## 主要特點
 
-- 通過 RS485/Modbus 收集傳感器數據
-- 通過 WiFi 或 NB-IoT 發佈數據到 MQTT 服務器
-- 由太陽能板供電（+18V）
-- 內置鉛酸電池充電功能
+- 通過RS485/Modbus收集傳感器數據
+- 通過WiFi或NB-IoT將數據發佈到MQTT伺服器
+- 太陽能供電，內部配有鉛酸電池充電功能
+- 本地存儲在SD卡上（最大支持32GB）
 
 ## 應用場景
 
-- 天氣站
+- 氣象站
 - 農業
 - 建築環境監測
-- 一般環境監測
+- 總體環境監測
 
 ## 技術規格
 
-- **CPU:** 雙核 Arm Cortex-M0+ 處理器，靈活時鐘最高可達 133 MHz，264kB 片上 SRAM
-- **電源接口:** 太陽能充電電源接口（+18V~30V）
-- **電池端口:** 鉛酸電池端口（+12V）x2
-- **通信端口:** 帶電源驅動的 RS485/Modbus 端口（+12V）x1
-- **連接性:** NB-IoT，WiFi
-- **存儲:** SD 卡（最高支援 32GB）
-- **GPS:** 預留
+- **CPU:** 雙核Arm Cortex-M0+處理器，靈活時鐘運行頻率可達133 MHz，264kB片上SRAM
+- **電源接口:** 太陽能充電電源（+18V~30V）
+- **電池接口:** 鉛酸電池（+12V）接口 x2
+- **通信接口:** 帶驅動電源的RS485/Modbus接口（+12V）x1
+- **連接:** NB-IoT，WiFi
+- **存儲:** SD卡（最大支持32GB）
+- **GPS:** 保留
 
 ## 使用指南
 
 ### 連接指南
 
-#### 太陽能板
+#### 太陽能面板
 
-將太陽能板連接到電源接口。
+將太陽能面板連接到電源接口。
 
-![Solar Panel](./solar_power.png?raw=true)
+![太陽能面板](./solar_power.png?raw=true)
 
 #### 鉛酸電池
 
 將鉛酸電池安裝在靠近太陽能電源接口的主電池端口。
 
-![Lead-Acid Battery](./lead_acid.png?raw=true)
+![鉛酸電池](./lead_acid.png?raw=true)
 
-#### 12V 電源輸出
+#### 12V電源輸出
 
-12V 電源輸出預留用於未來使用。如果不需要，請保持開放狀態。
+12V電源輸出保留供未來使用。如果不需要，請保持開放狀態。
 
-![External Power Output](./external_power_output.png?raw=true)
+![外部電源輸出](./external_power_output.png?raw=true)
 
-#### RS485 通信端口
+#### RS485通信接口
 
-SQ-SNC001 支持兩個 Modbus/RS485 通信端口。默認情況下，使用標有 A1、B1 的端口 1，並保持端口 2 開放。
+SQ-SNC001支持兩個Modbus/RS485通信接口。默認情況下，使用標有A1、B1的1號端口，並保持2號端口開放。
 
-##### 端口 1
+##### 1號端口
 
-默認情況下，將 SQS-LUV800 連接到此端口。
+默認情況下，將SQS-LUV800連接到此端口。
 
-![Modbus Port 1](./modbus_port1.png?raw=true)
+![Modbus 1號端口](./modbus_port1.png?raw=true)
 
-##### 端口 2
+##### 2號端口
 
-預留用於未來使用。
+保留供未來使用。
 
-![Modbus Port 2](./modbus_port2.png?raw=true)
+![Modbus 2號端口](./modbus_port2.png?raw=true)
 
 ### 設置
 
-#### 通過 RS485 外部線纜總線連接天氣傳感器
+#### 通過RS485外部電纜總線連接氣象傳感器
 
-![Wiring Diagram](./weather_sensor_connect.png?raw=true)
+![連接示意圖](./weather_sensor_connect.png?raw=true)
 
-#### 通過外部線纜總線連接太陽能板
+#### 通過外部電纜總線連接太陽能面板
 
-![Wiring Diagram](./solar_power_connect.png?raw=true)
+![連接示意圖](./solar_power_connect.png?raw=true)
 
-#### 通過內部線纜總線連接鉛酸電池
+#### 通過內部電纜總線連接鉛酸電池
 
-![Wiring Diagram](./lead_acid_connect.png?raw=true)
+![連接示意圖](./lead_acid_connect.png?raw=true)
 
-#### SD 卡插槽
+#### SD卡插槽
 
-![Wiring Diagram](./sd_card.png?raw=true)
+![連接示意圖](./sd_card.png?raw=true)
 
-#### SIM 卡插槽
+#### SIM卡插槽
 
-![Wiring Diagram](./sim_card.png?raw=true)
+![連接示意圖](./sim_card.png?raw=true)
 
-### 初始設置您的系統
+### 系統初始設置
 
-SQ-SNC001 使用 SD 卡文件設置系統。初始情況下，SD 卡是空的。您需要使用電腦上的編輯器（例如 Windows 系統上的 Notepad，Mac 系統上的 TextEdit）添加一個名為 `setup.json` 的文件。文件 `sensor_data.csv` 將由 SQ-SNC001 創建和更新。您只需要將其複製到您的電腦中。當初始化新記錄時，刪除 `sensor_data.csv` 文件，只保留 `setup.json` 文件在 SD 卡上。
+SQ-SNC001使用SD卡文件進行系統設置。初始情況下，SD卡是空的。您需要使用電腦上的編輯器（如Windows的Notepad，Mac的TextEdit）添加一個名為`setup.json`的文件。SQ-SNC001將創建並更新`sensor_data.csv`文件。您只需要將其複製到電腦上。初始化新記錄時，刪除`sensor_data.csv`文件，只保留`setup.json`在SD卡上。
 
-![SD Card Files Diagram](./sd_card_files.png?raw=true)
+![SD卡文件示意圖](./sd_card_files.png?raw=true)
 
 #### 如何設置發佈模式
 
-SQ-SNC001 支持 WiFi 和 NB-IoT 模式發佈數據，但它們不能同時工作。用戶可以使用 `setup.json` 文件來配置系統。
+SQ-SNC001支持WiFi和NB-IoT模式來發佈數據，但它們不能同時工作。用戶可以使用`setup.json`文件配置系統。
 
-使用以下 JSON 格式設置 SQ-SNC001：
+使用以下JSON格式設置SQ-SNC001：
 
 ```json
 {
-  "mode": "NBIOT",  // 僅支持 NBIOT 或 WIFI，默認值為 "NBIOT"
-  "device_id": "0",  // 0 ~ 255，默認值為 "0"
-  "WIFI_SSID": "your-wifi-ssid",  // 輸入您的 WiFi SSID 以連接到互聯網，在 NBIOT 模式下禁用
-  "WIFI_PASSWORD": "your-wifi-password"  // 輸入您的 WiFi 密碼以連接到互聯網，在 NBIOT 模式下禁用
+  "mode": "NBIOT",  // 僅支持NBIOT或WIFI模式，默認："NBIOT"
+  "device_id": "0",  // 0 ~ 255，默認："0"
+  "WIFI_SSID": "your-wifi-ssid",  // 輸入您的WiFi SSID以連接互聯網，在NBIOT模式下禁用
+  "WIFI_PASSWORD": "your-wifi-password"  // 輸入您的WiFi密碼以連接互聯網，在NBIOT模式下禁用
 }
 ```
 
 #### 如何讀取本地記錄
 
-在電腦上讀取 SD 卡。應該有一個名為 `sensor_data.csv` 的文件。數據顯示如下。
+在您的電腦上讀取SD卡。它應包含一個名為`sensor_data.csv`的文件。數據可能如下所示。
 
-![Sensor Data Diagram](./sensor_data.png?raw=true)
+![傳感器數據示意圖](./sensor_data.png?raw=true)
 
-## 其他資源
+## 指示燈
 
-（包括其他資源、手冊或支持文檔的鏈接或參考資料。）
+SQ-SNC001支持2個3色LED指示系統信息。LED1是默認指示燈。LED2保留。
+
+![LED指示燈示意圖](./leds.png?raw=true)
+
+### LED1
+
+支持3個獨立的紅色、藍色和綠色LED。
+
+#### 指示含義
+
+1. **系統電源正常:** 綠色常亮
+2. **系統錯誤:** 紅色閃爍
+   1. **網絡錯誤:** 藍色快速閃爍（0.2秒周期）
+   2. **SD卡錯誤:** 藍色慢速閃爍（1秒周期）
+   3. **傳感器數據錯誤:** 藍色常亮
+
+## 附加資源
+
+（包括連結或引用附加資源、手冊或支持文檔。）

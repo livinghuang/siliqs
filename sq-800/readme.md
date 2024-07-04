@@ -1,5 +1,3 @@
-Certainly! Here is the improved and detailed documentation for the SQS-LUV800: 8-in-1 Weather Sensor.
-
 # SQS-LUV800: 8-in-1 Weather Sensor
 
 ![SQS-LUV800](./SQS-LUV800.png?raw=true)
