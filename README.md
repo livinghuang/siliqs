@@ -48,7 +48,7 @@ Peripheral boards designed for communication purposes are named starting with "S
 
 | Project Name       | Description                                 |
 | ---------------- | ------------------------------------------- |
-| [SQ-SNC001](./sqsnc001/readme.md) | multifunction weather station data collection device |
+| [SQ-SNC001](./sq-snc001/readme.md) | multifunction weather station data collection device |
 | [SQS-LUV800](./sqs-luv800/readme.md) | 8-in-1 Weather Sensor |
 
 Feel free to explore our project and the various boards we offer. Contributions and feedback are welcome!
