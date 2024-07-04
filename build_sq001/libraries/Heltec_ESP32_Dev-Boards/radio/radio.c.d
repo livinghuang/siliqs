@@ -1,0 +1,20 @@
+/Users/living/code/github/siliqs/build_sq001/libraries/Heltec_ESP32_Dev-Boards/radio/radio.c.o: \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/radio.c \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/esp_hw_support/include/esp_sleep.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/esp_common/include/esp_err.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/esp_common/include/esp_compiler.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/hal/include/hal/touch_sensor_types.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/esp_common/include/esp_attr.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/esp_common/include/esp_bit_defs.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/soc/esp32c3/include/soc/soc_caps.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/hal/include/hal/gpio_types.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../driver/timer.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../driver/../loramac/utilities.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../driver/sx126x.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../driver/../driver/gpio.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../driver/../driver/lorawan_spi.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../driver/../driver/../driver/gpio.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../driver/sx126x-board.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../driver/../driver/sx126x.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../loramac/utilities.h \
+ /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/../radio/radio.h

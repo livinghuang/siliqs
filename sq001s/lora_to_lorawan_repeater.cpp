@@ -6,7 +6,7 @@ void lora_to_lorawan_repeater_init(void)
 #if (LORAWAN_DEVEUI_AUTO)
   LoRaWAN.generateDeveuiByChipID();
 #endif
-  Mcu.begin();
+  // Mcu.begin();
   static bool lora_receive_test_init = true;
   if (lora_receive_test_init == true)
   {

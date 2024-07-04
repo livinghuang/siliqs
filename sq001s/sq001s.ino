@@ -10,7 +10,7 @@ test_status_t test_status;
 void setup()
 {
   Serial.begin(115200);
-  Mcu.begin();
+  // Mcu.begin();
 
   print_wakeup_reason();
   ++bootCount;

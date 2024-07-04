@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "../../..,../../..,../../..,../../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../..,../../..,../../..,../../..,../../..",
+  "builtInToolsFolders": "",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "",
+  "fqbn": "Heltec-esp32:esp32:heltec_wireless_mini_shell:LORAWAN_REGION=0,CPUFreq=160,UploadSpeed=921600,DebugLevel=none,LoRaWanDebugLevel=0,LORAWAN_DEVEUI=0,LORAWAN_PREAMBLE_LENGTH=0,EraseFlash=none",
+  "hardwareFolders": "/Users/living/Library/Arduino15/packages",
+  "otherLibrariesFolders": "/Users/living/Documents/Arduino/libraries",
+  "runtime.ide.version": "10607",
+  "sketchLocation": "/Users/living/code/github/siliqs/sq001s"
+}
