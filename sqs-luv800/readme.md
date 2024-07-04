@@ -2,6 +2,8 @@ Certainly! Here is the improved and detailed documentation for the SQS-LUV800: 8
 
 # SQS-LUV800: 8-in-1 Weather Sensor
 
+![SQS-LUV800](./SQS-LUV800.png?raw=true)
+
 ## Overview
 
 The SQS-LUV800 is an 8-in-1 weather sensor that integrates multiple functions including air pressure, temperature, CO2, PM2.5, PM10, humidity, wind direction, and wind speed. It offers a compact solution for comprehensive environmental monitoring with output via RS485.
@@ -384,13 +386,13 @@ To connect the SQS-LUV800 sensor to your main system, follow the wiring instruct
 
 Refer to the wiring diagram below to ensure proper connections:
 
-![Wiring Diagram](path_to_wiring_diagram_image)
+![Wiring Diagram](./wires.png?raw=true)
 
 #### Implementation
 
 For accurate setup, ensure that the sensor is oriented correctly with the designated point facing north. Refer to the image below for guidance on the correct positioning:
 
-![North Point Setup](path_to_north_point_setup_image)
+![North Point Setup](./point_to_north.png?raw=true)
 
 By following these steps, you will ensure that the SQS-LUV800 sensor is properly connected and oriented for optimal performance.
 
