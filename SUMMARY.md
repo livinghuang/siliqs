@@ -21,5 +21,5 @@
   * [SQC4G (U.P)](./sqc4g/readme.md)
   * [SQSH001 (U.P)](./sqsh001/readme.md)
 * [Weather Station Project](weather_station.md)
-  * [SQSNC001 (U.D)](./sqsnc001/readme.md)
+  * [SQSNC001 (U.D)](./sq-snc001/readme.md)
   * [SQS-LUV800 (U.D)](./sqs-luv800/readme.md)
