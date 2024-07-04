@@ -72,23 +72,23 @@ Reserved for future use.
 
 #### Connection for Weather Sensor via RS485 Outside Cable Bus 
 
-![Wiring Diagram](./wires_weather_sensor.png?raw=true)
+![Wiring Diagram](./weather_sensor.png?raw=true)
 
 #### Connection for Solar Panel via Outside Cable Bus 
 
-![Wiring Diagram](./wires_solar_panel.png?raw=true)
+![Wiring Diagram](./solar_panel.png?raw=true)
 
 #### Connection for Lead-Acid Battery via Inside Cable Bus 
 
-![Wiring Diagram](./wires_acid_lead.png?raw=true)
+![Wiring Diagram](./acid_lead.png?raw=true)
 
 #### SD Card Slot  
 
-![Wiring Diagram](./wires_sd_card.png?raw=true)
+![Wiring Diagram](./sd_card.png?raw=true)
 
 #### SIM Card Slot  
 
-![Wiring Diagram](./wires_sim_card.png?raw=true)
+![Wiring Diagram](./sim_card.png?raw=true)
 
 ### Initial Setup of Your System
 
