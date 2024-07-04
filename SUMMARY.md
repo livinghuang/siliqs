@@ -20,3 +20,4 @@
   * [SQCNBIOT (U.P)](./sqcnbiot/readme.md)
   * [SQC4G (U.P)](./sqc4g/readme.md)
   * [SQSH001 (U.P)](./sqsh001/readme.md)
+  * [SQS-LUV800 (U.D)](./sqs-luv800/readme.md)
