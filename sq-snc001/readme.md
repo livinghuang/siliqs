@@ -27,7 +27,7 @@ The SQ-SNC001 is a multifunction weather station data collection device. It can 
 - **Battery Port:** Lead-acid battery (+12V) port x2
 - **Communication Port:** RS485/Modbus port with power driving (+12V) x1
 - **Connectivity:** NB-IoT, WiFi
-- **Storage:** SD Card (32GB)
+- **Storage:** SD Card (support max. 32GB)
 - **GPS:** Reserved
 
 ## Usage Guide
@@ -72,15 +72,15 @@ Reserved for future use.
 
 #### Connection for Weather Sensor via RS485 Outside Cable Bus 
 
-![Wiring Diagram](./weather_sensor.png?raw=true)
+![Wiring Diagram](./weather_sensor_connect.png?raw=true)
 
 #### Connection for Solar Panel via Outside Cable Bus 
 
-![Wiring Diagram](./solar_panel.png?raw=true)
+![Wiring Diagram](./solar_power_connect.png?raw=true)
 
 #### Connection for Lead-Acid Battery via Inside Cable Bus 
 
-![Wiring Diagram](./acid_lead.png?raw=true)
+![Wiring Diagram](./lead_acid_connect.png?raw=true)
 
 #### SD Card Slot  
 
@@ -152,7 +152,7 @@ SQ-SNC001 是一款多功能天氣站數據收集設備。它可以通過 RS485/
 - **電池端口:** 鉛酸電池端口（+12V）x2
 - **通信端口:** 帶電源驅動的 RS485/Modbus 端口（+12V）x1
 - **連接性:** NB-IoT，WiFi
-- **存儲:** SD 卡（32GB）
+- **存儲:** SD 卡（最高支援 32GB）
 - **GPS:** 預留
 
 ## 使用指南
