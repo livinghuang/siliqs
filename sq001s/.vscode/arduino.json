@@ -1,7 +1,7 @@
 {
-    "sketch": "sq001.ino",
-    "port": "/dev/tty.wchusbserial830",
-    "board": "Heltec-esp32:esp32:wireless_mini_shell",
-    "configuration": "LORAWAN_REGION=6,CPUFreq=160,UploadSpeed=115200,DebugLevel=none,LoRaWanDebugLevel=0,LORAWAN_DEVEUI=0,LORAWAN_PREAMBLE_LENGTH=0",
+    "sketch": "sq001s.ino",
+    "port": "/dev/tty.wchusbserial84320",
+    "board": "Heltec-esp32:esp32:heltec_wireless_mini_shell",
+    "configuration": "LORAWAN_REGION=0,CPUFreq=160,UploadSpeed=921600,DebugLevel=none,LoRaWanDebugLevel=0,LORAWAN_DEVEUI=0,LORAWAN_PREAMBLE_LENGTH=0,EraseFlash=none",
     "output": "../build_sq001"
 }

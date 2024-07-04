@@ -75,7 +75,7 @@ void generate_lorawan_parameters(uint8_t *nwkSKey, uint8_t *appSKey, uint32_t *d
   unsigned char hash_output[32];
 
   // Get MAC address
-  esp_efuse_mac_get_default(mac);
+  // esp_efuse_mac_get_default(mac);
 
   // Use MAC address to seed SHA-256 for key generation
   mbedtls_sha256_context ctx;
@@ -152,7 +152,7 @@ void lorawan_init(void)
 
   pt100_init();
   pt100_fetch();
-  Mcu.begin();
+  // Mcu.begin();
 }
 
 void lorawan_process(void)
