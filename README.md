@@ -1,9 +1,9 @@
 ---
-title: SILIQS - LPWAN IoT PCB Boards
-description: A collection of PCB boards for IoT projects, including main boards with communication capabilities and various peripheral boards.
+title: SILIQS 
+description: A collection of boards for IoT projects, including main boards with communication capabilities and various peripheral boards.
 ---
 
-# SILIQS - IoT PCB Project
+# SILIQS - IoT Project
 
 Welcome to the SILIQS project! This repository contains a range of PCB boards designed for IoT applications. Our project includes main boards for communication and several peripheral boards to support these main boards for various user purposes.
 
@@ -13,6 +13,7 @@ Main boards are designed for communication and include a unique identifier in th
 
 | Board Name       | Description                                 |
 | ---------------- | ------------------------------------------- |
+| [SQ001S](./sq001s/readme.md) | A versatile IoT development platform with RISC-V power and Arduino compatibility. |
 | [SQ001S](./sq001s/readme.md) | A versatile IoT development platform with RISC-V power and Arduino compatibility. |
 
 ## Peripheral Boards for Sensors
@@ -42,5 +43,12 @@ Peripheral boards designed for sensor applications are named starting with "SQSx
 ## Peripheral Boards for Communication
 
 Peripheral boards designed for communication purposes are named starting with "SQCxxx," where "xxx" indicates the communication method. For example, SQC485 is our board designed for RS485 communication.
+
+## Weather Station Project
+
+| Project Name       | Description                                 |
+| ---------------- | ------------------------------------------- |
+| [SQ-SNC001](./sqsnc001/readme.md) | multifunction weather station data collection device |
+| [SQS-LUV800](./sqs-luv800/readme.md) | 8-in-1 Weather Sensor |
 
 Feel free to explore our project and the various boards we offer. Contributions and feedback are welcome!

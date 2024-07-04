@@ -1,6 +1,6 @@
 # Table of Contents
 
-* [IoT PCB Project](README.md)
+* [IoT Project](README.md)
 * [MAIN BOARD Project](mainboards.md)
   * [SQ001S (M.P)](./sq001s/readme.md)
 * [PERIPHERAL BOARD Project](peripherals.md)
@@ -20,4 +20,6 @@
   * [SQCNBIOT (U.P)](./sqcnbiot/readme.md)
   * [SQC4G (U.P)](./sqc4g/readme.md)
   * [SQSH001 (U.P)](./sqsh001/readme.md)
+* [Weather Station Project](weather_station.md)
+  * [SQSNC001 (U.D)](./sqsnc001/readme.md)
   * [SQS-LUV800 (U.D)](./sqs-luv800/readme.md)
