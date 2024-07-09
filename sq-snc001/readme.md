@@ -92,22 +92,51 @@ Reserved for future use.
 
 ### Initial Setup of Your System
 
-The SQ-SNC001 uses an SD card file to set up the system. Initially, the SD card is empty. You must add a file named `setup.json` using an editor on your computer (e.g., Notepad on Windows, TextEdit on Mac). The file `sensor_data.csv` will be created and updated by the SQ-SNC001. You only need to copy it to your computer. When initializing a new record, delete the `sensor_data.csv` file, leaving only `setup.json` on the SD card.
+The SQ-SNC001 uses an SD card file to set up the system. Initially, the SD card is empty. You must add a file named `config.json` using an editor on your computer (e.g., Notepad on Windows, TextEdit on Mac). The file `sensor_data.csv` will be created and updated by the SQ-SNC001. You only need to copy it to your computer. When initializing a new record, delete the `sensor_data.csv` file, leaving only `config.json` on the SD card.
 
 ![SD Card Files Diagram](./sd_card_files.png?raw=true)
 
 #### How to Set Up Publish Mode
 
-The SQ-SNC001 supports WiFi and NB-IoT modes to publish data, but they cannot work simultaneously. Users can configure the system using a `setup.json` file.
+The SQ-SNC001 supports WiFi and NB-IoT modes to publish data, but they cannot work simultaneously. Users can configure the system using a `config.json` file.
 
 Use the following JSON format to set up the SQ-SNC001:
 
 ```json
 {
-  "mode": "NBIOT",  // NBIOT or WIFI only, default: "NBIOT"
-  "device_id": "0",  // 0 ~ 255, default: "0"
-  "WIFI_SSID": "your-wifi-ssid",  // Input your WiFi SSID for internet connection, disabled in NBIOT mode
-  "WIFI_PASSWORD": "your-wifi-password"  // Input your WiFi password for internet connection, disabled in NBIOT mode
+  "id": 1, // 1~14
+  "Protocol": 1, // 1=NB-IOT, 2=WIFI
+  "WifiSsid": "YourSSID", // Set your WiFi SSID, avoiding any special characters other than a space
+  "WifiPwd": "YourPassword", // Set your WiFi password, avoiding any special characters other than a space
+  "MqttBroker": "13.210.141.86", // MQTT server address
+  "MqttPortNo": 1883, // MQTT port
+  "UserName": "siliq", // Set MQTT server username
+  "UserPwd": "siliq1234", // Set MQTT server password
+  "PubTopic": "test/topic", // Set MQTT publish topic
+  "SubTopic": "test/subtopic", // Set MQTT subscribe topic
+  "QoS": 0, // QoS: 0 = At most once, 1 = At least once, 2 = Exactly once
+  "Retained": false, // Retained: true means the broker retains the last message, valid values: true, false
+  "LogsInterval": 5 // Unit: minute, valid values: 2, 3, 4, 5, 6, 10, 15, 20, 30
+}
+```
+
+Here is the template with the remarks removed as requested:
+
+```json
+{
+  "id": 1,
+  "Protocol": 1,
+  "WifiSsid": "YourSSID",
+  "WifiPwd": "YourPassword",
+  "MqttBroker": "13.210.141.86",
+  "MqttPortNo": 1883,
+  "UserName": "siliq",
+  "UserPwd": "siliq1234",
+  "PubTopic": "test/topic",
+  "SubTopic": "test/subtopic",
+  "QoS": 0,
+  "Retained": false,
+  "LogsInterval": 5
 }
 ```
 
@@ -235,22 +264,51 @@ SQ-SNC001支持兩個Modbus/RS485通信接口。默認情況下，使用標有A1
 
 ### 系統初始設置
 
-SQ-SNC001使用SD卡文件進行系統設置。初始情況下，SD卡是空的。您需要使用電腦上的編輯器（如Windows的Notepad，Mac的TextEdit）添加一個名為`setup.json`的文件。SQ-SNC001將創建並更新`sensor_data.csv`文件。您只需要將其複製到電腦上。初始化新記錄時，刪除`sensor_data.csv`文件，只保留`setup.json`在SD卡上。
+SQ-SNC001使用SD卡文件進行系統設置。初始情況下，SD卡是空的。您需要使用電腦上的編輯器（如Windows的Notepad，Mac的TextEdit）添加一個名為`config.json`的文件。SQ-SNC001將創建並更新`sensor_data.csv`文件。您只需要將其複製到電腦上。初始化新記錄時，刪除`sensor_data.csv`文件，只保留`config.json`在SD卡上。
 
 ![SD卡文件示意圖](./sd_card_files.png?raw=true)
 
 #### 如何設置發佈模式
 
-SQ-SNC001支持WiFi和NB-IoT模式來發佈數據，但它們不能同時工作。用戶可以使用`setup.json`文件配置系統。
+SQ-SNC001支持WiFi和NB-IoT模式來發佈數據，但它們不能同時工作。用戶可以使用`config.json`文件配置系統。
 
 使用以下JSON格式設置SQ-SNC001：
 
 ```json
 {
-  "mode": "NBIOT",  // 僅支持NBIOT或WIFI模式，默認："NBIOT"
-  "device_id": "0",  // 0 ~ 255，默認："0"
-  "WIFI_SSID": "your-wifi-ssid",  // 輸入您的WiFi SSID以連接互聯網，在NBIOT模式下禁用
-  "WIFI_PASSWORD": "your-wifi-password"  // 輸入您的WiFi密碼以連接互聯網，在NBIOT模式下禁用
+  "id": 1, // 1~14
+  "Protocol": 1, // 1=NB-IOT，2=WIFI
+  "WifiSsid": "YourSSID", // 設定您的 WiFi SSID，避免使用空格以外的特殊字符
+  "WifiPwd": "YourPassword", // 設定您的 WiFi 密碼，避免使用空格以外的特殊字符
+  "MqttBroker": "13.210.141.86", // MQTT 伺服器地址
+  "MqttPortNo": 1883, // MQTT 埠號
+  "UserName": "siliq", // 設定 MQTT 伺服器的用戶名
+  "UserPwd": "siliq1234", // 設定 MQTT 伺服器的密碼
+  "PubTopic": "test/topic", // 設定 MQTT 發佈主題
+  "SubTopic": "test/subtopic", // 設定 MQTT 訂閱主題
+  "QoS": 0, // QoS：0=最多一次，1=至少一次，2=保證一次
+  "Retained": false, // Retained：true 表示伺服器保留最後一條消息，有效值：true, false
+  "LogsInterval": 5 // 單位：分鐘，有效值：2, 3, 4, 5, 6, 10, 15, 20, 30
+}
+```
+
+使用時請移除備註部分如下範本:
+
+```json
+{
+  "id": 1,
+  "Protocol": 1,
+  "WifiSsid": "YourSSID",
+  "WifiPwd": "YourPassword",
+  "MqttBroker": "13.210.141.86",
+  "MqttPortNo": 1883,
+  "UserName": "siliq",
+  "UserPwd": "siliq1234",
+  "PubTopic": "test/topic",
+  "SubTopic": "test/subtopic",
+  "QoS": 0,
+  "Retained": false,
+  "LogsInterval": 5
 }
 ```
 
