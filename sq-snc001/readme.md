@@ -158,11 +158,30 @@ Supports 3 independent LEDs with red, blue, and green colors.
 
 #### Indications
 
-1. **System Power Normal:** Green stays on
-2. **System Error:** Red blinks
-   1. **Network Error:** Blue blinks quickly (0.2 sec cycle)
-   2. **SD Card Error:** Blue blinks slowly (1 sec cycle)
-   3. **Sensor Data Error:** Blue stays on
+Sure! Here's the updated table based on your specifications:
+
+| Index | Condition               | Red LED          | Green LED         | Blue LED         |
+|-------|-------------------------|------------------|-------------------|------------------|
+| 1     | Power Error             | OFF              | OFF               | OFF              |
+| 2     | System Power On Period  | ON               | ON                | ON               |
+| 3     | SD Card Read Error      | Blinking Slow    | Blinking Slow     | Blinking Slow    |
+| 4     | Network Error           | ON               | Blinking Slow     | Blinking Fast    |
+| 5     | Sensor Read Error       | ON               | Blinking Slow     | ON               |
+| 6     | SD Card Write Error     | ON               | Blinking Slow     | Blinking Slow    |
+
+### Legend:
+- **ON**: LED is continuously on.
+- **OFF**: LED is off.
+- **Blinking Slow**: LED is blinking at a slow interval (1 sec).
+- **Blinking Fast**: LED is blinking at a fast interval (0.2 sec).
+
+### Explanation:
+1. **Power Error**: All LEDs are off, indicating a power error.
+2. **System Power On Period**: All LEDs are on, indicating the system is powering on.
+3. **SD Card Read Error**: All LEDs blink slowly, signifying an issue with reading the SD card.
+4. **Network Error**: The Red LED is on, the Green LED blinks slowly, and the Blue LED blinks fast, indicating a network error.
+5. **Sensor Read Error**: The Red and Blue LEDs are on, and the Green LED blinks slowly, indicating a sensor read error.
+6. **SD Card Write Error**: The Red LED is on, and both the Green and Blue LEDs blink slowly, indicating an issue with writing to the SD card.
 
 ## Additional Resources
 
@@ -326,15 +345,34 @@ SQ-SNC001支持2個3色LED指示系統信息。LED1是默認指示燈。LED2保�
 
 ### LED1
 
-支持3個獨立的紅色、藍色和綠色LED。
+支援 3 個獨立的 LED，分別為紅色、藍色和綠色。
 
-#### 指示含義
+#### 指示
 
-1. **系統電源正常:** 綠色常亮
-2. **系統錯誤:** 紅色閃爍
-   1. **網絡錯誤:** 藍色快速閃爍（0.2秒周期）
-   2. **SD卡錯誤:** 藍色慢速閃爍（1秒周期）
-   3. **傳感器數據錯誤:** 藍色常亮
+以下是根據您的規格更新的表格：
+
+| 指數 | 條件                   | 紅色 LED       | 綠色 LED          | 藍色 LED         |
+|------|------------------------|----------------|-------------------|------------------|
+| 1    | 電源錯誤               | 關閉           | 關閉              | 關閉             |
+| 2    | 系統啟動期間           | 常亮           | 常亮              | 常亮             |
+| 3    | SD 卡讀取錯誤          | 慢速閃爍       | 慢速閃爍          | 慢速閃爍         |
+| 4    | 網路錯誤               | 常亮           | 慢速閃爍          | 快速閃爍         |
+| 5    | 感測器讀取錯誤         | 常亮           | 慢速閃爍          | 常亮             |
+| 6    | SD 卡寫入錯誤          | 常亮           | 慢速閃爍          | 慢速閃爍         |
+
+### 備註：
+- **常亮**: LED 持續亮。
+- **關閉**: LED 關閉。
+- **慢速閃爍**: LED 以慢速間隔閃爍（1 秒）。
+- **快速閃爍**: LED 以快速間隔閃爍（0.2 秒）。
+
+### 說明：
+1. **電源錯誤**: 所有 LED 關閉，表示電源錯誤。
+2. **系統啟動期間**: 所有 LED 常亮，表示系統正在啟動。
+3. **SD 卡讀取錯誤**: 所有 LED 慢速閃爍，表示 SD 卡讀取問題。
+4. **網路錯誤**: 紅色 LED 常亮，綠色 LED 慢速閃爍，藍色 LED 快速閃爍，表示網路錯誤。
+5. **感測器讀取錯誤**: 紅色和藍色 LED 常亮，綠色 LED 慢速閃爍，表示感測器讀取錯誤。
+6. **SD 卡寫入錯誤**: 紅色 LED 常亮，綠色和藍色 LED 慢速閃爍，表示 SD 卡寫入問題。
 
 ## 附加資源
 
