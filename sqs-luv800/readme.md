@@ -32,13 +32,20 @@ The SQS-LUV800 is an 8-in-1 weather sensor that integrates multiple functions in
 
 ### Querying Sensor Data
 
-To query sensor data from the SQS-LUV800, send a request via RS485 using the Modbus protocol. The sensor will respond with a data packet containing the requested environmental data.
+To query sensor data from the SQS-LUV800, send a request via RS485 using the Modbus protocol. The sensor will respond with two parts of the data packet containing the requested environmental data and wind data. You should use different commands to fetch each type of data.
 
-## Modbus Data Example
+## Modbus Data
 
-### Environment Modbus Data Example V1
+### Environment Modbus Data
 
-Command: 10 20 02 00 00 4F C3
+We support two commands (function calls) to fetch the data. Here is the command list:
+
+- **Command_v1**: `10 20 02 00 00 4F C3` (old, not supported in the future)
+- **Command_v2**: `10 21 02 00 00 4E F3`
+
+### Environment Modbus Data Example
+
+Command_v1 : 10 20 02 00 00 4F C3
 
 Response: 0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x02, 0x61, 0xF5
 
@@ -432,28 +439,26 @@ By following these steps, you will ensure that the SQS-LUV800 sensor is properly
 
 (Include links or references to additional resources, manuals, or support documents.)
 
-
 # ===
-
-# SQS-LUV800: 8合1氣象傳感器
+# SQS-LUV800：8合1氣象傳感器
 
 ![SQS-LUV800](./SQS-LUV800.png?raw=true)
 
 ## 概述
 
-SQS-LUV800 是一款8合1氣象傳感器，集成了氣壓、溫度、二氧化碳、PM2.5、PM10、濕度、風向和風速等多種功能。它提供了一個緊湊的解決方案，用於綜合環境監測，並通過RS485輸出數據。
+SQS-LUV800是一款8合1氣象傳感器，集成了多種功能，包括氣壓、溫度、二氧化碳、PM2.5、PM10、濕度、風向和風速。它提供了一個緊湊的解決方案，用於全面的環境監測，通過RS485輸出數據。
 
 ## 主要特點
 
-- **多傳感器集成**：結合氣壓、溫度、二氧化碳、PM2.5、PM10、濕度、風向和風速傳感器。
-- **RS485輸出**：提供簡單的數據傳輸和與其他系統的集成。
+- **多傳感器集成**：結合了氣壓、溫度、二氧化碳、PM2.5、PM10、濕度、風向和風速傳感器。
+- **RS485輸出**：提供便捷的數據傳輸和與其他系統的集成。
 
 ## 應用場景
 
 - 氣象站
 - 農業
 - 建築環境監測
-- 通用環境監測
+- 一般環境監測
 
 ## 技術規格
 
@@ -461,7 +466,7 @@ SQS-LUV800 是一款8合1氣象傳感器，集成了氣壓、溫度、二氧化�
 - **風向**：±3°@60%RH,25°C
 - **溫度**：-40 至 85 °C±0.5°C
 - **濕度**：0 至 100%±2%
-- **二氧化碳**：400 至 3000 ppm±(50ppm+5%*讀值)
+- **二氧化碳**：400 至 3000 ppm±(50ppm+5%*結果)
 - **PM2.5**：0～500 μg/m³±(10μg/m3@0～100μg/m3,10%@100～500μg/m3)
 - **氣壓**：300 至 1200 hPa±0.002hPa
 
@@ -469,114 +474,173 @@ SQS-LUV800 是一款8合1氣象傳感器，集成了氣壓、溫度、二氧化�
 
 ### 查詢傳感器數據
 
-要查詢SQS-LUV800的傳感器數據，請通過RS485使用Modbus協議發送請求。傳感器將回應包含請求的環境數據的數據包。
+要從SQS-LUV800查詢傳感器數據，請通過RS485使用Modbus協議發送請求。傳感器將以兩部分數據包回應，分別包含所請求的環境數據和風速數據。需要使用不同的命令來獲取這些數據。
 
-## Modbus數據範例
+## Modbus數據
 
-### Modbus 數據範例 V1
+### 環境Modbus數據
 
-指令: 10 20 02 00 00 4F C3
+我們支持兩種命令（函數調用）來獲取數據。以下是命令列表：
 
-回應: 0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x02, 0x61, 0xF5
+- **Command_v1**：`10 20 02 00 00 4F C3`（舊版，未來不再支持）
+- **Command_v2**：`10 21 02 00 00 4E F3`
 
-| 字節索引 | 範例數據             | 範例值 (Hex)   | 描述                     | 數據類型 | 當前值     | 單位    | 高低字節說明                           |
-|----------|----------------------|----------------|--------------------------|----------|------------|---------|----------------------------------------|
-| 0        | 0x10                 | 0x10           | 設備地址                 |          |            |         | 無需字節反轉                           |
-| 1        | 0x20                 | 0x20           | 功能碼                   |          |            |         | 無需字節反轉                           |
-| 2        | 0x15                 | 0x15           | 數據長度                 | int8     |            |         | 無需字節反轉                           |
-| 3 - 6    | 0xFC, 0xF2, 0xFB, 0x41| 0x41FBF2FC    | 溫度 (DSP310)            | float    | 31.49      | °C      | 需要反轉字節順序以形成正確的浮點數     |
-| 7 - 10   | 0xBD, 0x6B, 0xC5, 0x47| 0x47C56BBD    | 氣壓                    | float    | 101079.48  | hPa     | 需要反轉字節順序以形成正確的浮點數     |
-| 11 - 12  | 0x88, 0x0B           | 0x0B88         | CO2 濃度                 | int16    | 2952       | ppm     | 高低字節反轉                           |
-| 13 - 14  | 0x02, 0x00           | 0x0002         | PM2.5 濃度               | int16    | 2          | µg/m³   | 高低字節反轉                           |
-| 15 - 16  | 0x0A, 0x00           | 0x000A         | PM10 濃度                | int16    | 10         | µg/m³   | 高低字節反轉                           |
-| 17 - 18  | 0xF9, 0x00           | 0x00F9         | 溫度 (HDC1080)           | int16    | 31.49      | 0.1 °C  | 高低字節反轉                           |
-| 19 - 20  | 0xD6, 0x02           | 0x02D6         | 濕度                    | int16    | 72.6       | 0.1 %   | 高低字節反轉                           |
-| 21 - 22  | 0x00, 0x00           | 0x0000         | 保留                    |          |            |         | 無需字節反轉                           |
-| 23       | 0x02                 | 0x02           | 版本                    | int8     | 2          |         | 無需字節反轉                           |
-| 24 - 25  | 0x61, 0xF5           | 0xF561         | CRC                     |          |            |         | 高低字節反轉                           |
+### 環境Modbus數據範例
 
-### Modbus 數據範例 V2
+**Command_v1**：`10 20 02 00 00 4F C3`
 
-指令: 10 21 02 00 00 4E F3
+回應：0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x02, 0x61, 0xF5
 
-回應: 0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47
+| 字節索引 | 範例數據             | 範例值 (Hex)  | 描述                     | 數據類型 | 當前值     | 單位    | 高低字節說明                           |
+|----------|----------------------|---------------|--------------------------|----------|------------|---------|----------------------------------------|
+| 0        | 0x10                 | 0x10          | 設備地址                 |          |            |         | 無需字節反轉                           |
+| 1        | 0x20                 | 0x20          | 功能碼                   |          |            |         | 無需字節反轉                           |
+| 2        | 0x15                 | 0x15          | 數據長度                 | int8     |            |         | 無需字節反轉                           |
+| 3 - 6    | 0xFC, 0xF2, 0xFB, 0x41 | 0x41FBF2FC   | 溫度 (DSP310)            | float    | 31.49      | °C      | 需要反轉字節順序以形成正確的浮點數     |
+| 7 - 10   | 0xBD, 0x6B, 0xC5, 0x47 | 0x47C56BBD   | 氣壓                    | float    | 101079.48  | hPa     | 需要反轉字節順序以形成正確的浮點數     |
+| 11 - 12  | 0x88, 0x0B           | 0x0B88        | CO2 濃度                 | int16    | 2952       | ppm     | 高低字節反轉                           |
+| 13 - 14  | 0x02, 0x00           | 0x0002        | PM2.5 濃度               | int16    | 2          | µg/m³   | 高低字節反轉                           |
+| 15 - 16  | 0x0A, 0x00           | 0x000A        | PM10 濃度                | int16    | 10         | µg/m³   | 高低字節反轉                           |
+| 17 - 18  | 0xF9, 0x00           | 0x00F9        | 溫度 (HDC1080)           | int16    | 31.49      | 0.1 °C  | 高低字節反轉                           |
+| 19 - 20  | 0xD6, 0x02           | 0x02D6        | 濕度                    | int16    | 72.6       | 0.1 %   | 高低字節反轉                           |
+| 21 - 22  | 0x00, 0x00           | 0x0000        | 保留                    |          |            |         | 無需字節反轉                           |
+| 23       | 0x02                 | 0x02          | 版本                    | int8     | 2          |         | 無需字節反轉                           |
+| 24 - 25  | 0x61, 0xF5           | 0xF561        | CRC                     |          |            |         | 高低字節反轉                           |
 
-根據提供的回應數據（0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47），表格更新如下：
+### 環境Modbus數據範例_V2
 
-| 字節索引 | 範例數據                | 範例值 (Hex)   | 描述                     | 數據類型 | 當前值     | 單位    | 高低字節說明                           |
-|----------|------------------------|----------------|--------------------------|----------|------------|---------|----------------------------------------|
-| 0        | 0x10                  | 0x10           | 設備地址                 |          |            |         | 無需字節反轉                           |
-| 1        | 0x21                  | 0x21           | 功能碼                   |          |            |         | 無需字節反轉                           |
-| 2        | 0x25                  | 0x25           | 數據長度                 | int8     |            |         | 無需字節反轉                           |
+命令：10 21 02 00 00 4E F3
+
+回應：0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47
+
+根據提供的回應數據（0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47），表格可以更新如下：
+
+| 字節索引 | 範例數據                | 範例值 (Hex)  | 描述                     | 數據類型 | 當前值     | 單位    | 高低字節說明                           |
+|----------|------------------------|---------------|--------------------------|----------|------------|---------|----------------------------------------|
+| 0        | 0x10                  | 0x10          | 設備地址                 |          |            |         | 無需字節反轉                           |
+| 1        | 0x21                  | 0x21          | 功能碼                   |          |            |         | 無需字節反轉                           |
+| 2        | 0x25                  | 0x25          | 數據長度                 | int8     |            |         | 無需字節反轉                           |
 | 3 - 8    | 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C| 0x50E3B66E9E9C | 設備 ID               |          |            |         | 無需字節反轉                           |
 | 9 - 18   | 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00| 0x00000000000000000000 | 保留    |          |            |         | 無需字節反轉                           |
-| 19 - 20  | 0x01, 0x00            | 0x0001         | PM2.5 濃度               | int16    | 1          | µg/m³   | 高低字節反轉                           |
-| 21 - 22  | 0x01, 0x00            | 0x0001         | PM10 濃度                | int16    | 1          | µg/m³   | 高低字節反轉                           |
-| 23 - 24  | 0xA1, 0x07            | 0x07A1         | CO2 濃度                 | int16    | 1953       | ppm     | 高低字節反轉                           |
-| 25 - 26  | 0x9B, 0x02            | 0x029B         | 濕度                    | int16    | 66.7       | %       | 高低字節反轉                           |
-| 27 - 30  | 0x1C, 0xC6, 0x90, 0x43| 0x4390C61C     |
+| 19 - 20  | 0x01, 0x00            | 0x0001        | PM2.5 濃度               | int16    | 1          | µg/m³   | 高低字節反轉                           |
+| 21 - 22  | 0x01, 0x00            | 0x0001        | PM10 濃度                | int16    | 1          | µg/m³   | 高低字節反轉                           |
+| 23 - 24  | 0xA1, 0x07            | 0x07A1        | CO2 濃度                 | int16    | 1953       | ppm     | 高低字節反轉                           |
+| 25 - 26  | 0x9B, 0x02            | 0x029B        | 濕度                    | int16    | 66.7       | %       | 高低字節反轉                           |
+| 27 - 30  | 0x1C, 0xC6, 0x90, 0x43| 0x4390C61C     | 溫度 (HDC1080)           | float    | 288.56     | °C      | 需要反轉字節順序以形成正確的浮點數     |
+| 31 - 34  | 0xB8, 0xD6, 0xEB, 0x41| 0x41EBD6B8    | 溫度 (DSP310)            | float    | 29.73      | °C      | 需要反轉字節順序以形成正確的浮點數     |
+| 35 - 38  | 0xBE, 0xDA, 0xC4, 0x47| 0x47C4DABE    | 氣壓                    | float    | 1007.89    | hPa     | 需要反轉字節順序以形成正確的浮點數     |
+| 39       | 0x02                  | 0x02          | 版本                    | int8     | 2          |         | 無需字節反轉                           |
+| 40 - 41  | 0xFF, 0x47            | 0x47FF        | CRC                     |          |            |         | 高低字節反轉                           |
 
-### C範例解析代碼：
+#### 備註：
+- **設備地址**：標識Modbus網絡上的設備。
+- **功能碼**：表示要執行的操作類型。
+- **數據長度**：指定數據字段的長度。
+- **保留**：保留未來使用的字節或填充字節。
+- **版本**：表示固件版本。
+- **CRC**：用於錯誤檢查。
+
+#### C語言範例解析代碼：
 
 ```c
-#include <stdint.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <string.h>
 
-// Define the wind data structure
-struct wind_data
+uint16_t modbusCRC(uint8_t *buffer, int len)
 {
-  uint16_t wind_direction;
-  uint16_t wind_speed;
-};
-
-// Define the Modbus response structure for wind data
-struct modbus_response_wind
-{
-  uint8_t modbus_id;
-  uint8_t function_code;
-  uint8_t byte_count;
-  uint8_t register_data[4]; // 4 bytes for wind direction and speed
-  uint16_t crc;
-};
-
-// Declare the global wind data result
-struct wind_data wind_result;
-
-// Function to parse the Modbus response buffer into the wind data structure
-void parse_wind_response(const struct modbus_response_wind *response)
-{
-  wind_result.wind_direction = (response->register_data[0] << 8) | response->register_data[1];
-  wind_result.wind_speed = (response->register_data[2] << 8) | response->register_data[3];
+  uint16_t crc = 0xFFFF;
+  for (int pos = 0; pos < len; pos++)
+  {
+    crc ^= (uint16_t)buffer[pos];
+    for (int i = 8; i > 0; i--)
+    { // 使用 > 保證循環次數明確
+      if ((crc & 0x0001) != 0)
+      {
+        crc >>= 1;
+        crc ^= 0xA001;
+      }
+      else
+      {
+        crc >>= 1;
+      }
+    }
+  }
+  return crc;
 }
+
+struct sensor_data
+{
+  float dsp310_temperature;
+  float pressure;
+  uint16_t co2;
+  uint16_t pm2p5;
+  uint16_t pm10;
+  int16_t temperature;
+  uint16_t humidity;
+};
+
+struct louver_data_struct_v2
+{
+  uint8_t deviceId[6];       // 6 bytes
+  uint8_t reserved[10];      // 10 bytes (corrected comment)
+  uint16_t pm2p5;            // 2 bytes
+  uint16_t pm10;             // 2 bytes
+  uint16_t co2;              // 2 bytes
+  uint16_t humidity;         // 2 bytes
+  float hdc1080_temperature; // 4 bytes
+  float dsp310_temperature;  // 4 bytes
+  float airPressure;         // 4 bytes
+};
+
+typedef struct sensor_data sensor_data_t;
+typedef struct louver_data_struct_v2 louver_data_struct_v2_t;
+
+sensor_data_t global_sensor_result;
+louver_data_struct_v2_t global_louver_result;
 
 int main()
 {
-  // Example response buffer for wind data (fill with your actual response data)
-  uint8_t response_data_wind[] = {0x01, 0x03, 0x04, 0x00, 0xD3, 0x01, 0x1F, 0x4B, 0x92};
+  // 回應緩衝區（用你的實際回應數據填充）
+  uint8_t response[] = {0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x01, 0x61, 0xF5};
+  uint8_t response_v2[] = {0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47}; // 解釋回應
 
-  // Map the response data to the Modbus response structure for wind data
-  struct modbus_response_wind response_wind;
-  memcpy(&response_wind, response_data_wind, sizeof(response_wind));
+  if (modbusCRC(response, sizeof(response)) == 0)
+  {
+    memcpy(&global_sensor_result, &response[3], sizeof(global_sensor_result));
+    printf("PM2.5=%d ug/m3\n", global_sensor_result.pm2p5);
+    printf("PM10=%d ug/m3\n", global_sensor_result.pm10);
+    printf("CO2=%d ppm\n", global_sensor_result.co2);
+    printf("Humidity=%d %%\n", global_sensor_result.humidity);
+    printf("Temperature=%.2f C\n", global_sensor_result.temperature);
+    printf("Air Pressure=%.2f hPa\n", global_sensor_result.pressure);
+  }
+  else
+  {
+    printf("CRC error\n");
+  }
 
-  // Print the Modbus response data for wind
-  printf("Modbus ID: %u\n", response_wind.modbus_id);
-  printf("Function code: %u\n", response_wind.function_code);
-  printf("Byte count: %u\n", response_wind.byte_count);
-  printf("CRC: %u\n", response_wind.crc);
-
-  // Parse the wind sensor data
-  parse_wind_response(&response_wind);
-
-  // Print the parsed wind data
-  printf("Wind Direction: %u deg\n", wind_result.wind_direction);
-  printf("Wind Speed: %.2f m/s\n", wind_result.wind_speed / 100.0);
+  if (modbusCRC(response_v2, sizeof(response_v2)) == 0)
+  {
+    memcpy(&global_louver_result, &response_v2[3], sizeof(global_louver_result));
+    printf("PM2.5=%d ug/m3\n", global_louver_result.pm2p5);
+    printf("PM10=%d ug/m3\n", global_louver_result.pm10);
+    printf("CO2=%d ppm\n", global_louver_result.co2);
+    printf("Humidity=%d %%\n", global_louver_result.humidity);
+    printf("HDC1080 Temperature=%.2f C\n", global_louver_result.hdc1080_temperature);
+    printf("DSP310 Temperature=%.2f C\n", global_louver_result.dsp310_temperature);
+    printf("Air Pressure=%.2f hPa\n", global_louver_result.airPressure);
+  }
+  else
+  {
+    printf("CRC error\n");
+  }
 
   return 0;
 }
 ```
 
-### Python範例解析代碼：
+#### Python語言範例解析代碼：
 
 ```python
 import struct
@@ -649,51 +713,51 @@ if __name__ == "__main__":
     main()
 ```
 
-### 風速數據的 Modbus 資料範例
+### 風速數據Modbus範例
 
-**指令:** `01 03 00 00 00 02 C4 0B`
+**命令**：`01 03 00 00 00 02 C4 0B`
 
-**回應:** `01 03 04 00 d3 01 1f 4b 92`
+**回應**：`01 03 04 00 d3 01 1f 4b 92`
 
-給定的數據 `0x01, 0x03, 0x04, 0x00, 0xD3, 0x01, 0x1F, 0x4B, 0x92` 可以解釋如下：
+給定數據`0x01, 0x03, 0x04, 0x00, 0xD3, 0x01, 0x1F, 0x4B, 0x92`可以解釋如下：
 
-| 字節索引   | 範例數據                | 值範例（十六進制）  | 說明                                  | 數據類型  | 當前值       | 單位        | 高低位字節解釋                                 |
-|------------|-----------------------|---------------------|--------------------------------------|-----------|---------------|-------------|---------------------------------------------|
-| 0          | 0x01                  | 0x01                | 設備地址                             |           |               |             |                                             |
-| 1          | 0x03                  | 0x03                | 功能碼                               |           |               |             |                                             |
-| 2          | 0x04                  | 0x04                | 字節數                               | int8      |               |             |                                             |
-| 3 - 4      | 0x00, 0xD3            | 0x00D3              | 風向                                 | int16     | 211           | 度          | 高位字節在前，低位字節在後                   |
-| 5 - 6      | 0x01, 0x1F            | 0x011F              | 風速                                 | int16     | 287           | 0.01 m/s    | 高位字節在前，低位字節在後                   |
-| 7 - 8      | 0x4B, 0x92            | 0x4B92              | CRC                                  |           |               |             | 高位字節在前，低位字節在後                   |
+| 字節索引   | 範例數據          | 範例值 (Hex) | 描述                          | 數據類型 | 當前值     | 單位      | 高低字節說明                      |
+|------------|-------------------|--------------|-------------------------------|----------|------------|-----------|----------------------------------|
+| 0          | 0x01              | 0x01         | 設備地址                      |          |            |           |                                  |
+| 1          | 0x03              | 0x03         | 功能碼                        |          |            |           |                                  |
+| 2          | 0x04              | 0x04         | 字節數                        | int8     |            |           |                                  |
+| 3 - 4      | 0x00, 0xD3        | 0x00D3       | 風向                          | int16    | 211        | 度        | 高低字節反轉                     |
+| 5 - 6      | 0x01, 0x1F        | 0x011F       | 風速                          | int16    | 287        | 0.01m/s   | 高低字節反轉                     |
+| 7 - 8      | 0x4B, 0x92        | 0x4B92       | CRC                           |          |            |           | 高低字節反轉                     |
 
-#### C 語言解析範例代碼：
+#### C語言範例解析代碼：
 
 ```c
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 
-// Define the wind data structure
+// 定義風速數據結構
 struct wind_data
 {
   uint16_t wind_direction;
   uint16_t wind_speed;
 };
 
-// Define the Modbus response structure for wind data
+// 定義風速數據的Modbus回應結構
 struct modbus_response_wind
 {
   uint8_t modbus_id;
   uint8_t function_code;
   uint8_t byte_count;
-  uint8_t register_data[4]; // 4 bytes for wind direction and speed
+  uint8_t register_data[4]; // 4個字節，表示風向和風速
   uint16_t crc;
 };
 
-// Declare the global wind data result
+// 聲明全局風速數據結果
 struct wind_data wind_result;
 
-// Function to parse the Modbus response buffer into the wind data structure
+// 解析Modbus回應緩衝區到風速數據結構的函數
 void parse_wind_response(const struct modbus_response_wind *response)
 {
   wind_result.wind_direction = (response->register_data[0] << 8) | response->register_data[1];
@@ -702,23 +766,23 @@ void parse_wind_response(const struct modbus_response_wind *response)
 
 int main()
 {
-  // Example response buffer for wind data (fill with your actual response data)
+  // 風速數據的回應緩衝區（用你的實際回應數據填充）
   uint8_t response_data_wind[] = {0x01, 0x03, 0x04, 0x00, 0xD3, 0x01, 0x1F, 0x4B, 0x92};
 
-  // Map the response data to the Modbus response structure for wind data
+  // 將回應數據映射到風速數據的Modbus回應結構
   struct modbus_response_wind response_wind;
   memcpy(&response_wind, response_data_wind, sizeof(response_wind));
 
-  // Print the Modbus response data for wind
+  // 打印風速數據的Modbus回應
   printf("Modbus ID: %u\n", response_wind.modbus_id);
   printf("Function code: %u\n", response_wind.function_code);
   printf("Byte count: %u\n", response_wind.byte_count);
   printf("CRC: %u\n", response_wind.crc);
 
-  // Parse the wind sensor data
+  // 解析風速傳感器數據
   parse_wind_response(&response_wind);
 
-  // Print the parsed wind data
+  // 打印解析出的風速數據
   printf("Wind Direction: %u deg\n", wind_result.wind_direction);
   printf("Wind Speed: %.2f m/s\n", wind_result.wind_speed / 100.0);
 
@@ -726,29 +790,29 @@ int main()
 }
 ```
 
-#### Python 語言解析範例代碼：
+#### Python語言範例解析代碼：
 
 ```python
 import struct
 
-# Define the wind data structure
+# 定義風速數據結構
 class WindData:
     def __init__(self):
         self.wind_direction = 0
         self.wind_speed = 0
 
-# Define the Modbus response structure for wind data
+# 定義風速數據的Modbus回應結構
 class ModbusResponseWind:
     def __init__(self, data):
         if len(data) < 9:
-            raise ValueError("Data length is too short")
+            raise ValueError("數據長度過短")
         self.modbus_id = data[0]
         self.function_code = data[1]
         self.byte_count = data[2]
         self.register_data = data[3:7]
         self.crc = struct.unpack('>H', data[7:9])[0]
 
-# Function to parse the Modbus response buffer into the wind data structure
+# 解析Modbus回應緩衝區到風速數據結構的函數
 def parse_wind_response(response):
     wind_result = WindData()
     wind_result.wind_direction = struct.unpack('>H', response.register_data[0:2])[0]
@@ -756,22 +820,22 @@ def parse_wind_response(response):
     return wind_result
 
 def main():
-    # Example response buffer for wind data (fill with your actual response data)
+    # 風速數據的回應緩衝區（用你的實際回應數據填充）
     response_data_wind = bytes([0x01, 0x03, 0x04, 0x00, 0xD3, 0x01, 0x1F, 0x4B, 0x92])
 
-    # Create a ModbusResponseWind object for wind data
+    # 創建風速數據的Modbus回應對象
     response_wind = ModbusResponseWind(response_data_wind)
 
-    # Print the Modbus response data for wind
+    # 打印風速數據的Modbus回應
     print(f"Modbus ID: {response_wind.modbus_id}")
     print(f"Function code: {response_wind.function_code}")
     print(f"Byte count: {response_wind.byte_count}")
     print(f"CRC: {response_wind.crc}")
 
-    # Parse the wind sensor data
+    # 解析風速傳感器數據
     wind_result = parse_wind_response(response_wind)
 
-    # Print the parsed wind data
+    # 打印解析出的風速數據
     print(f"Wind Direction: {wind_result.wind_direction} deg")
     print(f"Wind Speed: {wind_result.wind_speed/100} m/s")
 
@@ -779,40 +843,40 @@ if __name__ == "__main__":
     main()
 ```
 
-#### 說明:
-1. **Modbus 表格**: 提供了風速數據的 Modbus 回應中每個字節的詳細解釋。
-2. **結構體定義**: C 語言中的 `wind_data` 結構和 Python 中的 `WindData` 類保存了解析後的風速值。
-3. **Modbus 回應結構**: C 語言中的 `modbus_response_wind` 結構和 Python 中的 `ModbusResponseWind` 類處理特定於風速數據的 Modbus 回應。
-4. **解析函數**: `parse_wind_response` 從 Modbus 回應中提取風向和風速。
-5. **主函數**: 將示例回應緩衝區映射到 `modbus_response_wind` 結構，進行解析並打印風速值。
+#### 說明：
+1. **Modbus表**：提供Modbus回應中每個字節的詳細說明，適用於風速數據。
+2. **結構定義**：C語言中的`wind_data`結構和Python中的`WindData`類保存解析的風速值。
+3. **Modbus回應結構**：C語言中的`modbus_response_wind`結構和Python中的`ModbusResponseWind`類處理特定於風速數據的Modbus回應。
+4. **解析函數**：`parse_wind_response`從Modbus回應中提取風向和風速。
+5. **主函數**：範例回應緩衝區映射到`modbus_response_wind`結構，進行解析並打印風速值。
 
-### 摘要
+### 總結
 
-SQS-LUV800 感測器的響應緩衝區包含了以特定格式編碼的環境數據。提供的 C 和 Python 代碼片段展示了如何解讀這些數據以提取有用的信息，如溫度、壓力、CO2 濃度、PM2.5 和 PM10 濃度，以及濕度。通過正確解析這些數值，用戶可以整合並使用這些數據來進行各種環境監測應用。
+SQS-LUV800傳感器的回應緩衝區包含以特定格式編碼的環境數據。提供的C語言和Python代碼片段展示了如何解析這些數據，從而提取有用的信息，如溫度、氣壓、二氧化碳濃度、PM2.5和PM10濃度以及濕度。通過正確解析這些值，用戶可以將數據整合並用於各種環境監測應用。
 
 ### 設置
 
-#### 連接線說明
+#### 線路連接
 
-將 SQS-LUV800 感測器連接到您的主系統，請按照以下連接說明：
+要將SQS-LUV800傳感器連接到您的主系統，請按照以下接線說明進行：
 
-- **紅線**: 電源輸入 (+10~24V)
-- **藍線**: 地 (GND)
-- **黃線**: RS485 A
-- **綠線**: RS485 B
+- **紅線**：電源輸入 (+10~24V)
+- **藍線**：GND
+- **黃線**：RS485 A
+- **綠線**：RS485 B
 
-請參考下方的連接圖以確保正確連接：
+請參考以下接線圖，以確保正確連接：
 
-![連接圖](./wires.png?raw=true)
+![接線圖](./wires.png?raw=true)
 
 #### 實施
 
-為了準確設置，請確保感測器正確對準，指定的點需面向北方。請參考下圖以獲得正確定位的指導：
+為確保準確設置，請確保傳感器正確定位，指定的點朝北。請參考下圖以獲取正確定位的指導：
 
-![北向設置圖](./point_to_north.png?raw=true)
+![北點設置](./point_to_north.png?raw=true)
 
-按照這些步驟操作，您將確保 SQS-LUV800 感測器正確連接和定位，以達到最佳性能。
+按照這些步驟操作，確保SQS-LUV800傳感器正確連接和定位，以達到最佳性能。
 
-## 其他資源
+## 附加資源
 
-（包括鏈接或參考其他資源、手冊或支援文件。）
+（包括鏈接或參考附加資源、手冊或支持文件。）
