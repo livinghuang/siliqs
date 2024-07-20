@@ -27,7 +27,7 @@ void setup()
   deepsleepflag = false;
 
   get_chip_id();
-  test_status = LORA_INTVAL_SEND_TEST;
+  test_status = SENSOR_TEST;
 }
 bool lora_receive_test_init = true;
 bool lora_to_lorawan_repeater_first_init = true;
@@ -89,10 +89,10 @@ void loop()
   }
   case LORA_COMMUNICATION_TEST:
   {
-    Serial.println("LORA_COMMUNICATION_TEST");
+    // Serial.println("LORA_COMMUNICATION_TEST");
     Serial.flush();
     lora_status_handle();
-    delay(1000);
+    // delay(1000);
     break;
   }
   case LORA_INTVAL_SEND_TEST:

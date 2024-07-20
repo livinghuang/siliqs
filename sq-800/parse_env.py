@@ -1,74 +1,68 @@
 import struct
+louver_format = '<2f3HhH'
+louver_format_v2 = '<6s10s4H3f'
 
-# Define the sensor data structure
+def modbus_crc(buffer):
+    crc = 0xFFFF
+    for pos in buffer:
+        crc ^= pos
+        for _ in range(8):
+            if crc & 0x0001:
+                crc >>= 1
+                crc ^= 0xA001
+            else:
+                crc >>= 1
+    return crc
+
 class SensorData:
-    def __init__(self):
-        self.dsp310_temperature = 0.0
-        self.pressure = 0.0
-        self.co2 = 0
-        self.pm2p5 = 0
-        self.pm10 = 0
-        self.temperature = 0
-        self.humidity = 0
-
-# Define the Modbus response structure
-class ModbusResponse:
     def __init__(self, data):
-        if len(data) < 34:
-            raise ValueError("Data length is too short")
-        
-        self.modbus_id = data[0]
-        self.function_code = data[1]
-        self.byte_count = data[2]
-        self.register_data = data[3:3+28]
-        self.version = data[31]
-        self.crc = struct.unpack('<H', data[32:34])[0]
+        self.temperature, self.pressure, self.co2, self.pm2p5, self.pm10, self.temperature_adc, self.humidity = struct.unpack(louver_format, data)
 
-# Function to parse the Modbus response buffer into the sensor data structure
-def parse_modbus_response(response):
-    sensor_result = SensorData()
-    sensor_result.dsp310_temperature = struct.unpack('<f', response.register_data[0:4])[0]
-    sensor_result.pressure = struct.unpack('<f', response.register_data[4:8])[0]
-    sensor_result.co2 = struct.unpack('<H', response.register_data[8:10])[0]
-    sensor_result.pm2p5 = struct.unpack('<H', response.register_data[10:12])[0]
-    sensor_result.pm10 = struct.unpack('<H', response.register_data[12:14])[0]
-    sensor_result.temperature = struct.unpack('<h', response.register_data[14:16])[0]
-    sensor_result.humidity = struct.unpack('<H', response.register_data[16:18])[0]
-    
-    return sensor_result
-
+class LouverDataStructV2:
+    def __init__(self, data):
+        self.deviceId, self.reserved, self.pm2p5, self.pm10, self.co2, self.humidity, self.hdc1080_temperature, self.dsp310_temperature, self.airPressure = struct.unpack(louver_format_v2, data)
 def main():
-    # Example response buffer (fill with your actual response data)
-    response_data = bytes([0x10, 0x20, 0x15, 0xCC, 0x5B, 0xE6, 0x41, 0x41, 0x02, 0xC6, 0x47,
-                           0x90, 0x08, 0x02, 0x00, 0x02, 0x00, 0x19, 0x01, 0xCC, 0x02,
-                           0x00, 0x00, 0x01, 0x2D, 0xC7, 0x00, 0x00, 0x00, 0x00, 0x00,
-                           0x01, 0x2C, 0xC7])
+    response = bytearray([0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x01, 0x61, 0xF5])
+    response_v2 = bytearray([0x01, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47])
 
-    # Ensure the response_data length is at least 34 bytes
-    if len(response_data) < 34:
-        response_data += bytes(34 - len(response_data))
+    if modbus_crc(response) == 0:
+        data=response[3:(len(response)-5)]
+        print(data)
+        print(len(data))
+        if len(data) == struct.calcsize(louver_format):
+            global_sensor_result = SensorData(data)
+            print(f"PM2.5={global_sensor_result.pm2p5} ug/m3")
+            print(f"PM10={global_sensor_result.pm10} ug/m3")
+            print(f"CO2={global_sensor_result.co2} ppm")
+            print(f"Humidity={global_sensor_result.humidity} %")
+            print(f"Temperature={global_sensor_result.temperature:.2f} C")
+            print(f"Air Pressure={global_sensor_result.pressure:.2f} hPa")
+        else:
+            print("len error")
+            print(len(data))
+            print(struct.calcsize(louver_format))
+    else:
+        print("CRC error")
 
-    # Create a ModbusResponse object
-    response = ModbusResponse(response_data)
+    if modbus_crc(response_v2) == 0:
+        data=response_v2[3:(len(response_v2)-3)]
+        print(data)
+        if len(data) == struct.calcsize(louver_format_v2):
+            global_louver_result = LouverDataStructV2(data)
+            print(f"PM2.5={global_louver_result.pm2p5} ug/m3")
+            print(f"PM10={global_louver_result.pm10} ug/m3")
+            print(f"CO2={global_louver_result.co2} ppm")
+            print(f"Humidity={global_louver_result.humidity} %")
+            print(f"HDC1080 Temperature={global_louver_result.hdc1080_temperature:.2f} C")
+            print(f"DSP310 Temperature={global_louver_result.dsp310_temperature:.2f} C")
+            print(f"Air Pressure={global_louver_result.airPressure:.2f} hPa")
+        else:
+            print("len error")
+            print(len(data))
+            print(struct.calcsize(louver_format_v2))
 
-    # Print the Modbus response data
-    print(f"Modbus ID: {response.modbus_id}")
-    print(f"Function code: {response.function_code}")
-    print(f"Byte count: {response.byte_count}")
-    print(f"Version: {response.version}")
-    print(f"CRC: {response.crc}")
-
-    # Parse the sensor data
-    sensor_result = parse_modbus_response(response)
-
-    # Print the parsed sensor data
-    print(f"Temperature (DSP310): {sensor_result.dsp310_temperature:.2f} °C")
-    print(f"Air Pressure: {sensor_result.pressure:.2f} hPa")
-    print(f"CO2 Concentration: {sensor_result.co2} ppm")
-    print(f"PM2.5 Concentration: {sensor_result.pm2p5} µg/m³")
-    print(f"PM10 Concentration: {sensor_result.pm10} µg/m³")
-    print(f"Temperature (HDC1080): {sensor_result.temperature / 10.0:.1f} °C")
-    print(f"Humidity: {sensor_result.humidity / 10.0:.1f} %")
+    else:
+        print("CRC error")
 
 if __name__ == "__main__":
     main()

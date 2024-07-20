@@ -36,49 +36,90 @@ To query sensor data from the SQS-LUV800, send a request via RS485 using the Mod
 
 ## Modbus Data Example
 
-### Environment Modbus Data Example
+### Environment Modbus Data Example V1
 
-The given data `0x10, 0x20, 0x15, 0xCC, 0x5B, 0xE6, 0x41, 0x41, 0x02, 0xC6, 0x47, 0x90, 0x08, 0x02, 0x00, 0x02, 0x00, 0x19, 0x01, 0xCC, 0x02, 0x00, 0x00, 0x01, 0x2D, 0xC7` can be interpreted as follows:
+Command: 10 20 02 00 00 4F C3
 
-| Byte Index   | Example Data          | Value Example (Hex) | Description                          | Data Type | Present Value | Unit      | High-Low Byte Explanation                  |
-|--------------|-----------------------|---------------------|--------------------------------------|-----------|---------------|-----------|-------------------------------------------|
-| 0            | 0x10                  | 0x10                | Device Address                       |           |               |           |                                           |
-| 1            | 0x20                  | 0x20                | Function Code                        |           |               |           |                                           |
-| 2            | 0x15                  | 0x15                | Length                               | int8      |               |           |                                           |
-| 3 - 6        | 0xCC, 0x5B, 0xE6, 0x41| 0x41E65BCC          | Temperature (DSP310)                 | float     | 28.72         | °C        | Bytes reversed for correct float value     |
-| 7 - 10       | 0x41, 0x02, 0xC6, 0x47| 0x47C60241          | Air Pressure                         | float     | 994.25        | hPa       | Bytes reversed for correct float value     |
-| 11 - 12      | 0x90, 0x08            | 0x0890              | CO2 Concentration                    | int16     | 2192          | ppm       | High and low bytes reversed                |
-| 13 - 14      | 0x02, 0x00            | 0x0002              | PM2.5 Concentration                  | int16     | 2             | µg/m³     | High and low bytes reversed                |
-| 15 - 16      | 0x02, 0x00            | 0x0002              | PM10 Concentration                   | int16     | 2             | µg/m³     | High and low bytes reversed                |
-| 17 - 18      | 0x19, 0x01            | 0x0119              | Temperature (HDC1080)                | int16     | 28.1          | 0.1 °C    | High and low bytes reversed                |
-| 19 - 20      | 0xCC, 0x02            | 0x02CC              | Humidity                             | int16     | 71.6          | 0.1 %     | High and low bytes reversed                |
-| 21 - 22      | 0x00, 0x00            | 0x0000              | Reserved                             |           |               |           |                                           |
-| 23           | 0x01                  | 0x01                | Version                              | int8      | 1             |           |                                           |
-| 24 - 25      | 0x2D, 0xC7            | 0xC72D              | CRC                                  |           |               |           | High and low bytes reversed                |
+Response: 0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x02, 0x61, 0xF5
+
+| Byte Index | Example Data          | Value Example (Hex) | Description              | Data Type | Present Value | Unit  | High-Low Byte Explanation                      |
+|------------|-----------------------|---------------------|--------------------------|-----------|---------------|-------|------------------------------------------------|
+| 0          | 0x10                  | 0x10                | Device Address           |           |               |       | No byte reversal needed                        |
+| 1          | 0x20                  | 0x20                | Function Code            |           |               |       | No byte reversal needed                        |
+| 2          | 0x15                  | 0x15                | Length                   | int8      |               |       | No byte reversal needed                        |
+| 3 - 6      | 0xFC, 0xF2, 0xFB, 0x41| 0x41FBF2FC          | Temperature (DSP310)     | float     | 31.49         | °C    | Bytes need to be reversed to form correct float|
+| 7 - 10     | 0xBD, 0x6B, 0xC5, 0x47| 0x47C56BBD          | Air Pressure             | float     | 101079.48        | hPa   | Bytes need to be reversed to form correct float|
+| 11 - 12    | 0x88, 0x0B            | 0x0B88              | CO2 Concentration        | int16     | 2952          | ppm   | High and low bytes reversed                    |
+| 13 - 14    | 0x02, 0x00            | 0x0002              | PM2.5 Concentration      | int16     | 2             | µg/m³ | High and low bytes reversed                    |
+| 15 - 16    | 0x0A, 0x00            | 0x000A              | PM10 Concentration       | int16     | 10            | µg/m³ | High and low bytes reversed                    |
+| 17 - 18    | 0xF9, 0x00            | 0x00F9              | Temperature (HDC1080)    | int16     | 31.49          | 0.1 °C| High and low bytes reversed                    |
+| 19 - 20    | 0xD6, 0x02            | 0x02D6              | Humidity                 | int16     | 72.6          | 0.1 % | High and low bytes reversed                    |
+| 21 - 22    | 0x00, 0x00            | 0x0000              | Reserved                 |           |               |       | No byte reversal needed                        |
+| 23         | 0x02                  | 0x02                | Version                  | int8      | 2             |       | No byte reversal needed                        |
+| 24 - 25    | 0x61, 0xF5            | 0xF561              | CRC                      |           |               |       | High and low bytes reversed                    |
+
+### Environment Modbus Data Example_V2
+
+Command: 10 21 02 00 00 4E F3
+
+Response: 0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47
+
+Based on the response data provided (0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47), the table can be updated as follows:
+
+| Byte Index | Example Data                | Value Example (Hex) | Description              | Data Type | Present Value | Unit  | High-Low Byte Explanation                      |
+|------------|-----------------------------|---------------------|--------------------------|-----------|---------------|-------|------------------------------------------------|
+| 0          | 0x10                        | 0x10                | Device Address           |           |               |       | No byte reversal needed                        |
+| 1          | 0x21                        | 0x21                | Function Code            |           |               |       | No byte reversal needed                        |
+| 2          | 0x25                        | 0x25                | Length                   | int8      |               |       | No byte reversal needed                        |
+| 3 - 8      | 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C| 0x50E3B66E9E9C | Device ID               |           |               |       | No byte reversal needed                        |
+| 9 - 18     | 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00| 0x00000000000000000000 | Reserved   |           |               |       | No byte reversal needed                        |
+| 19 - 20    | 0x01, 0x00                  | 0x0001              | PM2.5 Concentration      | int16     | 1             | µg/m³ | High and low bytes reversed                    |
+| 21 - 22    | 0x01, 0x00                  | 0x0001              | PM10 Concentration       | int16     | 1             | µg/m³ | High and low bytes reversed                    |
+| 23 - 24    | 0xA1, 0x07                  | 0x07A1              | CO2 Concentration        | int16     | 1953          | ppm   | High and low bytes reversed                    |
+| 25 - 26    | 0x9B, 0x02                  | 0x029B              | Humidity                 | int16     | 66.7          | %     | High and low bytes reversed                    |
+| 27 - 30    | 0x1C, 0xC6, 0x90, 0x43      | 0x4390C61C          | Temperature (HDC1080)    | float     | 288.56        | °C    | Bytes need to be reversed to form correct float|
+| 31 - 34    | 0xB8, 0xD6, 0xEB, 0x41      | 0x41EBD6B8          | Temperature (DSP310)     | float     | 29.73         | °C    | Bytes need to be reversed to form correct float|
+| 35 - 38    | 0xBE, 0xDA, 0xC4, 0x47      | 0x47C4DABE          | Air Pressure             | float     | 1007.89       | hPa   | Bytes need to be reversed to form correct float|
+| 39         | 0x02                        | 0x02                | Version                  | int8      | 2             |       | No byte reversal needed                        |
+| 40 - 41    | 0xFF, 0x47                  | 0x47FF              | CRC                      |           |               |       | High and low bytes reversed                    |
 
 #### Notes:
 - **Device Address**: Identifies the device on the Modbus network.
 - **Function Code**: Indicates the type of operation to be performed.
 - **Length**: Specifies the length of the data field.
-- **Temperature (DSP310)**: Measured in degrees Celsius, represented as a float.
-- **Air Pressure**: Measured in hPa, represented as a float.
-- **CO2 Concentration**: Measured in ppm, represented as an int16.
-- **PM2.5 Concentration**: Measured in µg/m³, represented as an int16.
-- **PM10 Concentration**: Measured in µg/m³, represented as an int16.
-- **Temperature (HDC1080)**: Measured in degrees Celsius, represented as an int16.
-- **Humidity**: Measured in percentage, represented as an int16.
 - **Reserved**: Bytes reserved for future use or padding.
-- **Version**: Indicates the version of the data format.
+- **Version**: Indicates the version of the firmware version.
 - **CRC**: Used for error checking.
 
 #### Example Parse Code in C:
 
 ```c
-#include <stdint.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <string.h>
 
-// Define the sensor data structure
+uint16_t modbusCRC(uint8_t *buffer, int len)
+{
+  uint16_t crc = 0xFFFF;
+  for (int pos = 0; pos < len; pos++)
+  {
+    crc ^= (uint16_t)buffer[pos];
+    for (int i = 8; i > 0; i--)
+    { // 使用 > 保证循环次数明确
+      if ((crc & 0x0001) != 0)
+      {
+        crc >>= 1;
+        crc ^= 0xA001;
+      }
+      else
+      {
+        crc >>= 1;
+      }
+    }
+  }
+  return crc;
+}
+
 struct sensor_data
 {
   float dsp310_temperature;
@@ -90,55 +131,61 @@ struct sensor_data
   uint16_t humidity;
 };
 
-// Define the Modbus response structure
-struct modbus_response
+struct louver_data_struct_v2
 {
-  uint8_t modbus_id;
-  uint8_t function_code;
-  uint8_t byte_count;
-  uint8_t register_data[sizeof(struct sensor_data)]; // Big-endian data
-  uint8_t version;
-  uint16_t crc; // This will be manually attached, not part of the initial structure
+  uint8_t deviceId[6];       // 6 bytes
+  uint8_t reserved[10];      // 10 bytes (corrected comment)
+  uint16_t pm2p5;            // 2 bytes
+  uint16_t pm10;             // 2 bytes
+  uint16_t co2;              // 2 bytes
+  uint16_t humidity;         // 2 bytes
+  float hdc1080_temperature; // 4 bytes
+  float dsp310_temperature;  // 4 bytes
+  float airPressure;         // 4 bytes
 };
 
-// Declare the global sensor data result
-struct sensor_data sensor_result;
+typedef struct sensor_data sensor_data_t;
+typedef struct louver_data_struct_v2 louver_data_struct_v2_t;
 
-// Function to parse the Modbus response buffer into the sensor data structure
-void parse_modbus_response(const struct modbus_response *response)
-{
-  memcpy(&sensor_result, response->register_data, sizeof(sensor_result));
-}
+sensor_data_t global_sensor_result;
+louver_data_struct_v2_t global_louver_result;
 
 int main()
 {
-  // Example response buffer (fill with your actual response data)
-  uint8_t response_data[] = {0x10, 0x20, 0x15, 0xCC, 0x5B, 0xE6, 0x41, 0x41, 0x02, 0xC6, 0x47,
-                             0x90, 0x08, 0x02, 0x00, 0x02, 0x00, 0x19, 0x01, 0xCC, 0x02,
-                             0x00, 0x00, 0x01, 0x2D, 0xC7};
+  // Response buffer (fill with your actual response data)
+  uint8_t response[] = {0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x01, 0x61, 0xF5};
+  uint8_t response_v2[] = {0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47}; // Interpret the response
 
-  // Map the response data to the Modbus response structure
-  struct modbus_response response;
-  memcpy(&response, response_data, sizeof(response));
+  if (modbusCRC(response, sizeof(response)) == 0)
+  {
+    memcpy(&global_sensor_result, &response[3], sizeof(global_sensor_result));
+    printf("PM2.5=%d ug/m3\n", global_sensor_result.pm2p5);
+    printf("PM10=%d ug/m3\n", global_sensor_result.pm10);
+    printf("CO2=%d ppm\n", global_sensor_result.co2);
+    printf("Humidity=%d %%\n", global_sensor_result.humidity);
+    printf("Temperature=%.2f C\n", global_sensor_result.temperature);
+    printf("Air Pressure=%.2f hPa\n", global_sensor_result.pressure);
+  }
+  else
+  {
+    printf("CRC error\n");
+  }
 
-  // Print the Modbus response data
-  printf("Modbus ID: %u\n", response.modbus_id);
-  printf("Function code: %u\n", response.function_code);
-  printf("Byte count: %u\n", response.byte_count);
-  printf("Version: %u\n", response.version);
-  printf("CRC: %u\n", response.crc);
-
-  // Parse the sensor data
-  parse_modbus_response(&response);
-
-  // Print the parsed sensor data
-  printf("Temperature (DSP310): %.2f °C\n", sensor_result.dsp310_temperature);
-  printf("Air Pressure: %.2f hPa\n", sensor_result.pressure);
-  printf("CO2 Concentration: %u ppm\n", sensor_result.co2);
-  printf("PM2.5 Concentration: %u µg/m³\n", sensor_result.pm2p5);
-  printf("PM10 Concentration: %u µg/m³\n", sensor_result.pm10);
-  printf("Temperature (HDC1080): %.1f °C\n", sensor_result.temperature / 10.0);
-  printf("Humidity: %.1f %%\n", sensor_result.humidity / 10.0);
+  if (modbusCRC(response_v2, sizeof(response_v2)) == 0)
+  {
+    memcpy(&global_louver_result, &response_v2[3], sizeof(global_louver_result));
+    printf("PM2.5=%d ug/m3\n", global_louver_result.pm2p5);
+    printf("PM10=%d ug/m3\n", global_louver_result.pm10);
+    printf("CO2=%d ppm\n", global_louver_result.co2);
+    printf("Humidity=%d %%\n", global_louver_result.humidity);
+    printf("HDC1080 Temperature=%.2f C\n", global_louver_result.hdc1080_temperature);
+    printf("DSP310 Temperature=%.2f C\n", global_louver_result.dsp310_temperature);
+    printf("Air Pressure=%.2f hPa\n", global_louver_result.airPressure);
+  }
+  else
+  {
+    printf("CRC error\n");
+  }
 
   return 0;
 }
@@ -148,87 +195,74 @@ int main()
 
 ```python
 import struct
+louver_format = '<2f3HhH'
+louver_format_v2 = '<6s10s4H3f'
 
-# Define the sensor data structure
+def modbus_crc(buffer):
+    crc = 0xFFFF
+    for pos in buffer:
+        crc ^= pos
+        for _ in range(8):
+            if crc & 0x0001:
+                crc >>= 1
+                crc ^= 0xA001
+            else:
+                crc >>= 1
+    return crc
+
 class SensorData:
-    def __init__(self):
-        self.dsp310_temperature = 0.0
-        self.pressure = 0.0
-        self.co2 = 0
-        self.pm2p5 = 0
-        self.pm10 = 0
-        self.temperature = 0
-        self.humidity = 0
-
-# Define the Modbus response structure
-class ModbusResponse:
     def __init__(self, data):
-        if len(data) < 34:
-            raise ValueError("Data length is too short")
-        
-        self.modbus_id = data[0]
-        self.function_code = data[1]
-        self.byte_count = data[2]
-        self.register_data = data[3:3+28]
-        self.version = data[31]
-        self.crc = struct.unpack('<H', data[32:34])[0]
+        self.temperature, self.pressure, self.co2, self.pm2p5, self.pm10, self.temperature_adc, self.humidity = struct.unpack(louver_format, data)
 
-# Function to parse the Modbus response buffer into the sensor data structure
-def parse_modbus_response(response):
-    sensor_result = SensorData()
-    sensor_result.dsp310_temperature = struct.unpack('<f', response.register_data[0:4])[0]
-    sensor_result.pressure = struct.unpack('<f', response.register_data[4:8])[0]
-    sensor_result.co2 = struct.unpack('<H', response.register_data[8:10])[0]
-    sensor_result.pm2p5 = struct.unpack('<H', response.register_data[10:12])[0]
-    sensor_result.pm10 = struct.unpack('<H', response.register_data[12:14])[0]
-    sensor_result.temperature = struct.unpack('<h', response.register_data[14:16])[0]
-    sensor_result.humidity = struct.unpack('<H', response.register_data[16:18])[0]
-    
-    return sensor_result
-
+class LouverDataStructV2:
+    def __init__(self, data):
+        self.deviceId, self.reserved, self.pm2p5, self.pm10, self.co2, self.humidity, self.hdc1080_temperature, self.dsp310_temperature, self.airPressure = struct.unpack(louver_format_v2, data)
 def main():
-    # Example response buffer (fill with your actual response data)
-    response_data = bytes([0x10, 0x20, 0x15, 0xCC, 0x5B, 0xE6, 0x41, 0x41, 0x02, 0xC6, 0x47,
-                           0x90, 0x08, 0x02, 0x00, 0x02, 0x00, 0x19, 0x01, 0xCC, 0x02,
-                           0x00, 0x00, 0x01, 0x2D, 0xC7, 0x00, 0x00, 0x00, 0x00, 0x00,
-                           0x01, 0x2C, 0xC7])
+    response = bytearray([0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x01, 0x61, 0xF5])
+    response_v2 = bytearray([0x01, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47])
 
-    # Ensure the response_data length is at least 34 bytes
-    if len(response_data) < 34:
-        response_data += bytes(34 - len(response_data))
+    if modbus_crc(response) == 0:
+        data=response[3:(len(response)-5)]
+        print(data)
+        print(len(data))
+        if len(data) == struct.calcsize(louver_format):
+            global_sensor_result = SensorData(data)
+            print(f"PM2.5={global_sensor_result.pm2p5} ug/m3")
+            print(f"PM10={global_sensor_result.pm10} ug/m3")
+            print(f"CO2={global_sensor_result.co2} ppm")
+            print(f"Humidity={global_sensor_result.humidity} %")
+            print(f"Temperature={global_sensor_result.temperature:.2f} C")
+            print(f"Air Pressure={global_sensor_result.pressure:.2f} hPa")
+        else:
+            print("len error")
+            print(len(data))
+            print(struct.calcsize(louver_format))
+    else:
+        print("CRC error")
 
-    # Create a ModbusResponse object
-    response = ModbusResponse(response_data)
+    if modbus_crc(response_v2) == 0:
+        data=response_v2[3:(len(response_v2)-3)]
+        print(data)
+        if len(data) == struct.calcsize(louver_format_v2):
+            global_louver_result = LouverDataStructV2(data)
+            print(f"PM2.5={global_louver_result.pm2p5} ug/m3")
+            print(f"PM10={global_louver_result.pm10} ug/m3")
+            print(f"CO2={global_louver_result.co2} ppm")
+            print(f"Humidity={global_louver_result.humidity} %")
+            print(f"HDC1080 Temperature={global_louver_result.hdc1080_temperature:.2f} C")
+            print(f"DSP310 Temperature={global_louver_result.dsp310_temperature:.2f} C")
+            print(f"Air Pressure={global_louver_result.airPressure:.2f} hPa")
+        else:
+            print("len error")
+            print(len(data))
+            print(struct.calcsize(louver_format_v2))
 
-    # Print the Modbus response data
-    print(f"Modbus ID: {response.modbus_id}")
-    print(f"Function code: {response.function_code}")
-    print(f"Byte count: {response.byte_count}")
-    print(f"Version: {response.version}")
-    print(f"CRC: {response.crc}")
-
-    # Parse the sensor data
-    sensor_result = parse_modbus_response(response)
-
-    # Print the parsed sensor data
-    print(f"Temperature (DSP310): {sensor_result.dsp310_temperature:.2f} °C")
-    print(f"Air Pressure: {sensor_result.pressure:.2f} hPa")
-    print(f"CO2 Concentration: {sensor_result.co2} ppm")
-    print(f"PM2.5 Concentration: {sensor_result.pm2p5} µg/m³")
-    print(f"PM10 Concentration: {sensor_result.pm10} µg/m³")
-    print(f"Temperature (HDC1080): {sensor_result.temperature / 10.0:.1f} °C")
-    print(f"Humidity: {sensor_result.humidity / 10.0:.1f} %")
+    else:
+        print("CRC error")
 
 if __name__ == "__main__":
     main()
 ```
-
-#### Explanation:
-1. **Struct Definition**: The `SensorData` class holds the parsed sensor values. The `ModbusResponse` class holds the Modbus response data, including methods to initialize from a byte array.
-2. **Parsing Function**: `parse_modbus_response` directly interprets the `register_data` from the Modbus response into the `SensorData` object using `struct.unpack` to ensure the byte order is correctly handled.
-3. **Main Function**: The example response buffer is used to create a `ModbusResponse` object, which is then parsed to populate a `SensorData` object. The parsed sensor values are printed.
-
-This code directly interprets the `register_data` from the Modbus response into the `SensorData` structure, assuming the data in the response is in the correct byte order for the target system. Adjust the `response_data` array as needed for different input data.
 
 ### Modbus Data Example for Wind Data
 
@@ -439,38 +473,48 @@ SQS-LUV800 是一款8合1氣象傳感器，集成了氣壓、溫度、二氧化�
 
 ## Modbus數據範例
 
-給定的數據 `0x10, 0x20, 0x15, 0xCC, 0x5B, 0xE6, 0x41, 0x41, 0x02, 0xC6, 0x47, 0x90, 0x08, 0x02, 0x00, 0x02, 0x00, 0x19, 0x01, 0xCC, 0x02, 0x00, 0x00, 0x01, 0x2D, 0xC7` 可以解釋如下：
+### Modbus 數據範例 V1
 
-| 字節索引      | 範例數據            | 值範例 (Hex)      | 描述                                  | 數據類型  | 當前值        | 單位      | 高低字節交換解釋                      |
-|---------------|---------------------|-------------------|---------------------------------------|-----------|---------------|-----------|--------------------------------------|
-| 0             | 0x10                | 0x10              | 設備地址                             |           |               |           |                                      |
-| 1             | 0x20                | 0x20              | 功能代碼                             |           |               |           |                                      |
-| 2             | 0x15                | 0x15              | 長度                                 | int8      |               |           |                                      |
-| 3 - 6         | 0xCC, 0x5B, 0xE6, 0x41| 0x41E65BCC      | 溫度 (DSP310)                        | float     | 28.72         | °C        | 字節反轉以獲得正確的浮點值           |
-| 7 - 10        | 0x41, 0x02, 0xC6, 0x47| 0x47C60241      | 氣壓                                 | float     | 994.25        | hPa       | 字節反轉以獲得正確的浮點值           |
-| 11 - 12       | 0x90, 0x08          | 0x0890            | 二氧化碳濃度                         | int16     | 2192          | ppm       | 高低字節反轉                          |
-| 13 - 14       | 0x02, 0x00          | 0x0002            | PM2.5濃度                            | int16     | 2             | µg/m³     | 高低字節反轉                          |
-| 15 - 16       | 0x02, 0x00          | 0x0002            | PM10濃度                             | int16     | 2             | µg/m³     | 高低字節反轉                          |
-| 17 - 18       | 0x19, 0x01          | 0x0119            | 溫度 (HDC1080)                       | int16     | 28.1          | 0.1 °C    | 高低字節反轉                          |
-| 19 - 20       | 0xCC, 0x02          | 0x02CC            | 濕度                                 | int16     | 71.6          | 0.1 %     | 高低字節反轉                          |
-| 21 - 22       | 0x00, 0x00          | 0x0000            | 保留                                 |           |               |           |                                      |
-| 23            | 0x01                | 0x01              | 版本                                 | int8      | 1             |           |                                      |
-| 24 - 25       | 0x2D, 0xC7          | 0xC72D            | CRC                                  |           |               |           | 高低字節反轉                          |
+指令: 10 20 02 00 00 4F C3
 
-### 注意事項：
-- **設備地址**：識別Modbus網絡上的設備。
-- **功能代碼**：指示要執行的操作類型。
-- **長度**：指定數據字段的長度。
-- **溫度 (DSP310)**：以攝氏度為單位，表示為浮點數。
-- **氣壓**：以百帕斯卡（hPa）為單位，表示為浮點數。
-- **二氧化碳濃度**：以ppm為單位，表示為int16。
-- **PM2.5濃度**：以微克每立方米（µg/m³）為單位，表示為int16。
-- **PM10濃度**：以微克每立方米（µg/m³）為單位，表示為int16。
-- **溫度 (HDC1080)**：以攝氏度為單位，表示為int16。
-- **濕度**：以百分比為單位，表示為int16。
-- **保留**：為將來使用或填充保留的字節。
-- **版本**：指示數據格式的版本。
-- **CRC**：用於錯誤檢查。
+回應: 0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x02, 0x61, 0xF5
+
+| 字節索引 | 範例數據             | 範例值 (Hex)   | 描述                     | 數據類型 | 當前值     | 單位    | 高低字節說明                           |
+|----------|----------------------|----------------|--------------------------|----------|------------|---------|----------------------------------------|
+| 0        | 0x10                 | 0x10           | 設備地址                 |          |            |         | 無需字節反轉                           |
+| 1        | 0x20                 | 0x20           | 功能碼                   |          |            |         | 無需字節反轉                           |
+| 2        | 0x15                 | 0x15           | 數據長度                 | int8     |            |         | 無需字節反轉                           |
+| 3 - 6    | 0xFC, 0xF2, 0xFB, 0x41| 0x41FBF2FC    | 溫度 (DSP310)            | float    | 31.49      | °C      | 需要反轉字節順序以形成正確的浮點數     |
+| 7 - 10   | 0xBD, 0x6B, 0xC5, 0x47| 0x47C56BBD    | 氣壓                    | float    | 101079.48  | hPa     | 需要反轉字節順序以形成正確的浮點數     |
+| 11 - 12  | 0x88, 0x0B           | 0x0B88         | CO2 濃度                 | int16    | 2952       | ppm     | 高低字節反轉                           |
+| 13 - 14  | 0x02, 0x00           | 0x0002         | PM2.5 濃度               | int16    | 2          | µg/m³   | 高低字節反轉                           |
+| 15 - 16  | 0x0A, 0x00           | 0x000A         | PM10 濃度                | int16    | 10         | µg/m³   | 高低字節反轉                           |
+| 17 - 18  | 0xF9, 0x00           | 0x00F9         | 溫度 (HDC1080)           | int16    | 31.49      | 0.1 °C  | 高低字節反轉                           |
+| 19 - 20  | 0xD6, 0x02           | 0x02D6         | 濕度                    | int16    | 72.6       | 0.1 %   | 高低字節反轉                           |
+| 21 - 22  | 0x00, 0x00           | 0x0000         | 保留                    |          |            |         | 無需字節反轉                           |
+| 23       | 0x02                 | 0x02           | 版本                    | int8     | 2          |         | 無需字節反轉                           |
+| 24 - 25  | 0x61, 0xF5           | 0xF561         | CRC                     |          |            |         | 高低字節反轉                           |
+
+### Modbus 數據範例 V2
+
+指令: 10 21 02 00 00 4E F3
+
+回應: 0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47
+
+根據提供的回應數據（0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47），表格更新如下：
+
+| 字節索引 | 範例數據                | 範例值 (Hex)   | 描述                     | 數據類型 | 當前值     | 單位    | 高低字節說明                           |
+|----------|------------------------|----------------|--------------------------|----------|------------|---------|----------------------------------------|
+| 0        | 0x10                  | 0x10           | 設備地址                 |          |            |         | 無需字節反轉                           |
+| 1        | 0x21                  | 0x21           | 功能碼                   |          |            |         | 無需字節反轉                           |
+| 2        | 0x25                  | 0x25           | 數據長度                 | int8     |            |         | 無需字節反轉                           |
+| 3 - 8    | 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C| 0x50E3B66E9E9C | 設備 ID               |          |            |         | 無需字節反轉                           |
+| 9 - 18   | 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00| 0x00000000000000000000 | 保留    |          |            |         | 無需字節反轉                           |
+| 19 - 20  | 0x01, 0x00            | 0x0001         | PM2.5 濃度               | int16    | 1          | µg/m³   | 高低字節反轉                           |
+| 21 - 22  | 0x01, 0x00            | 0x0001         | PM10 濃度                | int16    | 1          | µg/m³   | 高低字節反轉                           |
+| 23 - 24  | 0xA1, 0x07            | 0x07A1         | CO2 濃度                 | int16    | 1953       | ppm     | 高低字節反轉                           |
+| 25 - 26  | 0x9B, 0x02            | 0x029B         | 濕度                    | int16    | 66.7       | %       | 高低字節反轉                           |
+| 27 - 30  | 0x1C, 0xC6, 0x90, 0x43| 0x4390C61C     |
 
 ### C範例解析代碼：
 
@@ -479,67 +523,54 @@ SQS-LUV800 是一款8合1氣象傳感器，集成了氣壓、溫度、二氧化�
 #include <stdio.h>
 #include <string.h>
 
-// Define the sensor data structure
-struct sensor_data
+// Define the wind data structure
+struct wind_data
 {
-  float dsp310_temperature;
-  float pressure;
-  uint16_t co2;
-  uint16_t pm2p5;
-  uint16_t pm10;
-  int16_t temperature;
-  uint16_t humidity;
+  uint16_t wind_direction;
+  uint16_t wind_speed;
 };
 
-// Define the Modbus response structure
-struct modbus_response
+// Define the Modbus response structure for wind data
+struct modbus_response_wind
 {
   uint8_t modbus_id;
   uint8_t function_code;
   uint8_t byte_count;
-  uint8_t register_data[sizeof(struct sensor_data)]; // Big-endian data
-  uint8_t version;
-  uint16_t crc; // This will be manually attached, not part of the initial structure
+  uint8_t register_data[4]; // 4 bytes for wind direction and speed
+  uint16_t crc;
 };
 
-// Declare the global sensor data result
-struct sensor_data sensor_result;
+// Declare the global wind data result
+struct wind_data wind_result;
 
-// Function to parse the Modbus response buffer into the sensor data structure
-void parse_modbus_response(const struct modbus_response *response)
+// Function to parse the Modbus response buffer into the wind data structure
+void parse_wind_response(const struct modbus_response_wind *response)
 {
-  memcpy(&sensor_result, response->register_data, sizeof(sensor_result));
+  wind_result.wind_direction = (response->register_data[0] << 8) | response->register_data[1];
+  wind_result.wind_speed = (response->register_data[2] << 8) | response->register_data[3];
 }
 
 int main()
 {
-  // Example response buffer (fill with your actual response data)
-  uint8_t response_data[] = {0x10, 0x20, 0x15, 0xCC, 0x5B, 0xE6, 0x41, 0x41, 0x02, 0xC6, 0x47,
-                             0x90, 0x08, 0x02, 0x00, 0x02, 0x00, 0x19, 0x01, 0xCC, 0x02,
-                             0x00, 0x00, 0x01, 0x2D, 0xC7};
+  // Example response buffer for wind data (fill with your actual response data)
+  uint8_t response_data_wind[] = {0x01, 0x03, 0x04, 0x00, 0xD3, 0x01, 0x1F, 0x4B, 0x92};
 
-  // Map the response data to the Modbus response structure
-  struct modbus_response response;
-  memcpy(&response, response_data, sizeof(response));
+  // Map the response data to the Modbus response structure for wind data
+  struct modbus_response_wind response_wind;
+  memcpy(&response_wind, response_data_wind, sizeof(response_wind));
 
-  // Print the Modbus response data
-  printf("Modbus ID: %u\n", response.modbus_id);
-  printf("Function code: %u\n", response.function_code);
-  printf("Byte count: %u\n", response.byte_count);
-  printf("Version: %u\n", response.version);
-  printf("CRC: %u\n", response.crc);
+  // Print the Modbus response data for wind
+  printf("Modbus ID: %u\n", response_wind.modbus_id);
+  printf("Function code: %u\n", response_wind.function_code);
+  printf("Byte count: %u\n", response_wind.byte_count);
+  printf("CRC: %u\n", response_wind.crc);
 
-  // Parse the sensor data
-  parse_modbus_response(&response);
+  // Parse the wind sensor data
+  parse_wind_response(&response_wind);
 
-  // Print the parsed sensor data
-  printf("Temperature (DSP310): %.2f °C\n", sensor_result.dsp310_temperature);
-  printf("Air Pressure: %.2f hPa\n", sensor_result.pressure);
-  printf("CO2 Concentration: %u ppm\n", sensor_result.co2);
-  printf("PM2.5 Concentration: %u µg/m³\n", sensor_result.pm2p5);
-  printf("PM10 Concentration: %u µg/m³\n", sensor_result.pm10);
-  printf("Temperature (HDC1080): %.1f °C\n", sensor_result.temperature / 10.0);
-  printf("Humidity: %.1f %%\n", sensor_result.humidity / 10.0);
+  // Print the parsed wind data
+  printf("Wind Direction: %u deg\n", wind_result.wind_direction);
+  printf("Wind Speed: %.2f m/s\n", wind_result.wind_speed / 100.0);
 
   return 0;
 }
@@ -549,87 +580,74 @@ int main()
 
 ```python
 import struct
+louver_format = '<2f3HhH'
+louver_format_v2 = '<6s10s4H3f'
 
-# Define the sensor data structure
+def modbus_crc(buffer):
+    crc = 0xFFFF
+    for pos in buffer:
+        crc ^= pos
+        for _ in range(8):
+            if crc & 0x0001:
+                crc >>= 1
+                crc ^= 0xA001
+            else:
+                crc >>= 1
+    return crc
+
 class SensorData:
-    def __init__(self):
-        self.dsp310_temperature = 0.0
-        self.pressure = 0.0
-        self.co2 = 0
-        self.pm2p5 = 0
-        self.pm10 = 0
-        self.temperature = 0
-        self.humidity = 0
-
-# Define the Modbus response structure
-class ModbusResponse:
     def __init__(self, data):
-        if len(data) < 34:
-            raise ValueError("Data length is too short")
-        
-        self.modbus_id = data[0]
-        self.function_code = data[1]
-        self.byte_count = data[2]
-        self.register_data = data[3:3+28]
-        self.version = data[31]
-        self.crc = struct.unpack('<H', data[32:34])[0]
+        self.temperature, self.pressure, self.co2, self.pm2p5, self.pm10, self.temperature_adc, self.humidity = struct.unpack(louver_format, data)
 
-# Function to parse the Modbus response buffer into the sensor data structure
-def parse_modbus_response(response):
-    sensor_result = SensorData()
-    sensor_result.dsp310_temperature = struct.unpack('<f', response.register_data[0:4])[0]
-    sensor_result.pressure = struct.unpack('<f', response.register_data[4:8])[0]
-    sensor_result.co2 = struct.unpack('<H', response.register_data[8:10])[0]
-    sensor_result.pm2p5 = struct.unpack('<H', response.register_data[10:12])[0]
-    sensor_result.pm10 = struct.unpack('<H', response.register_data[12:14])[0]
-    sensor_result.temperature = struct.unpack('<h', response.register_data[14:16])[0]
-    sensor_result.humidity = struct.unpack('<H', response.register_data[16:18])[0]
-    
-    return sensor_result
-
+class LouverDataStructV2:
+    def __init__(self, data):
+        self.deviceId, self.reserved, self.pm2p5, self.pm10, self.co2, self.humidity, self.hdc1080_temperature, self.dsp310_temperature, self.airPressure = struct.unpack(louver_format_v2, data)
 def main():
-    # Example response buffer (fill with your actual response data)
-    response_data = bytes([0x10, 0x20, 0x15, 0xCC, 0x5B, 0xE6, 0x41, 0x41, 0x02, 0xC6, 0x47,
-                           0x90, 0x08, 0x02, 0x00, 0x02, 0x00, 0x19, 0x01, 0xCC, 0x02,
-                           0x00, 0x00, 0x01, 0x2D, 0xC7, 0x00, 0x00, 0x00, 0x00, 0x00,
-                           0x01, 0x2C, 0xC7])
+    response = bytearray([0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x01, 0x61, 0xF5])
+    response_v2 = bytearray([0x01, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47])
 
-    # Ensure the response_data length is at least 34 bytes
-    if len(response_data) < 34:
-        response_data += bytes(34 - len(response_data))
+    if modbus_crc(response) == 0:
+        data=response[3:(len(response)-5)]
+        print(data)
+        print(len(data))
+        if len(data) == struct.calcsize(louver_format):
+            global_sensor_result = SensorData(data)
+            print(f"PM2.5={global_sensor_result.pm2p5} ug/m3")
+            print(f"PM10={global_sensor_result.pm10} ug/m3")
+            print(f"CO2={global_sensor_result.co2} ppm")
+            print(f"Humidity={global_sensor_result.humidity} %")
+            print(f"Temperature={global_sensor_result.temperature:.2f} C")
+            print(f"Air Pressure={global_sensor_result.pressure:.2f} hPa")
+        else:
+            print("len error")
+            print(len(data))
+            print(struct.calcsize(louver_format))
+    else:
+        print("CRC error")
 
-    # Create a ModbusResponse object
-    response = ModbusResponse(response_data)
+    if modbus_crc(response_v2) == 0:
+        data=response_v2[3:(len(response_v2)-3)]
+        print(data)
+        if len(data) == struct.calcsize(louver_format_v2):
+            global_louver_result = LouverDataStructV2(data)
+            print(f"PM2.5={global_louver_result.pm2p5} ug/m3")
+            print(f"PM10={global_louver_result.pm10} ug/m3")
+            print(f"CO2={global_louver_result.co2} ppm")
+            print(f"Humidity={global_louver_result.humidity} %")
+            print(f"HDC1080 Temperature={global_louver_result.hdc1080_temperature:.2f} C")
+            print(f"DSP310 Temperature={global_louver_result.dsp310_temperature:.2f} C")
+            print(f"Air Pressure={global_louver_result.airPressure:.2f} hPa")
+        else:
+            print("len error")
+            print(len(data))
+            print(struct.calcsize(louver_format_v2))
 
-    # Print the Modbus response data
-    print(f"Modbus ID: {response.modbus_id}")
-    print(f"Function code: {response.function_code}")
-    print(f"Byte count: {response.byte_count}")
-    print(f"Version: {response.version}")
-    print(f"CRC: {response.crc}")
-
-    # Parse the sensor data
-    sensor_result = parse_modbus_response(response)
-
-    # Print the parsed sensor data
-    print(f"Temperature (DSP310): {sensor_result.dsp310_temperature:.2f} °C")
-    print(f"Air Pressure: {sensor_result.pressure:.2f} hPa")
-    print(f"CO2 Concentration: {sensor_result.co2} ppm")
-    print(f"PM2.5 Concentration: {sensor_result.pm2p5} µg/m³")
-    print(f"PM10 Concentration: {sensor_result.pm10} µg/m³")
-    print(f"Temperature (HDC1080): {sensor_result.temperature / 10.0:.1f} °C")
-    print(f"Humidity: {sensor_result.humidity / 10.0:.1f} %")
+    else:
+        print("CRC error")
 
 if __name__ == "__main__":
     main()
 ```
-
-### 解釋：
-1. **結構定義**：`SensorData` 類持有解析的傳感器值。`ModbusResponse` 類持有Modbus響應數據，包括從字節數組初始化的方法。
-2. **解析函數**：`parse_modbus_response` 直接解釋Modbus響應中的`register_data`並使用`struct.unpack`將其轉換為`SensorData`對象，確保正確處理字節順序。
-3. **主函數**：示例響應緩衝區用於創建`ModbusResponse`對象，然後解析以填充`SensorData`對象。解析後的傳感器值將被打印出來。
-
-這段代碼直接解釋Modbus響應中的`register_data`並轉換為`SensorData`結構，假設響應中的數據以目標系統的正確字節順序排列。根據需要調整`response_data`數組以適應不同的輸入數據。
 
 ### 風速數據的 Modbus 資料範例
 
