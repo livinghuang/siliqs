@@ -12,7 +12,7 @@
   {
     "Sourcefile": "/Users/living/code/github/siliqs/build_sq001/sketch/sq001s.ino.cpp",
     "Include": "LoRaWan_APP.h",
-    "Includepath": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src"
+    "Includepath": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src"
   },
   {
     "Sourcefile": "/Users/living/code/github/siliqs/build_sq001/sketch/sq001s.ino.cpp",
@@ -135,212 +135,212 @@
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/BH1750.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/BH1750.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/BMP180.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/BMP180.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/GXHTC.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/GXHTC.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/HT_Display.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/HT_Display.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/HT_DisplayUi.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/HT_DisplayUi.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/HT_TinyGPS++.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/HT_TinyGPS++.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/HT_st7735.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/HT_st7735.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/HT_st7735_fonts.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/HT_st7735_fonts.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/HT_st7736.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/HT_st7736.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/LoRaWan_APP.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/LoRaWan_APP.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/clk.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/clk.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/da217.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/da217.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/board.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/board.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/delay.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/delay.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/gpio-board.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/gpio-board.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/gpio.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/gpio.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/sx1262-board.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/sx1262-board.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/sx126x.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/sx126x.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/sx1276-board.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/sx1276-board.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/sx1276.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/sx1276.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/heltec.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/heltec.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/lora/LoRa.cpp",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/lora/LoRa.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/LoRaMac.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/LoRaMac.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/LoRaMacClassB.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/LoRaMacClassB.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/LoRaMacConfirmQueue.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/LoRaMacConfirmQueue.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/LoRaMacCrypto.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/LoRaMacCrypto.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/aes.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/aes.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/cmac.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/cmac.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/Region.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/Region.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionAS923.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionAS923.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionAU915.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionAU915.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionCN470.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionCN470.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionCN779.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionCN779.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionCommon.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionCommon.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionEU433.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionEU433.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionEU868.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionEU868.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionIN865.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionIN865.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionKR920.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionKR920.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionUS915-Hybrid.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionUS915-Hybrid.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/RegionUS915.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/RegionUS915.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/utilities.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/utilities.c",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/radio/radio.c",
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/radio/radio.c",
     "Include": "",
     "Includepath": null
   },
@@ -405,27 +405,12 @@
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Adafruit_BusIO/Adafruit_BusIO_Register 2.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
     "Sourcefile": "/Users/living/Documents/Arduino/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp",
     "Include": "",
     "Includepath": null
   },
   {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Adafruit_BusIO/Adafruit_I2CDevice 2.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
     "Sourcefile": "/Users/living/Documents/Arduino/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "/Users/living/Documents/Arduino/libraries/Adafruit_BusIO/Adafruit_SPIDevice 2.cpp",
     "Include": "",
     "Includepath": null
   },

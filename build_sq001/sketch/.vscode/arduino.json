@@ -1,7 +1,7 @@
 #line 1 "/Users/living/code/github/siliqs/sq001s/.vscode/arduino.json"
 {
     "sketch": "sq001s.ino",
-    "port": "/dev/tty.wchusbserial84320",
+    "port": "/dev/tty.wchusbserial8320",
     "board": "Heltec-esp32:esp32:heltec_wireless_mini_shell",
     "configuration": "LORAWAN_REGION=0,CPUFreq=160,UploadSpeed=921600,DebugLevel=none,LoRaWanDebugLevel=0,LORAWAN_DEVEUI=0,LORAWAN_PREAMBLE_LENGTH=0,EraseFlash=none",
     "output": "../build_sq001"

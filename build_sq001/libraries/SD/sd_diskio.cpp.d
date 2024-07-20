@@ -135,7 +135,7 @@
  /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/fatfs/src/ff.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/fatfs/diskio/diskio_impl.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/fatfs/vfs/esp_vfs_fat.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/gpio.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/gpio.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/driver/sdmmc/include/driver/sdmmc_types.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/driver/spi/include/driver/sdspi_host.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/tools/esp32-arduino-libs/idf-release_v5.1-3662303f31/esp32c3/include/driver/spi/include/driver/spi_master.h \

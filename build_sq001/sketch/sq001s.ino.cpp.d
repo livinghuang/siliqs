@@ -125,36 +125,36 @@
  /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/cores/esp32/io_pin_remap.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/cores/esp32/Arduino.h \
  /Users/living/code/github/siliqs/build_sq001/sketch/global.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/LoRaWan_APP.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/ESP32_Mcu.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/LoRaWan_APP.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/ESP32_Mcu.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/SPI/src/SPI.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/cores/esp32/esp32-hal-spi.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/rtc-board.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/../driver/timer.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/../driver/../loramac/utilities.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/board-config.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/lorawan_spi.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/../driver/gpio.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/sx126x.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/../driver/lorawan_spi.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/LoRaMac.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/../driver/timer.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/../loramac/LoRaMacCrypto.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/../radio/radio.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/Region.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/../../driver/timer.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/../../driver/debug.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/../../driver/../loramac/utilities.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/../LoRaMac.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/../utilities.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/../../radio/radio.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/utilities.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/ESP32_LoRaWan_102.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/Commissioning.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/loramac/region/Region.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/rtc-board.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/../driver/timer.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/../driver/../loramac/utilities.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/board-config.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/lorawan_spi.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/../driver/gpio.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/sx126x.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/../driver/lorawan_spi.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/LoRaMac.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/../driver/timer.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/../loramac/LoRaMacCrypto.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/../radio/radio.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/Region.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/../../driver/timer.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/../../driver/debug.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/../../driver/../loramac/utilities.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/../LoRaMac.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/../utilities.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/../../radio/radio.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/utilities.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/ESP32_LoRaWan_102.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/Commissioning.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/loramac/region/Region.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/cores/esp32/HardwareSerial.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/board.h \
- /Users/living/Documents/Arduino/libraries/Heltec_ESP32_Dev-Boards/src/driver/debug.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/board.h \
+ /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Heltec_ESP32-master/src/driver/debug.h \
  /Users/living/code/github/siliqs/build_sq001/sketch/bsp.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFi.h \
  /Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/cores/esp32/Print.h \
