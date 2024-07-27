@@ -1,0 +1,10 @@
+#line 1 "/Users/living/code/github/siliqs/sqs-luv800/sinica_louver_v2/.vscode/settings.json"
+{
+  "files.associations": {
+    "*.tcc": "cpp",
+    "string_view": "c",
+    "array": "cpp",
+    "string": "cpp",
+    "cstddef": "cpp"
+  }
+}
