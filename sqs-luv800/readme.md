@@ -41,7 +41,7 @@ To query sensor data from the SQS-LUV800, send a request via RS485 using the Mod
 We support two commands (function calls) to fetch the data. Here is the command list:
 
 - **Command_v1**: `10 20 02 00 00 4F C3` (old, not supported in the future)
-- **Command_v2**: `10 21 02 00 00 4E F3`
+- **Command_v2**: `10 21 02 00 00 4E 3F`
 
 ### Environment Modbus Data Example
 
@@ -483,7 +483,7 @@ SQS-LUV800是一款8合1氣象傳感器，集成了多種功能，包括氣壓�
 我們支持兩種命令（函數調用）來獲取數據。以下是命令列表：
 
 - **Command_v1**：`10 20 02 00 00 4F C3`（舊版，未來不再支持）
-- **Command_v2**：`10 21 02 00 00 4E F3`
+- **Command_v2**：`10 21 02 00 00 4E 3F`
 
 ### 環境Modbus數據範例
 
