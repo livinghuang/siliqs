@@ -1,0 +1,162 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/cores/esp32"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/variants/heltec_wireless_mini_shell"
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/sinica_louver_v2.ino.cpp",
+    "Include": "WiFi.h",
+    "Includepath": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src"
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/sinica_louver_v2.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Wire/src"
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/sinica_louver_v2.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/SPI/src"
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/sinica_louver_v2.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/Dps310.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/DpsClass.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/HDC1080.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/atmosphericPressure.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/dsco2.cpp",
+    "Include": "SoftwareSerial.h",
+    "Includepath": "/Users/living/Documents/Arduino/libraries/EspSoftwareSerial/src"
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/dsco2.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/g5t.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/global.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/modbus.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/modbuscrc.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/parse_example.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/rawsum.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/sensors.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/code/github/siliqs/sqs-luv800/built_sinica_louver_v2/sketch/temperatureHumidity.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFi.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFiAP.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFiClient.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFiGeneric.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFiMulti.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFiSTA.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFiScan.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFiServer.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/WiFi/src/WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/Wire/src/Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Library/Arduino15/packages/Heltec-esp32/hardware/esp32/3.0.0/libraries/SPI/src/SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/living/Documents/Arduino/libraries/EspSoftwareSerial/src/SoftwareSerial.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
