@@ -2,6 +2,8 @@
 
 ![SQ-SNC001](./sq_snc001.png?raw=true)
 
+English | [中文](#中文)
+
 ## Overview
 
 The SQ-SNC001 is a versatile weather station data collection device designed to gather sensor data via RS485/Modbus, store it locally on an SD card, and forward it to a web cloud platform. It supports multiple communication methods, including WiFi and NB-IoT, and is powered by a solar panel with an internal battery charger for lead-acid batteries.
@@ -104,19 +106,24 @@ Use the following JSON format to set up the SQ-SNC001:
 
 ```json
 {
-  "id": 1, // 1~14
-  "Protocol": 1, // 1=NB-IOT, 2=WIFI
-  "WifiSsid": "YourSSID", // Set your WiFi SSID, avoiding any special characters other than a space
-  "WifiPwd": "YourPassword", // Set your WiFi password, avoiding any special characters other than a space
-  "MqttBroker": "13.210.141.86", // MQTT server address
-  "MqttPortNo": 1883, // MQTT port
-  "UserName": "siliq", // Set MQTT server username
-  "UserPwd": "YOUR_MQTT_PASSWORD", // Set MQTT server password
-  "PubTopic": "test/topic", // Set MQTT publish topic
-  "SubTopic": "test/subtopic", // Set MQTT subscribe topic
-  "QoS": 0, // QoS: 0 = At most once, 1 = At least once, 2 = Exactly once
-  "Retained": false, // Retained: true means the broker retains the last message, valid values: true, false
-  "LogsInterval": 5 // Unit: minute, valid values: 2, 3, 4, 5, 6, 10, 15, 20, 30
+	"id":1, // INT
+	"Name":"<Station Name>",//Set the nick name Max. 8bytes
+	"Protocol":1,// 1=NB-IOT, 2=WIFI
+	"WifiSsid":"<Your SSID>",// Set your WiFi SSID, avoiding any special characters other than a space
+	"WifiPwd":"<SSID Password>",// Set your WiFi password, avoiding any special characters other than a space
+	"MqttBroker":"13.210.141.86",// MQTT server address
+	"MqttPortNo":1883,// MQTT port
+	"UserName":"siliq",// Set MQTT server username
+	"UserPwd":"YOUR_MQTT_PASSWORD",// Set MQTT server password
+	"PubTopic":"test_v2/topic",// Set MQTT publish topic
+	"SubTopic":"test_v2/subtopic",// Set MQTT subscribe topic
+	"QoS":0,// QoS: 0 = At most once, 1 = At least once, 2 = Exactly once
+	"Retained":false,// Retained: true means the broker retains the last message, valid values: true, false
+	"LogsInterval":5,// Unit: minute, valid values: 2, 3, 4, 5, 6, 10, 15, 20, 30
+	"Latitude":25.04022, // location message latitude
+	"Longitue":121.61406,// location message longitue
+	"Altitude":5.21,// location message altitude
+	"DebugMessage":true //Make DebugMessage_YYYYMMDD.txt in SD CARD
 }
 ```
 
@@ -124,19 +131,24 @@ Here is the template with the remarks removed as requested:
 
 ```json
 {
-  "id": 1,
-  "Protocol": 1,
-  "WifiSsid": "YourSSID",
-  "WifiPwd": "YourPassword",
-  "MqttBroker": "13.210.141.86",
-  "MqttPortNo": 1883,
-  "UserName": "siliq",
-  "UserPwd": "YOUR_MQTT_PASSWORD",
-  "PubTopic": "test/topic",
-  "SubTopic": "test/subtopic",
-  "QoS": 0,
-  "Retained": false,
-  "LogsInterval": 5
+	"id":1, 
+	"Name":"<Station Name>",
+	"Protocol":1,
+	"WifiSsid":"<Your SSID>",
+	"WifiPwd":"<SSID Password>",
+	"MqttBroker":"13.210.141.86",
+	"MqttPortNo":1883,
+	"UserName":"siliq",
+	"UserPwd":"YOUR_MQTT_PASSWORD",
+	"PubTopic":"test_v2/topic",
+	"SubTopic":"test_v2/subtopic",
+	"QoS":0,
+	"Retained":false,
+	"LogsInterval":5,
+	"Latitude":25.04022, 
+	"Longitue":121.61406,
+	"Altitude":5.21,
+	"DebugMessage":true
 }
 ```
 
@@ -187,7 +199,13 @@ Sure! Here's the updated table based on your specifications:
 
 (Include links or references to additional resources, manuals, or support documents.)
 
-# ===
+&nbsp;
+
+***
+***
+&nbsp;
+
+## 中文
 
 # SQ-SNC001: 氣象站數據收集與記錄器
 
@@ -295,19 +313,24 @@ SQ-SNC001支持WiFi和NB-IoT模式來發佈數據，但它們不能同時工作�
 
 ```json
 {
-  "id": 1, // 1~14
-  "Protocol": 1, // 1=NB-IOT，2=WIFI
-  "WifiSsid": "YourSSID", // 設定您的 WiFi SSID，避免使用空格以外的特殊字符
-  "WifiPwd": "YourPassword", // 設定您的 WiFi 密碼，避免使用空格以外的特殊字符
-  "MqttBroker": "13.210.141.86", // MQTT 伺服器地址
-  "MqttPortNo": 1883, // MQTT 埠號
-  "UserName": "siliq", // 設定 MQTT 伺服器的用戶名
-  "UserPwd": "YOUR_MQTT_PASSWORD", // 設定 MQTT 伺服器的密碼
-  "PubTopic": "test/topic", // 設定 MQTT 發佈主題
-  "SubTopic": "test/subtopic", // 設定 MQTT 訂閱主題
-  "QoS": 0, // QoS：0=最多一次，1=至少一次，2=保證一次
-  "Retained": false, // Retained：true 表示伺服器保留最後一條消息，有效值：true, false
-  "LogsInterval": 5 // 單位：分鐘，有效值：2, 3, 4, 5, 6, 10, 15, 20, 30
+	"id":1, // INT
+	"Name":"<Station Name>",//Set the nick name Max. 8bytes
+	"Protocol":1,// 1=NB-IOT, 2=WIFI
+	"WifiSsid":"<Your SSID>",// Set your WiFi SSID, avoiding any special characters other than a space
+	"WifiPwd":"<SSID Password>",// Set your WiFi password, avoiding any special characters other than a space
+	"MqttBroker":"13.210.141.86",// MQTT server address
+	"MqttPortNo":1883,// MQTT port
+	"UserName":"siliq",// Set MQTT server username
+	"UserPwd":"YOUR_MQTT_PASSWORD",// Set MQTT server password
+	"PubTopic":"test_v2/topic",// Set MQTT publish topic
+	"SubTopic":"test_v2/subtopic",// Set MQTT subscribe topic
+	"QoS":0,// QoS: 0 = At most once, 1 = At least once, 2 = Exactly once
+	"Retained":false,// Retained: true means the broker retains the last message, valid values: true, false
+	"LogsInterval":5,// Unit: minute, valid values: 2, 3, 4, 5, 6, 10, 15, 20, 30
+	"Latitude":25.04022, // location message latitude
+	"Longitue":121.61406,// location message longitue
+	"Altitude":5.21,// location message altitude
+	"DebugMessage":true //Make DebugMessage_YYYYMMDD.txt in SD CARD
 }
 ```
 
@@ -315,19 +338,24 @@ SQ-SNC001支持WiFi和NB-IoT模式來發佈數據，但它們不能同時工作�
 
 ```json
 {
-  "id": 1,
-  "Protocol": 1,
-  "WifiSsid": "YourSSID",
-  "WifiPwd": "YourPassword",
-  "MqttBroker": "13.210.141.86",
-  "MqttPortNo": 1883,
-  "UserName": "siliq",
-  "UserPwd": "YOUR_MQTT_PASSWORD",
-  "PubTopic": "test/topic",
-  "SubTopic": "test/subtopic",
-  "QoS": 0,
-  "Retained": false,
-  "LogsInterval": 5
+	"id":1, 
+	"Name":"<Station Name>",
+	"Protocol":1,
+	"WifiSsid":"<Your SSID>",
+	"WifiPwd":"<SSID Password>",
+	"MqttBroker":"13.210.141.86",
+	"MqttPortNo":1883,
+	"UserName":"siliq",
+	"UserPwd":"YOUR_MQTT_PASSWORD",
+	"PubTopic":"test_v2/topic",
+	"SubTopic":"test_v2/subtopic",
+	"QoS":0,
+	"Retained":false,
+	"LogsInterval":5,
+	"Latitude":25.04022, 
+	"Longitue":121.61406,
+	"Altitude":5.21,
+	"DebugMessage":true
 }
 ```
 
