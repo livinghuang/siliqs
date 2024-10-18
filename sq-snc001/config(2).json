@@ -1,0 +1,20 @@
+{
+	"id":1,
+	"Name":"<Station Name Max. 8bytes>",
+	"Protocol":1,
+	"WifiSsid":"<Your SSID>",
+	"WifiPwd":"<SSID Password>",
+	"MqttBroker":"13.210.141.86",
+	"MqttPortNo":1883,
+	"UserName":"siliq",
+	"UserPwd":"siliq1234",
+	"PubTopic":"test_v2/topic",
+	"SubTopic":"test_v2/subtopic",
+	"QoS":0,
+	"Retained":false,
+	"LogsInterval":5,
+	"Latitude":25.04022,
+	"Longitue":121.61406,
+	"Altitude":5.21,
+	"DebugMessage":true
+}
