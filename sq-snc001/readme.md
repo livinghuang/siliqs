@@ -1,8 +1,8 @@
+English | [中文](#中文)
+
 # SQ-SNC001: Weather Station Data Collection and Recorder
 
 ![SQ-SNC001](./sq_snc001.png?raw=true)
-
-English | [中文](#中文)
 
 ## Overview
 
