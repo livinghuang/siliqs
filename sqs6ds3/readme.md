@@ -1,32 +1,31 @@
-# SQS6DS3 Module: LSM6DS3TR-C 3D Accelerometer and Gyroscope
+# SQS6DS3 (U.P)
 
 ## Overview
 
-(under planning)
-The SQS6DS3 module is built around the LSM6DS3TR-C system-in-package, which combines a 3D digital accelerometer and a 3D digital gyroscope in a single compact package. Designed for efficiency, it operates at just 0.90 mA in high-performance mode, while also supporting always-on, low-power features. This module is optimized for consumer applications requiring sophisticated motion detection and tracking capabilities with minimal power consumption.
+(under planning) The SQS6DS3 module is built around the LSM6DS3TR-C system-in-package, which combines a 3D digital accelerometer and a 3D digital gyroscope in a single compact package. Designed for efficiency, it operates at just 0.90 mA in high-performance mode, while also supporting always-on, low-power features. This module is optimized for consumer applications requiring sophisticated motion detection and tracking capabilities with minimal power consumption.
 
 ## Key Features
 
-- **Integrated 3D Accelerometer and Gyroscope**: Offers comprehensive motion sensing in three dimensions, enabling accurate tracking of movement and orientation.
-- **Low Power Consumption**: Achieves high-performance motion sensing at only 0.90 mA, with support for always-on features in low-power mode, extending battery life in portable devices.
-- **High-Performance Mode**: Ensures an optimal motion experience for the consumer, suitable for applications requiring precise and responsive motion data.
-- **Versatile Application Support**: Meets main operating system requirements, making it ideal for a wide range of consumer electronics, including smartphones, wearables, and gaming devices.
+* **Integrated 3D Accelerometer and Gyroscope**: Offers comprehensive motion sensing in three dimensions, enabling accurate tracking of movement and orientation.
+* **Low Power Consumption**: Achieves high-performance motion sensing at only 0.90 mA, with support for always-on features in low-power mode, extending battery life in portable devices.
+* **High-Performance Mode**: Ensures an optimal motion experience for the consumer, suitable for applications requiring precise and responsive motion data.
+* **Versatile Application Support**: Meets main operating system requirements, making it ideal for a wide range of consumer electronics, including smartphones, wearables, and gaming devices.
 
 ## Application Scenarios
 
-- **Wearable Technology**: Enhances fitness trackers, smartwatches, and health monitoring devices with advanced motion detection.
-- **Smartphones and Tablets**: Improves user interaction through motion-based commands and navigation.
-- **Gaming and Virtual Reality**: Provides precise motion tracking for gaming controllers and virtual reality headsets, enhancing user immersion.
-- **Fitness and Health Devices**: Captures detailed motion data for fitness coaching apps and physical rehabilitation devices.
+* **Wearable Technology**: Enhances fitness trackers, smartwatches, and health monitoring devices with advanced motion detection.
+* **Smartphones and Tablets**: Improves user interaction through motion-based commands and navigation.
+* **Gaming and Virtual Reality**: Provides precise motion tracking for gaming controllers and virtual reality headsets, enhancing user immersion.
+* **Fitness and Health Devices**: Captures detailed motion data for fitness coaching apps and physical rehabilitation devices.
 
 ## Technical Specifications
 
-- **Chip**: LSM6DS3TR-C
-- **Sensing Capabilities**: 3D Acceleration and 3D Gyroscope
-- **Power Consumption**: 0.90 mA in high-performance mode
-- **Acceleration Range**: ±2/±4/±8/±16 g
-- **Gyroscope Range**: ±125/±250/±500/±1000/±2000 degrees per second (dps)
-- **Package**: Plastic Land Grid Array (LGA)
+* **Chip**: LSM6DS3TR-C
+* **Sensing Capabilities**: 3D Acceleration and 3D Gyroscope
+* **Power Consumption**: 0.90 mA in high-performance mode
+* **Acceleration Range**: ±2/±4/±8/±16 g
+* **Gyroscope Range**: ±125/±250/±500/±1000/±2000 degrees per second (dps)
+* **Package**: Plastic Land Grid Array (LGA)
 
 ## Usage Guide
 
@@ -44,7 +43,7 @@ The SQS6DS3 module is built around the LSM6DS3TR-C system-in-package, which comb
 
 ## Additional Resources
 
-- [LSM6DS3TR-C Datasheet](https://www.st.com/en/mems-and-sensors/lsm6ds3.html)
-- [SQS6DS3 Integration Guide](#)
+* [LSM6DS3TR-C Datasheet](https://www.st.com/en/mems-and-sensors/lsm6ds3.html)
+* [SQS6DS3 Integration Guide](./)
 
 For detailed specifications, operational guidelines, and additional information on leveraging the SQS6DS3 module for motion-sensitive applications, refer to the datasheet and integration guide provided above.

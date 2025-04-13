@@ -1,16 +1,15 @@
-# SQS1080 Module: Humidity and Temperature Sensor
+# SQS1080 (RDY)
 
 ## Overview
 
-(Ready For M.P)
-The SQS1080 module integrates the HDC1080 sensor to offer precise measurements of humidity and temperature, making it a key component for environmental monitoring, HVAC systems, and any application requiring accurate climate control. Its high accuracy, low power consumption, and easy integration make it ideal for a wide range of projects.
+(Ready For M.P) The SQS1080 module integrates the HDC1080 sensor to offer precise measurements of humidity and temperature, making it a key component for environmental monitoring, HVAC systems, and any application requiring accurate climate control. Its high accuracy, low power consumption, and easy integration make it ideal for a wide range of projects.
 
 ## Key Features
 
-- **HDC1080 Sensor**: Features the HDC1080 chip for high-accuracy measurements of humidity and temperature.
-- **Precision Measurement**: Delivers highly accurate readings of both humidity and temperature, suitable for critical and sensitive applications.
-- **Low Power Consumption**: Designed with energy efficiency in mind, it operates with minimal power, perfect for battery-operated devices.
-- **Simple Integration**: Offers straightforward connectivity with various microcontrollers, supporting both hobbyist and professional applications.
+* **HDC1080 Sensor**: Features the HDC1080 chip for high-accuracy measurements of humidity and temperature.
+* **Precision Measurement**: Delivers highly accurate readings of both humidity and temperature, suitable for critical and sensitive applications.
+* **Low Power Consumption**: Designed with energy efficiency in mind, it operates with minimal power, perfect for battery-operated devices.
+* **Simple Integration**: Offers straightforward connectivity with various microcontrollers, supporting both hobbyist and professional applications.
 
 ## Functionalities
 
@@ -19,18 +18,18 @@ The SQS1080 module integrates the HDC1080 sensor to offer precise measurements o
 
 ## Application Scenarios
 
-- **Environmental Monitoring**: Ideal for monitoring humidity and temperature in sensitive environments, such as greenhouses, laboratories, and data centers.
-- **HVAC Systems**: Enhances the efficiency and accuracy of heating, ventilation, and air conditioning systems through precise climate control.
-- **Weather Stations**: Suitable for use in personal or professional weather stations, providing reliable data for weather analysis.
-- **Smart Home Systems**: Can be integrated into smart home systems for improved indoor climate control and comfort.
+* **Environmental Monitoring**: Ideal for monitoring humidity and temperature in sensitive environments, such as greenhouses, laboratories, and data centers.
+* **HVAC Systems**: Enhances the efficiency and accuracy of heating, ventilation, and air conditioning systems through precise climate control.
+* **Weather Stations**: Suitable for use in personal or professional weather stations, providing reliable data for weather analysis.
+* **Smart Home Systems**: Can be integrated into smart home systems for improved indoor climate control and comfort.
 
 ## Technical Specifications
 
-- **Base Chip**: HDC1080
-- **Humidity Measurement Range**: Detail the range and accuracy of humidity measurements.
-- **Temperature Measurement Range**: Specify the range and accuracy of temperature measurements.
-- **Interface**: Outline the communication interface details (e.g., I2C).
-- **Power Requirements**: Indicate the power supply requirements and consumption.
+* **Base Chip**: HDC1080
+* **Humidity Measurement Range**: Detail the range and accuracy of humidity measurements.
+* **Temperature Measurement Range**: Specify the range and accuracy of temperature measurements.
+* **Interface**: Outline the communication interface details (e.g., I2C).
+* **Power Requirements**: Indicate the power supply requirements and consumption.
 
 ## Usage Guide
 
@@ -48,14 +47,14 @@ The SQS1080 module integrates the HDC1080 sensor to offer precise measurements o
 
 ### Pinout
 
-![SQS1080 Pinout Diagram](./pinout.png?raw=true)
+![SQS1080 Pinout Diagram](pinout.png)
 
 ### Schematic
 
-![SQS1080 Schematic Diagram](./schematic.png?raw=true)
+![SQS1080 Schematic Diagram](schematic.png)
 
 ### Datasheet
 
-- [HDC1080 Datasheet](./hdc1080.pdf "Datasheet for the HDC1080 sensor")
+* [HDC1080 Datasheet](hdc1080.pdf)
 
 This template provides detailed guidelines and specifications for the SQS1080 module, ensuring users have the necessary information for successful integration and application. For further details, refer to the datasheets and resources provided above.

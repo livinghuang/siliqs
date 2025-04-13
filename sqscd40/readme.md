@@ -1,30 +1,29 @@
-# SQSCD40 Module: SCD40-D-R1 CO2 Sensor for Indoor Air Quality
+# SQSCD40 (U.P)
 
 ## Overview
 
-(under planning)
-The SQSCD40 module, leveraging the capabilities of the SCD40-D-R1 chip, is a state-of-the-art solution designed for accurate monitoring of indoor air quality, with a particular emphasis on carbon dioxide (CO2) concentration levels. This module is an integral component for developing systems that aim to maintain a healthy and productive indoor environment by ensuring optimal air quality through precise CO2 measurement.
+(under planning) The SQSCD40 module, leveraging the capabilities of the SCD40-D-R1 chip, is a state-of-the-art solution designed for accurate monitoring of indoor air quality, with a particular emphasis on carbon dioxide (CO2) concentration levels. This module is an integral component for developing systems that aim to maintain a healthy and productive indoor environment by ensuring optimal air quality through precise CO2 measurement.
 
 ## Key Features
 
-- **SCD40-D-R1 Sensor**: Incorporates the advanced SCD40-D-R1 sensor chip for reliable and accurate CO2 concentration measurement.
-- **Indoor Air Quality Monitoring**: Specifically designed to monitor indoor air quality, helping to maintain low CO2 levels for health and productivity.
-- **Connected Device Compatibility**: Ideal for integration into smart home systems, HVAC controls, and other IoT devices focused on air quality management.
-- **Energy Efficient**: Optimized for low power consumption, making it suitable for battery-powered applications and continuous monitoring.
+* **SCD40-D-R1 Sensor**: Incorporates the advanced SCD40-D-R1 sensor chip for reliable and accurate CO2 concentration measurement.
+* **Indoor Air Quality Monitoring**: Specifically designed to monitor indoor air quality, helping to maintain low CO2 levels for health and productivity.
+* **Connected Device Compatibility**: Ideal for integration into smart home systems, HVAC controls, and other IoT devices focused on air quality management.
+* **Energy Efficient**: Optimized for low power consumption, making it suitable for battery-powered applications and continuous monitoring.
 
 ## Application Scenarios
 
-- **Smart Homes**: Enhances smart home ecosystems with precise indoor air quality monitoring, enabling automated HVAC controls based on CO2 levels.
-- **Office and Commercial Buildings**: Provides essential data for maintaining optimal air quality in workspaces, contributing to improved concentration and productivity.
-- **Educational Institutions**: Monitors classrooms and indoor facilities to ensure a healthy learning environment by managing CO2 concentration.
-- **Healthcare Facilities**: Supports air quality management in hospitals and clinics, promoting patient health and comfort.
+* **Smart Homes**: Enhances smart home ecosystems with precise indoor air quality monitoring, enabling automated HVAC controls based on CO2 levels.
+* **Office and Commercial Buildings**: Provides essential data for maintaining optimal air quality in workspaces, contributing to improved concentration and productivity.
+* **Educational Institutions**: Monitors classrooms and indoor facilities to ensure a healthy learning environment by managing CO2 concentration.
+* **Healthcare Facilities**: Supports air quality management in hospitals and clinics, promoting patient health and comfort.
 
 ## Technical Specifications
 
-- **Chip**: SCD40-D-R1
-- **Measurement Capability**: Accurate CO2 concentration measurement, along with humidity and temperature readings for comprehensive air quality analysis.
-- **Communication Interface**: Details on the module's communication interface (e.g., I2C, SPI) for easy integration with microcontrollers and IoT devices.
-- **Power Requirements**: Specify the voltage and power consumption for optimal operation.
+* **Chip**: SCD40-D-R1
+* **Measurement Capability**: Accurate CO2 concentration measurement, along with humidity and temperature readings for comprehensive air quality analysis.
+* **Communication Interface**: Details on the module's communication interface (e.g., I2C, SPI) for easy integration with microcontrollers and IoT devices.
+* **Power Requirements**: Specify the voltage and power consumption for optimal operation.
 
 ## Usage Guide
 
@@ -42,7 +41,7 @@ The SQSCD40 module, leveraging the capabilities of the SCD40-D-R1 chip, is a sta
 
 ## Additional Resources
 
-- [SCD40-D-R1 Datasheet](https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensors-co2/)
-- [SQSCD40 Integration Guide](#)
+* [SCD40-D-R1 Datasheet](https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensors-co2/)
+* [SQSCD40 Integration Guide](./)
 
 This markdown template offers a structured approach to documenting the SQSCD40 module's features, applications, and integration steps. For further technical details and operational guidance, refer to the provided datasheet and integration resources.

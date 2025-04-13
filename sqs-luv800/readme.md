@@ -1,71 +1,73 @@
-# SQS-LUV800: 8-in-1 Weather Sensor
+# SQS-LUV800 (U.D)
 
-![SQS-LUV800](./SQS-LUV800.png?raw=true)
+## SQS-LUV800: 8-in-1 Weather Sensor
 
-## Overview
+![SQS-LUV800](SQS-LUV800.png)
+
+### Overview
 
 The SQS-LUV800 is an 8-in-1 weather sensor that integrates multiple functions including air pressure, temperature, CO2, PM2.5, PM10, humidity, wind direction, and wind speed. It offers a compact solution for comprehensive environmental monitoring with output via RS485.
 
-## Key Features
+### Key Features
 
-- **Multiple Sensors Integration**: Combines air pressure, temperature, CO2, PM2.5, PM10, humidity, wind direction, and wind speed sensors.
-- **RS485 Output**: Provides easy data transmission and integration with other systems.
+* **Multiple Sensors Integration**: Combines air pressure, temperature, CO2, PM2.5, PM10, humidity, wind direction, and wind speed sensors.
+* **RS485 Output**: Provides easy data transmission and integration with other systems.
 
-## Application Scenarios
+### Application Scenarios
 
-- Weather Stations
-- Agriculture
-- Building Environmental Monitoring
-- General Environmental Monitoring
+* Weather Stations
+* Agriculture
+* Building Environmental Monitoring
+* General Environmental Monitoring
 
-## Technical Specifications
+### Technical Specifications
 
-- **Wind Speed**: ±0.5+2%m/s@60%RH,25°C
-- **Wind Direction**: ±3°@60%RH,25°C
-- **Temperature**: -40 to 85 °C±0.5°C
-- **Humidity**: 0 to 100%±2%
-- **CO2**: 400 to 3000 ppm±(50ppm+5%*result)
-- **PM2.5**: 0～500 μg/m³±(10μg/m3@0～100μg/m3,10%@100～500μg/m3)
-- **Air Pressure**: 300 to 1200 hPa±0.002hPa
+* **Wind Speed**: ±0.5+2%m/s@60%RH,25°C
+* **Wind Direction**: ±3°@60%RH,25°C
+* **Temperature**: -40 to 85 °C±0.5°C
+* **Humidity**: 0 to 100%±2%
+* **CO2**: 400 to 3000 ppm±(50ppm+5%\*result)
+* **PM2.5**: 0～500 μg/m³±(10μg/m3@0～100μg/m3,10%@100～500μg/m3)
+* **Air Pressure**: 300 to 1200 hPa±0.002hPa
 
-## Usage Guide
+### Usage Guide
 
-### Querying Sensor Data
+#### Querying Sensor Data
 
 To query sensor data from the SQS-LUV800, send a request via RS485 using the Modbus protocol. The sensor will respond with two parts of the data packet containing the requested environmental data and wind data. You should use different commands to fetch each type of data.
 
-## Modbus Data
+### Modbus Data
 
-### Environment Modbus Data
+#### Environment Modbus Data
 
 We support two commands (function calls) to fetch the data. Here is the command list:
 
-- **Command_v1**: `10 20 02 00 00 4F C3` (old, not supported in the future)
-- **Command_v2**: `10 21 02 00 00 4E 3F`
+* **Command\_v1**: `10 20 02 00 00 4F C3` (old, not supported in the future)
+* **Command\_v2**: `10 21 02 00 00 4E 3F`
 
-### Environment Modbus Data Example
+#### Environment Modbus Data Example
 
-Command_v1 : 10 20 02 00 00 4F C3
+Command\_v1 : 10 20 02 00 00 4F C3
 
 Response: 0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x02, 0x61, 0xF5
 
-| Byte Index | Example Data          | Value Example (Hex) | Description              | Data Type | Present Value | Unit  | High-Low Byte Explanation                      |
-|------------|-----------------------|---------------------|--------------------------|-----------|---------------|-------|------------------------------------------------|
-| 0          | 0x10                  | 0x10                | Device Address           |           |               |       | No byte reversal needed                        |
-| 1          | 0x20                  | 0x20                | Function Code            |           |               |       | No byte reversal needed                        |
-| 2          | 0x15                  | 0x15                | Length                   | int8      |               |       | No byte reversal needed                        |
-| 3 - 6      | 0xFC, 0xF2, 0xFB, 0x41| 0x41FBF2FC          | Temperature (DSP310)     | float     | 31.49         | °C    | Bytes need to be reversed to form correct float|
-| 7 - 10     | 0xBD, 0x6B, 0xC5, 0x47| 0x47C56BBD          | Air Pressure             | float     | 101079.48        | hPa   | Bytes need to be reversed to form correct float|
-| 11 - 12    | 0x88, 0x0B            | 0x0B88              | CO2 Concentration        | int16     | 2952          | ppm   | High and low bytes reversed                    |
-| 13 - 14    | 0x02, 0x00            | 0x0002              | PM2.5 Concentration      | int16     | 2             | µg/m³ | High and low bytes reversed                    |
-| 15 - 16    | 0x0A, 0x00            | 0x000A              | PM10 Concentration       | int16     | 10            | µg/m³ | High and low bytes reversed                    |
-| 17 - 18    | 0xF9, 0x00            | 0x00F9              | Temperature (HDC1080)    | int16     | 31.49          | 0.1 °C| High and low bytes reversed                    |
-| 19 - 20    | 0xD6, 0x02            | 0x02D6              | Humidity                 | int16     | 72.6          | 0.1 % | High and low bytes reversed                    |
-| 21 - 22    | 0x00, 0x00            | 0x0000              | Reserved                 |           |               |       | No byte reversal needed                        |
-| 23         | 0x02                  | 0x02                | Version                  | int8      | 2             |       | No byte reversal needed                        |
-| 24 - 25    | 0x61, 0xF5            | 0xF561              | CRC                      |           |               |       | High and low bytes reversed                    |
+| Byte Index | Example Data           | Value Example (Hex) | Description           | Data Type | Present Value | Unit   | High-Low Byte Explanation                       |
+| ---------- | ---------------------- | ------------------- | --------------------- | --------- | ------------- | ------ | ----------------------------------------------- |
+| 0          | 0x10                   | 0x10                | Device Address        |           |               |        | No byte reversal needed                         |
+| 1          | 0x20                   | 0x20                | Function Code         |           |               |        | No byte reversal needed                         |
+| 2          | 0x15                   | 0x15                | Length                | int8      |               |        | No byte reversal needed                         |
+| 3 - 6      | 0xFC, 0xF2, 0xFB, 0x41 | 0x41FBF2FC          | Temperature (DSP310)  | float     | 31.49         | °C     | Bytes need to be reversed to form correct float |
+| 7 - 10     | 0xBD, 0x6B, 0xC5, 0x47 | 0x47C56BBD          | Air Pressure          | float     | 101079.48     | hPa    | Bytes need to be reversed to form correct float |
+| 11 - 12    | 0x88, 0x0B             | 0x0B88              | CO2 Concentration     | int16     | 2952          | ppm    | High and low bytes reversed                     |
+| 13 - 14    | 0x02, 0x00             | 0x0002              | PM2.5 Concentration   | int16     | 2             | µg/m³  | High and low bytes reversed                     |
+| 15 - 16    | 0x0A, 0x00             | 0x000A              | PM10 Concentration    | int16     | 10            | µg/m³  | High and low bytes reversed                     |
+| 17 - 18    | 0xF9, 0x00             | 0x00F9              | Temperature (HDC1080) | int16     | 31.49         | 0.1 °C | High and low bytes reversed                     |
+| 19 - 20    | 0xD6, 0x02             | 0x02D6              | Humidity              | int16     | 72.6          | 0.1 %  | High and low bytes reversed                     |
+| 21 - 22    | 0x00, 0x00             | 0x0000              | Reserved              |           |               |        | No byte reversal needed                         |
+| 23         | 0x02                   | 0x02                | Version               | int8      | 2             |        | No byte reversal needed                         |
+| 24 - 25    | 0x61, 0xF5             | 0xF561              | CRC                   |           |               |        | High and low bytes reversed                     |
 
-### Environment Modbus Data Example_V2
+#### Environment Modbus Data Example\_V2
 
 Command: 10 21 02 00 00 4E 3F
 
@@ -73,32 +75,33 @@ Response: 0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00
 
 Based on the response data provided (0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47), the table can be updated as follows:
 
-| Byte Index | Example Data                | Value Example (Hex) | Description              | Data Type | Present Value | Unit  | High-Low Byte Explanation                      |
-|------------|-----------------------------|---------------------|--------------------------|-----------|---------------|-------|------------------------------------------------|
-| 0          | 0x10                        | 0x10                | Device Address           |           |               |       | No byte reversal needed                        |
-| 1          | 0x21                        | 0x21                | Function Code            |           |               |       | No byte reversal needed                        |
-| 2          | 0x25                        | 0x25                | Length                   | int8      |               |       | No byte reversal needed                        |
-| 3 - 8      | 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C| 0x50E3B66E9E9C | Device ID               |           |               |       | No byte reversal needed                        |
-| 9 - 18     | 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00| 0x00000000000000000000 | Reserved   |           |               |       | No byte reversal needed                        |
-| 19 - 20    | 0x01, 0x00                  | 0x0001              | PM2.5 Concentration      | int16     | 1             | µg/m³ | High and low bytes reversed                    |
-| 21 - 22    | 0x01, 0x00                  | 0x0001              | PM10 Concentration       | int16     | 1             | µg/m³ | High and low bytes reversed                    |
-| 23 - 24    | 0xA1, 0x07                  | 0x07A1              | CO2 Concentration        | int16     | 1953          | ppm   | High and low bytes reversed                    |
-| 25 - 26    | 0x9B, 0x02                  | 0x029B              | Humidity                 | int16     | 66.7          | %     | High and low bytes reversed                    |
-| 27 - 30    | 0x1C, 0xC6, 0x90, 0x43      | 0x4390C61C          | Temperature (HDC1080)    | float     | 288.56        | °C    | Bytes need to be reversed to form correct float|
-| 31 - 34    | 0xB8, 0xD6, 0xEB, 0x41      | 0x41EBD6B8          | Temperature (DSP310)     | float     | 29.73         | °C    | Bytes need to be reversed to form correct float|
-| 35 - 38    | 0xBE, 0xDA, 0xC4, 0x47      | 0x47C4DABE          | Air Pressure             | float     | 1007.89       | hPa   | Bytes need to be reversed to form correct float|
-| 39         | 0x02                        | 0x02                | Version                  | int8      | 2             |       | No byte reversal needed                        |
-| 40 - 41    | 0xFF, 0x47                  | 0x47FF              | CRC                      |           |               |       | High and low bytes reversed                    |
+| Byte Index | Example Data                                               | Value Example (Hex)    | Description           | Data Type | Present Value | Unit  | High-Low Byte Explanation                       |
+| ---------- | ---------------------------------------------------------- | ---------------------- | --------------------- | --------- | ------------- | ----- | ----------------------------------------------- |
+| 0          | 0x10                                                       | 0x10                   | Device Address        |           |               |       | No byte reversal needed                         |
+| 1          | 0x21                                                       | 0x21                   | Function Code         |           |               |       | No byte reversal needed                         |
+| 2          | 0x25                                                       | 0x25                   | Length                | int8      |               |       | No byte reversal needed                         |
+| 3 - 8      | 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C                         | 0x50E3B66E9E9C         | Device ID             |           |               |       | No byte reversal needed                         |
+| 9 - 18     | 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 | 0x00000000000000000000 | Reserved              |           |               |       | No byte reversal needed                         |
+| 19 - 20    | 0x01, 0x00                                                 | 0x0001                 | PM2.5 Concentration   | int16     | 1             | µg/m³ | High and low bytes reversed                     |
+| 21 - 22    | 0x01, 0x00                                                 | 0x0001                 | PM10 Concentration    | int16     | 1             | µg/m³ | High and low bytes reversed                     |
+| 23 - 24    | 0xA1, 0x07                                                 | 0x07A1                 | CO2 Concentration     | int16     | 1953          | ppm   | High and low bytes reversed                     |
+| 25 - 26    | 0x9B, 0x02                                                 | 0x029B                 | Humidity              | int16     | 66.7          | %     | High and low bytes reversed                     |
+| 27 - 30    | 0x1C, 0xC6, 0x90, 0x43                                     | 0x4390C61C             | Temperature (HDC1080) | float     | 288.56        | °C    | Bytes need to be reversed to form correct float |
+| 31 - 34    | 0xB8, 0xD6, 0xEB, 0x41                                     | 0x41EBD6B8             | Temperature (DSP310)  | float     | 29.73         | °C    | Bytes need to be reversed to form correct float |
+| 35 - 38    | 0xBE, 0xDA, 0xC4, 0x47                                     | 0x47C4DABE             | Air Pressure          | float     | 1007.89       | hPa   | Bytes need to be reversed to form correct float |
+| 39         | 0x02                                                       | 0x02                   | Version               | int8      | 2             |       | No byte reversal needed                         |
+| 40 - 41    | 0xFF, 0x47                                                 | 0x47FF                 | CRC                   |           |               |       | High and low bytes reversed                     |
 
-#### Notes:
-- **Device Address**: Identifies the device on the Modbus network.
-- **Function Code**: Indicates the type of operation to be performed.
-- **Length**: Specifies the length of the data field.
-- **Reserved**: Bytes reserved for future use or padding.
-- **Version**: Indicates the version of the firmware version.
-- **CRC**: Used for error checking.
+**Notes:**
 
-#### Example Parse Code in C:
+* **Device Address**: Identifies the device on the Modbus network.
+* **Function Code**: Indicates the type of operation to be performed.
+* **Length**: Specifies the length of the data field.
+* **Reserved**: Bytes reserved for future use or padding.
+* **Version**: Indicates the version of the firmware version.
+* **CRC**: Used for error checking.
+
+**Example Parse Code in C:**
 
 ```c
 #include <stdio.h>
@@ -198,7 +201,7 @@ int main()
 }
 ```
 
-#### Example Parse Code in Python:
+**Example Parse Code in Python:**
 
 ```python
 import struct
@@ -271,7 +274,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### Modbus Data Example for Wind Data
+#### Modbus Data Example for Wind Data
 
 **Command:** `01 03 00 00 00 02 C4 0B`
 
@@ -279,16 +282,16 @@ if __name__ == "__main__":
 
 The given data `0x01, 0x03, 0x04, 0x00, 0xD3, 0x01, 0x1F, 0x4B, 0x92` can be interpreted as follows:
 
-| Byte Index   | Example Data          | Value Example (Hex) | Description                          | Data Type | Present Value | Unit      | High-Low Byte Explanation                  |
-|--------------|-----------------------|---------------------|--------------------------------------|-----------|---------------|-----------|-------------------------------------------|
-| 0            | 0x01                  | 0x01                | Device Address                       |           |               |           |                                           |
-| 1            | 0x03                  | 0x03                | Function Code                        |           |               |           |                                           |
-| 2            | 0x04                  | 0x04                | Byte Count                           | int8      |               |           |                                           |
-| 3 - 4        | 0x00, 0xD3            | 0x00D3              | Wind Direction                       | int16     | 211           | Degrees   | High and low bytes reversed                |
-| 5 - 6        | 0x01, 0x1F            | 0x011F              | Wind Speed                           | int16     | 287           | 0.01m/s   | High and low bytes reversed                |
-| 7 - 8        | 0x4B, 0x92            | 0x4B92              | CRC                                  |           |               |           | High and low bytes reversed                |
+| Byte Index | Example Data | Value Example (Hex) | Description    | Data Type | Present Value | Unit    | High-Low Byte Explanation   |
+| ---------- | ------------ | ------------------- | -------------- | --------- | ------------- | ------- | --------------------------- |
+| 0          | 0x01         | 0x01                | Device Address |           |               |         |                             |
+| 1          | 0x03         | 0x03                | Function Code  |           |               |         |                             |
+| 2          | 0x04         | 0x04                | Byte Count     | int8      |               |         |                             |
+| 3 - 4      | 0x00, 0xD3   | 0x00D3              | Wind Direction | int16     | 211           | Degrees | High and low bytes reversed |
+| 5 - 6      | 0x01, 0x1F   | 0x011F              | Wind Speed     | int16     | 287           | 0.01m/s | High and low bytes reversed |
+| 7 - 8      | 0x4B, 0x92   | 0x4B92              | CRC            |           |               |         | High and low bytes reversed |
 
-#### Example Parse Code in C:
+**Example Parse Code in C:**
 
 ```c
 #include <stdint.h>
@@ -348,7 +351,7 @@ int main()
 }
 ```
 
-#### Example Parse Code in Python:
+**Example Parse Code in Python:**
 
 ```python
 import struct
@@ -401,113 +404,115 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Explanation:
+**Explanation:**
+
 1. **Modbus Table**: Provides a detailed explanation of each byte in the Modbus response for wind data.
 2. **Struct Definition**: The `wind_data` struct in C and `WindData` class in Python hold the parsed wind values.
 3. **Modbus Response Structure**: The `modbus_response_wind` struct in C and `ModbusResponseWind` class in Python handle the Modbus response specific to wind data.
 4. **Parsing Function**: `parse_wind_response` extracts wind direction and speed from the Modbus response.
 5. **Main Function**: The example response buffer is mapped to the `modbus_response_wind` structure, parsed, and the wind values are printed.
 
-### Summary
+#### Summary
 
 The response buffer from the SQS-LUV800 sensor contains environmental data encoded in a specific format. The provided code snippets in C and Python show how to interpret this data to extract useful information such as temperature, pressure, CO2 concentration, PM2.5 and PM10 concentrations, and humidity. By correctly parsing these values, users can integrate and use the data for various environmental monitoring applications.
 
-### Setup
+#### Setup
 
-#### Wiring Connection
+**Wiring Connection**
 
 To connect the SQS-LUV800 sensor to your main system, follow the wiring instructions below:
 
-- **Red Wire**: POWER IN (+10~24V)
-- **Blue Wire**: GND
-- **Yellow Wire**: RS485 A
-- **Green Wire**: RS485 B
+* **Red Wire**: POWER IN (+10\~24V)
+* **Blue Wire**: GND
+* **Yellow Wire**: RS485 A
+* **Green Wire**: RS485 B
 
 Refer to the wiring diagram below to ensure proper connections:
 
-![Wiring Diagram](./wires.png?raw=true)
+![Wiring Diagram](wires.png)
 
-#### Implementation
+**Implementation**
 
 For accurate setup, ensure that the sensor is oriented correctly with the designated point facing north. Refer to the image below for guidance on the correct positioning:
 
-![North Point Setup](./point_to_north.png?raw=true)
+![North Point Setup](point_to_north.png)
 
 By following these steps, you will ensure that the SQS-LUV800 sensor is properly connected and oriented for optimal performance.
 
-## Additional Resources
+### Additional Resources
 
 (Include links or references to additional resources, manuals, or support documents.)
 
-# ===
-# SQS-LUV800：8合1氣象傳感器
+## ===
 
-![SQS-LUV800](./SQS-LUV800.png?raw=true)
+## SQS-LUV800：8合1氣象傳感器
 
-## 概述
+![SQS-LUV800](SQS-LUV800.png)
+
+### 概述
 
 SQS-LUV800是一款8合1氣象傳感器，集成了多種功能，包括氣壓、溫度、二氧化碳、PM2.5、PM10、濕度、風向和風速。它提供了一個緊湊的解決方案，用於全面的環境監測，通過RS485輸出數據。
 
-## 主要特點
+### 主要特點
 
-- **多傳感器集成**：結合了氣壓、溫度、二氧化碳、PM2.5、PM10、濕度、風向和風速傳感器。
-- **RS485輸出**：提供便捷的數據傳輸和與其他系統的集成。
+* **多傳感器集成**：結合了氣壓、溫度、二氧化碳、PM2.5、PM10、濕度、風向和風速傳感器。
+* **RS485輸出**：提供便捷的數據傳輸和與其他系統的集成。
 
-## 應用場景
+### 應用場景
 
-- 氣象站
-- 農業
-- 建築環境監測
-- 一般環境監測
+* 氣象站
+* 農業
+* 建築環境監測
+* 一般環境監測
 
-## 技術規格
+### 技術規格
 
-- **風速**：±0.5+2%m/s@60%RH,25°C
-- **風向**：±3°@60%RH,25°C
-- **溫度**：-40 至 85 °C±0.5°C
-- **濕度**：0 至 100%±2%
-- **二氧化碳**：400 至 3000 ppm±(50ppm+5%*結果)
-- **PM2.5**：0～500 μg/m³±(10μg/m3@0～100μg/m3,10%@100～500μg/m3)
-- **氣壓**：300 至 1200 hPa±0.002hPa
+* **風速**：±0.5+2%m/s@60%RH,25°C
+* **風向**：±3°@60%RH,25°C
+* **溫度**：-40 至 85 °C±0.5°C
+* **濕度**：0 至 100%±2%
+* **二氧化碳**：400 至 3000 ppm±(50ppm+5%\*結果)
+* **PM2.5**：0～500 μg/m³±(10μg/m3@0～100μg/m3,10%@100～500μg/m3)
+* **氣壓**：300 至 1200 hPa±0.002hPa
 
-## 使用指南
+### 使用指南
 
-### 查詢傳感器數據
+#### 查詢傳感器數據
 
 要從SQS-LUV800查詢傳感器數據，請通過RS485使用Modbus協議發送請求。傳感器將以兩部分數據包回應，分別包含所請求的環境數據和風速數據。需要使用不同的命令來獲取這些數據。
 
-## Modbus數據
+### Modbus數據
 
-### 環境Modbus數據
+#### 環境Modbus數據
 
 我們支持兩種命令（函數調用）來獲取數據。以下是命令列表：
 
-- **Command_v1**：`10 20 02 00 00 4F C3`（舊版，未來不再支持）
-- **Command_v2**：`10 21 02 00 00 4E 3F`
+* **Command\_v1**：`10 20 02 00 00 4F C3`（舊版，未來不再支持）
+* **Command\_v2**：`10 21 02 00 00 4E 3F`
 
-### 環境Modbus數據範例
+#### 環境Modbus數據範例
 
-**Command_v1**：`10 20 02 00 00 4F C3`
+**Command\_v1**：`10 20 02 00 00 4F C3`
 
 回應：0x10, 0x20, 0x15, 0xFC, 0xF2, 0xFB, 0x41, 0xBD, 0x6B, 0xC5, 0x47, 0x88, 0x0B, 0x02, 0x00, 0x0A, 0x00, 0xF9, 0x00, 0xD6, 0x02, 0x00, 0x00, 0x02, 0x61, 0xF5
 
-| 字節索引 | 範例數據             | 範例值 (Hex)  | 描述                     | 數據類型 | 當前值     | 單位    | 高低字節說明                           |
-|----------|----------------------|---------------|--------------------------|----------|------------|---------|----------------------------------------|
-| 0        | 0x10                 | 0x10          | 設備地址                 |          |            |         | 無需字節反轉                           |
-| 1        | 0x20                 | 0x20          | 功能碼                   |          |            |         | 無需字節反轉                           |
-| 2        | 0x15                 | 0x15          | 數據長度                 | int8     |            |         | 無需字節反轉                           |
-| 3 - 6    | 0xFC, 0xF2, 0xFB, 0x41 | 0x41FBF2FC   | 溫度 (DSP310)            | float    | 31.49      | °C      | 需要反轉字節順序以形成正確的浮點數     |
-| 7 - 10   | 0xBD, 0x6B, 0xC5, 0x47 | 0x47C56BBD   | 氣壓                    | float    | 101079.48  | hPa     | 需要反轉字節順序以形成正確的浮點數     |
-| 11 - 12  | 0x88, 0x0B           | 0x0B88        | CO2 濃度                 | int16    | 2952       | ppm     | 高低字節反轉                           |
-| 13 - 14  | 0x02, 0x00           | 0x0002        | PM2.5 濃度               | int16    | 2          | µg/m³   | 高低字節反轉                           |
-| 15 - 16  | 0x0A, 0x00           | 0x000A        | PM10 濃度                | int16    | 10         | µg/m³   | 高低字節反轉                           |
-| 17 - 18  | 0xF9, 0x00           | 0x00F9        | 溫度 (HDC1080)           | int16    | 31.49      | 0.1 °C  | 高低字節反轉                           |
-| 19 - 20  | 0xD6, 0x02           | 0x02D6        | 濕度                    | int16    | 72.6       | 0.1 %   | 高低字節反轉                           |
-| 21 - 22  | 0x00, 0x00           | 0x0000        | 保留                    |          |            |         | 無需字節反轉                           |
-| 23       | 0x02                 | 0x02          | 版本                    | int8     | 2          |         | 無需字節反轉                           |
-| 24 - 25  | 0x61, 0xF5           | 0xF561        | CRC                     |          |            |         | 高低字節反轉                           |
+| 字節索引    | 範例數據                   | 範例值 (Hex)  | 描述           | 數據類型  | 當前值       | 單位     | 高低字節說明            |
+| ------- | ---------------------- | ---------- | ------------ | ----- | --------- | ------ | ----------------- |
+| 0       | 0x10                   | 0x10       | 設備地址         |       |           |        | 無需字節反轉            |
+| 1       | 0x20                   | 0x20       | 功能碼          |       |           |        | 無需字節反轉            |
+| 2       | 0x15                   | 0x15       | 數據長度         | int8  |           |        | 無需字節反轉            |
+| 3 - 6   | 0xFC, 0xF2, 0xFB, 0x41 | 0x41FBF2FC | 溫度 (DSP310)  | float | 31.49     | °C     | 需要反轉字節順序以形成正確的浮點數 |
+| 7 - 10  | 0xBD, 0x6B, 0xC5, 0x47 | 0x47C56BBD | 氣壓           | float | 101079.48 | hPa    | 需要反轉字節順序以形成正確的浮點數 |
+| 11 - 12 | 0x88, 0x0B             | 0x0B88     | CO2 濃度       | int16 | 2952      | ppm    | 高低字節反轉            |
+| 13 - 14 | 0x02, 0x00             | 0x0002     | PM2.5 濃度     | int16 | 2         | µg/m³  | 高低字節反轉            |
+| 15 - 16 | 0x0A, 0x00             | 0x000A     | PM10 濃度      | int16 | 10        | µg/m³  | 高低字節反轉            |
+| 17 - 18 | 0xF9, 0x00             | 0x00F9     | 溫度 (HDC1080) | int16 | 31.49     | 0.1 °C | 高低字節反轉            |
+| 19 - 20 | 0xD6, 0x02             | 0x02D6     | 濕度           | int16 | 72.6      | 0.1 %  | 高低字節反轉            |
+| 21 - 22 | 0x00, 0x00             | 0x0000     | 保留           |       |           |        | 無需字節反轉            |
+| 23      | 0x02                   | 0x02       | 版本           | int8  | 2         |        | 無需字節反轉            |
+| 24 - 25 | 0x61, 0xF5             | 0xF561     | CRC          |       |           |        | 高低字節反轉            |
 
-### 環境Modbus數據範例_V2
+#### 環境Modbus數據範例\_V2
 
 命令：10 21 02 00 00 4E 3F
 
@@ -515,32 +520,33 @@ SQS-LUV800是一款8合1氣象傳感器，集成了多種功能，包括氣壓�
 
 根據提供的回應數據（0x10, 0x21, 0x25, 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0xA1, 0x07, 0x9B, 0x02, 0x1C, 0xC6, 0x90, 0x43, 0xB8, 0xD6, 0xEB, 0x41, 0xBE, 0xDA, 0xC4, 0x47, 0x02, 0xFF, 0x47），表格可以更新如下：
 
-| 字節索引 | 範例數據                | 範例值 (Hex)  | 描述                     | 數據類型 | 當前值     | 單位    | 高低字節說明                           |
-|----------|------------------------|---------------|--------------------------|----------|------------|---------|----------------------------------------|
-| 0        | 0x10                  | 0x10          | 設備地址                 |          |            |         | 無需字節反轉                           |
-| 1        | 0x21                  | 0x21          | 功能碼                   |          |            |         | 無需字節反轉                           |
-| 2        | 0x25                  | 0x25          | 數據長度                 | int8     |            |         | 無需字節反轉                           |
-| 3 - 8    | 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C| 0x50E3B66E9E9C | 設備 ID               |          |            |         | 無需字節反轉                           |
-| 9 - 18   | 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00| 0x00000000000000000000 | 保留    |          |            |         | 無需字節反轉                           |
-| 19 - 20  | 0x01, 0x00            | 0x0001        | PM2.5 濃度               | int16    | 1          | µg/m³   | 高低字節反轉                           |
-| 21 - 22  | 0x01, 0x00            | 0x0001        | PM10 濃度                | int16    | 1          | µg/m³   | 高低字節反轉                           |
-| 23 - 24  | 0xA1, 0x07            | 0x07A1        | CO2 濃度                 | int16    | 1953       | ppm     | 高低字節反轉                           |
-| 25 - 26  | 0x9B, 0x02            | 0x029B        | 濕度                    | int16    | 66.7       | %       | 高低字節反轉                           |
-| 27 - 30  | 0x1C, 0xC6, 0x90, 0x43| 0x4390C61C     | 溫度 (HDC1080)           | float    | 288.56     | °C      | 需要反轉字節順序以形成正確的浮點數     |
-| 31 - 34  | 0xB8, 0xD6, 0xEB, 0x41| 0x41EBD6B8    | 溫度 (DSP310)            | float    | 29.73      | °C      | 需要反轉字節順序以形成正確的浮點數     |
-| 35 - 38  | 0xBE, 0xDA, 0xC4, 0x47| 0x47C4DABE    | 氣壓                    | float    | 1007.89    | hPa     | 需要反轉字節順序以形成正確的浮點數     |
-| 39       | 0x02                  | 0x02          | 版本                    | int8     | 2          |         | 無需字節反轉                           |
-| 40 - 41  | 0xFF, 0x47            | 0x47FF        | CRC                     |          |            |         | 高低字節反轉                           |
+| 字節索引    | 範例數據                                                       | 範例值 (Hex)              | 描述           | 數據類型  | 當前值     | 單位    | 高低字節說明            |
+| ------- | ---------------------------------------------------------- | ---------------------- | ------------ | ----- | ------- | ----- | ----------------- |
+| 0       | 0x10                                                       | 0x10                   | 設備地址         |       |         |       | 無需字節反轉            |
+| 1       | 0x21                                                       | 0x21                   | 功能碼          |       |         |       | 無需字節反轉            |
+| 2       | 0x25                                                       | 0x25                   | 數據長度         | int8  |         |       | 無需字節反轉            |
+| 3 - 8   | 0x50, 0xE3, 0xB6, 0x6E, 0x9E, 0x9C                         | 0x50E3B66E9E9C         | 設備 ID        |       |         |       | 無需字節反轉            |
+| 9 - 18  | 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 | 0x00000000000000000000 | 保留           |       |         |       | 無需字節反轉            |
+| 19 - 20 | 0x01, 0x00                                                 | 0x0001                 | PM2.5 濃度     | int16 | 1       | µg/m³ | 高低字節反轉            |
+| 21 - 22 | 0x01, 0x00                                                 | 0x0001                 | PM10 濃度      | int16 | 1       | µg/m³ | 高低字節反轉            |
+| 23 - 24 | 0xA1, 0x07                                                 | 0x07A1                 | CO2 濃度       | int16 | 1953    | ppm   | 高低字節反轉            |
+| 25 - 26 | 0x9B, 0x02                                                 | 0x029B                 | 濕度           | int16 | 66.7    | %     | 高低字節反轉            |
+| 27 - 30 | 0x1C, 0xC6, 0x90, 0x43                                     | 0x4390C61C             | 溫度 (HDC1080) | float | 288.56  | °C    | 需要反轉字節順序以形成正確的浮點數 |
+| 31 - 34 | 0xB8, 0xD6, 0xEB, 0x41                                     | 0x41EBD6B8             | 溫度 (DSP310)  | float | 29.73   | °C    | 需要反轉字節順序以形成正確的浮點數 |
+| 35 - 38 | 0xBE, 0xDA, 0xC4, 0x47                                     | 0x47C4DABE             | 氣壓           | float | 1007.89 | hPa   | 需要反轉字節順序以形成正確的浮點數 |
+| 39      | 0x02                                                       | 0x02                   | 版本           | int8  | 2       |       | 無需字節反轉            |
+| 40 - 41 | 0xFF, 0x47                                                 | 0x47FF                 | CRC          |       |         |       | 高低字節反轉            |
 
-#### 備註：
-- **設備地址**：標識Modbus網絡上的設備。
-- **功能碼**：表示要執行的操作類型。
-- **數據長度**：指定數據字段的長度。
-- **保留**：保留未來使用的字節或填充字節。
-- **版本**：表示固件版本。
-- **CRC**：用於錯誤檢查。
+**備註：**
 
-#### C語言範例解析代碼：
+* **設備地址**：標識Modbus網絡上的設備。
+* **功能碼**：表示要執行的操作類型。
+* **數據長度**：指定數據字段的長度。
+* **保留**：保留未來使用的字節或填充字節。
+* **版本**：表示固件版本。
+* **CRC**：用於錯誤檢查。
+
+**C語言範例解析代碼：**
 
 ```c
 #include <stdio.h>
@@ -640,7 +646,7 @@ int main()
 }
 ```
 
-#### Python語言範例解析代碼：
+**Python語言範例解析代碼：**
 
 ```python
 import struct
@@ -713,7 +719,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### 風速數據Modbus範例
+#### 風速數據Modbus範例
 
 **命令**：`01 03 00 00 00 02 C4 0B`
 
@@ -721,16 +727,16 @@ if __name__ == "__main__":
 
 給定數據`0x01, 0x03, 0x04, 0x00, 0xD3, 0x01, 0x1F, 0x4B, 0x92`可以解釋如下：
 
-| 字節索引   | 範例數據          | 範例值 (Hex) | 描述                          | 數據類型 | 當前值     | 單位      | 高低字節說明                      |
-|------------|-------------------|--------------|-------------------------------|----------|------------|-----------|----------------------------------|
-| 0          | 0x01              | 0x01         | 設備地址                      |          |            |           |                                  |
-| 1          | 0x03              | 0x03         | 功能碼                        |          |            |           |                                  |
-| 2          | 0x04              | 0x04         | 字節數                        | int8     |            |           |                                  |
-| 3 - 4      | 0x00, 0xD3        | 0x00D3       | 風向                          | int16    | 211        | 度        | 高低字節反轉                     |
-| 5 - 6      | 0x01, 0x1F        | 0x011F       | 風速                          | int16    | 287        | 0.01m/s   | 高低字節反轉                     |
-| 7 - 8      | 0x4B, 0x92        | 0x4B92       | CRC                           |          |            |           | 高低字節反轉                     |
+| 字節索引  | 範例數據       | 範例值 (Hex) | 描述   | 數據類型  | 當前值 | 單位      | 高低字節說明 |
+| ----- | ---------- | --------- | ---- | ----- | --- | ------- | ------ |
+| 0     | 0x01       | 0x01      | 設備地址 |       |     |         |        |
+| 1     | 0x03       | 0x03      | 功能碼  |       |     |         |        |
+| 2     | 0x04       | 0x04      | 字節數  | int8  |     |         |        |
+| 3 - 4 | 0x00, 0xD3 | 0x00D3    | 風向   | int16 | 211 | 度       | 高低字節反轉 |
+| 5 - 6 | 0x01, 0x1F | 0x011F    | 風速   | int16 | 287 | 0.01m/s | 高低字節反轉 |
+| 7 - 8 | 0x4B, 0x92 | 0x4B92    | CRC  |       |     |         | 高低字節反轉 |
 
-#### C語言範例解析代碼：
+**C語言範例解析代碼：**
 
 ```c
 #include <stdint.h>
@@ -790,7 +796,7 @@ int main()
 }
 ```
 
-#### Python語言範例解析代碼：
+**Python語言範例解析代碼：**
 
 ```python
 import struct
@@ -843,40 +849,41 @@ if __name__ == "__main__":
     main()
 ```
 
-#### 說明：
+**說明：**
+
 1. **Modbus表**：提供Modbus回應中每個字節的詳細說明，適用於風速數據。
 2. **結構定義**：C語言中的`wind_data`結構和Python中的`WindData`類保存解析的風速值。
 3. **Modbus回應結構**：C語言中的`modbus_response_wind`結構和Python中的`ModbusResponseWind`類處理特定於風速數據的Modbus回應。
 4. **解析函數**：`parse_wind_response`從Modbus回應中提取風向和風速。
 5. **主函數**：範例回應緩衝區映射到`modbus_response_wind`結構，進行解析並打印風速值。
 
-### 總結
+#### 總結
 
 SQS-LUV800傳感器的回應緩衝區包含以特定格式編碼的環境數據。提供的C語言和Python代碼片段展示了如何解析這些數據，從而提取有用的信息，如溫度、氣壓、二氧化碳濃度、PM2.5和PM10濃度以及濕度。通過正確解析這些值，用戶可以將數據整合並用於各種環境監測應用。
 
-### 設置
+#### 設置
 
-#### 線路連接
+**線路連接**
 
 要將SQS-LUV800傳感器連接到您的主系統，請按照以下接線說明進行：
 
-- **紅線**：電源輸入 (+10~24V)
-- **藍線**：GND
-- **黃線**：RS485 A
-- **綠線**：RS485 B
+* **紅線**：電源輸入 (+10\~24V)
+* **藍線**：GND
+* **黃線**：RS485 A
+* **綠線**：RS485 B
 
 請參考以下接線圖，以確保正確連接：
 
-![接線圖](./wires.png?raw=true)
+![接線圖](wires.png)
 
-#### 實施
+**實施**
 
 為確保準確設置，請確保傳感器正確定位，指定的點朝北。請參考下圖以獲取正確定位的指導：
 
-![北點設置](./point_to_north.png?raw=true)
+![北點設置](point_to_north.png)
 
 按照這些步驟操作，確保SQS-LUV800傳感器正確連接和定位，以達到最佳性能。
 
-## 附加資源
+### 附加資源
 
 （包括鏈接或參考附加資源、手冊或支持文件。）

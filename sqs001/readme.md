@@ -1,41 +1,34 @@
-# Peripheral Board :  SQS001
+# SQS001 (M.P)
 
 ## Humidity, Temperature, and Air Pressure Sensor Board
 
 ## Overview
 
-(Mass Production)
-The SQS001 is a versatile peripheral board designed to provide precise measurements of humidity, temperature, and air pressure. It integrates two essential sensors, the HDC1080 and BMP280, to fulfill these critical functions.
+(Mass Production) The SQS001 is a versatile peripheral board designed to provide precise measurements of humidity, temperature, and air pressure. It integrates two essential sensors, the HDC1080 and BMP280, to fulfill these critical functions.
 
 ## Key Features
 
-- **HDC1080 Sensor**: This high-precision sensor measures humidity and temperature with exceptional accuracy.
-
-- **BMP280 Sensor**: Renowned for its precise air pressure and temperature measurements. Note that temperature readings are derived from the internal temperature sensor of the BMP280 chip.
-
-- **Integration**: By combining the HDC1080 and BMP280 sensors on a single board, the SQS001 simplifies data acquisition and offers a compact solution for environmental monitoring.
-
-- **Versatile Applications**: The SQS001 can be used in various applications, including weather monitoring, indoor climate control, and environmental sensing.
+* **HDC1080 Sensor**: This high-precision sensor measures humidity and temperature with exceptional accuracy.
+* **BMP280 Sensor**: Renowned for its precise air pressure and temperature measurements. Note that temperature readings are derived from the internal temperature sensor of the BMP280 chip.
+* **Integration**: By combining the HDC1080 and BMP280 sensors on a single board, the SQS001 simplifies data acquisition and offers a compact solution for environmental monitoring.
+* **Versatile Applications**: The SQS001 can be used in various applications, including weather monitoring, indoor climate control, and environmental sensing.
 
 ## Pinout
 
-![SQS001 Pinout Diagram](https://github.com/livinghuang/siliqs/blob/main/sqs001/SQS001.png?raw=true)
+![SQS001 Pinout Diagram](SQS001.png)
 
 ## Resources
 
-- [Datasheet for HDC1080](https://github.com/livinghuang/siliqs/blob/main/sqs001/hdc1080.pdf)
-- [Datasheet for BMP280](https://github.com/livinghuang/siliqs/blob/main/sqs001/BST_BMP280_DS001-1509562.pdf)
+* [Datasheet for HDC1080](hdc1080.pdf)
+* [Datasheet for BMP280](BST_BMP280_DS001-1509562.pdf)
 
 For more information and detailed specifications, please refer to the datasheets linked above.
 
 ## Usage
 
 1. **Power Supply**: Connect the VCC and GND pins to a 3.3V power source.
-
 2. **I2C Communication**: Utilize the SDA and SCL pins for I2C communication with your microcontroller.
-
 3. **Data Retrieval**: Retrieve humidity, temperature, and air pressure data from the HDC1080 and BMP280 sensors using your microcontroller.
-
 4. **Alert Function (Optional)**: You can configure the ALERT pin to trigger an interrupt when specific conditions are met, providing additional control over your application.
 
 ## Example Code
@@ -82,7 +75,6 @@ print(f"Pressure (BMP280): {pressure} hPa")
 ### connection
 
 1. Directly connect 1.25-4 connector with SQ001.
-
 2. Directly connect 2.54-5 header with SQ001.
 
 ### copy HDC1080/BMP280 library to your arduino workplace as below
@@ -99,7 +91,7 @@ print(f"Pressure (BMP280): {pressure} hPa")
 
 ### example code in arduino
 
-``` cpp
+```cpp
 BMP280 bmp;
 HDC1080 hdc1080;
 void power_On_Sensor_Bus()
