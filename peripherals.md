@@ -1,4 +1,4 @@
-# SILIQS Project Peripheral Overview
+# PERIPHERAL BOARD Project
 
 **Description:** A detailed guide to the peripherals compatible with the SILIQS LPWAN IoT PCB initiative, emphasizing the versatility and integration capabilities for enhancing IoT solutions.
 
@@ -12,14 +12,14 @@ The peripherals within the SILIQS project are carefully selected and developed t
 
 ## Standardized Peripheral Pinout
 
-![Peripherals Overview](./peripherals_pinout.png?raw=true)
+![Peripherals Overview](peripherals_pinout.png)
 
 To facilitate easy integration and compatibility across our ecosystem, the SILIQS project adopts standardized guidelines for peripheral connectivity:
 
-- **Modular Design:** Peripherals feature a modular design for quick plug-and-play integration with mainboards.
-- **Communication Standards:** Utilizes standard communication protocols (SPI, I2C, UART) for seamless data exchange with mainboards.
-- **Power Management:** Efficient power management protocols to ensure peripherals do not drain the system's battery life unnecessarily.
-- **Scalability:** Peripherals are designed with scalability in mind, allowing for future upgrades without necessitating major changes to the mainboard.
+* **Modular Design:** Peripherals feature a modular design for quick plug-and-play integration with mainboards.
+* **Communication Standards:** Utilizes standard communication protocols (SPI, I2C, UART) for seamless data exchange with mainboards.
+* **Power Management:** Efficient power management protocols to ensure peripherals do not drain the system's battery life unnecessarily.
+* **Scalability:** Peripherals are designed with scalability in mind, allowing for future upgrades without necessitating major changes to the mainboard.
 
 These guidelines ensure that peripherals can be easily added, removed, or swapped, enhancing the modularity and flexibility of SILIQS project IoT solutions.
 
@@ -31,4 +31,4 @@ The SILIQS project is committed to continually expanding its range of supported 
 
 We welcome contributions from the community in the form of new peripheral designs, integration guides, and compatibility improvements. By collaborating, we can forge a more comprehensive and versatile IoT ecosystem together.
 
-For further details on our peripheral offerings or to contribute towards the development of new peripherals, connect with us through our [Community Forum](#) or [GitHub Repository](#).
+For further details on our peripheral offerings or to contribute towards the development of new peripherals, connect with us through our [Community Forum](peripherals.md) or [GitHub Repository](peripherals.md).

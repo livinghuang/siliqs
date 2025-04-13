@@ -1,16 +1,15 @@
-# under construction# SQC4G Module: Quad-Band GSM/GPRS Communication
+# SQC4G (U.P)
 
 ## Overview
 
-(under planning)
-The SQC4G module, powered by the SIM800C chip, is designed to enable quad-band GSM/GPRS communication in a wide range of applications. This module supports the GSM850, EGSM900, DCS1800, and PCS1900 MHz frequency bands, making it highly versatile for global cellular communication needs. It's ideal for projects requiring mobile communication such as SMS, data, and voice calls.
+(under planning) The SQC4G module, powered by the SIM800C chip, is designed to enable quad-band GSM/GPRS communication in a wide range of applications. This module supports the GSM850, EGSM900, DCS1800, and PCS1900 MHz frequency bands, making it highly versatile for global cellular communication needs. It's ideal for projects requiring mobile communication such as SMS, data, and voice calls.
 
 ## Key Features
 
-- **SIM800C Chip**: Incorporates the SIM800C module for reliable quad-band GSM/GPRS connectivity.
-- **Quad-Band Support**: Works across GSM850, EGSM900, DCS1800, and PCS1900 MHz bands, offering comprehensive global coverage.
-- **Versatile Communication**: Enables a broad spectrum of cellular communications, including SMS, voice calls, and GPRS data transfer.
-- **Compact Design**: The module's small form factor facilitates easy integration into existing systems without significant space requirements.
+* **SIM800C Chip**: Incorporates the SIM800C module for reliable quad-band GSM/GPRS connectivity.
+* **Quad-Band Support**: Works across GSM850, EGSM900, DCS1800, and PCS1900 MHz bands, offering comprehensive global coverage.
+* **Versatile Communication**: Enables a broad spectrum of cellular communications, including SMS, voice calls, and GPRS data transfer.
+* **Compact Design**: The module's small form factor facilitates easy integration into existing systems without significant space requirements.
 
 ## Functionalities
 
@@ -20,18 +19,18 @@ The SQC4G module, powered by the SIM800C chip, is designed to enable quad-band G
 
 ## Application Scenarios
 
-- **IoT Devices**: Integrates cellular communication capabilities into IoT devices for remote monitoring and control.
-- **Security Systems**: Employs in security systems for alerts and communication with monitoring centers.
-- **Remote Monitoring**: Suitable for remote monitoring applications in agriculture, environmental monitoring, and industrial automation.
-- **Mobile Applications**: Enables mobile communication capabilities for devices requiring SMS, voice, and data transfer functionalities.
+* **IoT Devices**: Integrates cellular communication capabilities into IoT devices for remote monitoring and control.
+* **Security Systems**: Employs in security systems for alerts and communication with monitoring centers.
+* **Remote Monitoring**: Suitable for remote monitoring applications in agriculture, environmental monitoring, and industrial automation.
+* **Mobile Applications**: Enables mobile communication capabilities for devices requiring SMS, voice, and data transfer functionalities.
 
 ## Technical Specifications
 
-- **Base Chip**: SIM800C
-- **Supported Frequency Bands**: GSM850, EGSM900, DCS1800, PCS1900 MHz
-- **Communication Protocols**: GSM, GPRS
-- **Interface Options**: Include details on the electrical and communication interfaces (e.g., UART, SPI).
-- **Power Requirements**: Outline the power supply specifications and power consumption.
+* **Base Chip**: SIM800C
+* **Supported Frequency Bands**: GSM850, EGSM900, DCS1800, PCS1900 MHz
+* **Communication Protocols**: GSM, GPRS
+* **Interface Options**: Include details on the electrical and communication interfaces (e.g., UART, SPI).
+* **Power Requirements**: Outline the power supply specifications and power consumption.
 
 ## Usage Guide
 
@@ -50,7 +49,7 @@ The SQC4G module, powered by the SIM800C chip, is designed to enable quad-band G
 
 ## Additional Resources
 
-- [SIM800C Datasheet](https://www.example.com/SIM800C-datasheet "Datasheet for the SIM800C chip")
-- [SQC4G Module Integration Guide](https://www.example.com/SQC4G-integration-guide "Guide for integrating the SQC4G module into systems")
+* [SIM800C Datasheet](https://www.example.com/SIM800C-datasheet)
+* [SQC4G Module Integration Guide](https://www.example.com/SQC4G-integration-guide)
 
 This markdown template provides a structured overview of the SQC4G module's capabilities, emphasizing its quad-band GSM/GPRS communication features. For further details and integration assistance, refer to the datasheets and resources provided above.

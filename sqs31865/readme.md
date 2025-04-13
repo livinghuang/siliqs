@@ -1,16 +1,15 @@
-# SQS31865 Module: RTD-to-Digital Converter
+# SQS31865 (M.P)
 
 ## Overview
 
-(Mass Production)
-The SQS31865 module is designed around the MAX31865 chip, an advanced RTD-to-Digital converter that offers precise temperature measurements. This module is ideal for applications requiring accurate temperature readings over a wide range, such as industrial processes, scientific research, and temperature monitoring systems.
+(Mass Production) The SQS31865 module is designed around the MAX31865 chip, an advanced RTD-to-Digital converter that offers precise temperature measurements. This module is ideal for applications requiring accurate temperature readings over a wide range, such as industrial processes, scientific research, and temperature monitoring systems.
 
 ## Key Features
 
-- **MAX31865 Chip**: Utilizes the MAX31865 for high-accuracy Resistance Temperature Detector (RTD) to digital conversion, providing precise temperature readings.
-- **Wide Temperature Range**: Capable of measuring temperatures across a broad spectrum, suitable for diverse applications from cryogenics to high-temperature processes.
-- **Flexible RTD Support**: Supports various types of RTDs, making it adaptable to different measurement requirements and standards.
-- **Easy Integration**: Designed for straightforward integration with microcontrollers and computer systems, facilitating easy setup and operation.
+* **MAX31865 Chip**: Utilizes the MAX31865 for high-accuracy Resistance Temperature Detector (RTD) to digital conversion, providing precise temperature readings.
+* **Wide Temperature Range**: Capable of measuring temperatures across a broad spectrum, suitable for diverse applications from cryogenics to high-temperature processes.
+* **Flexible RTD Support**: Supports various types of RTDs, making it adaptable to different measurement requirements and standards.
+* **Easy Integration**: Designed for straightforward integration with microcontrollers and computer systems, facilitating easy setup and operation.
 
 ## Functionalities
 
@@ -20,18 +19,18 @@ The SQS31865 module is designed around the MAX31865 chip, an advanced RTD-to-Dig
 
 ## Application Scenarios
 
-- **Industrial Temperature Control**: Essential for precise temperature monitoring and control in manufacturing processes, ensuring product quality and safety.
-- **Scientific Research**: Enables accurate temperature measurements in laboratory settings, supporting experiments and research studies.
-- **HVAC Systems**: Improves the efficiency and effectiveness of heating, ventilation, and air conditioning systems through precise temperature regulation.
-- **Food Processing**: Assists in maintaining optimal temperatures during food processing and storage, preserving food quality and safety.
+* **Industrial Temperature Control**: Essential for precise temperature monitoring and control in manufacturing processes, ensuring product quality and safety.
+* **Scientific Research**: Enables accurate temperature measurements in laboratory settings, supporting experiments and research studies.
+* **HVAC Systems**: Improves the efficiency and effectiveness of heating, ventilation, and air conditioning systems through precise temperature regulation.
+* **Food Processing**: Assists in maintaining optimal temperatures during food processing and storage, preserving food quality and safety.
 
 ## Technical Specifications
 
-- **Base Chip**: MAX31865
-- **Supported RTD Types**: Specify which RTD types are supported (e.g., PT100, PT1000).
-- **Temperature Measurement Range**: Indicate the temperature range that the module can measure.
-- **Interface**: Detail the communication interface (e.g., SPI).
-- **Power Requirements**: Outline the power supply needs and consumption.
+* **Base Chip**: MAX31865
+* **Supported RTD Types**: Specify which RTD types are supported (e.g., PT100, PT1000).
+* **Temperature Measurement Range**: Indicate the temperature range that the module can measure.
+* **Interface**: Detail the communication interface (e.g., SPI).
+* **Power Requirements**: Outline the power supply needs and consumption.
 
 ## Usage Guide
 
@@ -50,14 +49,14 @@ The SQS31865 module is designed around the MAX31865 chip, an advanced RTD-to-Dig
 
 ### Pinout
 
-![SQS31865 Pinout Diagram](./pinout.png?raw=true)
+![SQS31865 Pinout Diagram](pinout.png)
 
 ### Schematic
 
-![SQS31865 Schematic Diagram](./schematic.png?raw=true)
+![SQS31865 Schematic Diagram](schematic.png)
 
 ### Datasheet
 
-- [MAX31865 Datasheet](./MAX31865ATP.pdf "Datasheet for the MAX31865 chip")
+* [MAX31865 Datasheet](MAX31865ATP.pdf)
 
 This markdown template is structured to offer a detailed overview of the SQS31865 module's functionalities and integration process. For more comprehensive technical specifications and guidance, refer to the provided datasheets and resources.
