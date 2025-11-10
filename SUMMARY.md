@@ -24,3 +24,8 @@
 * [Weather Station Project](weather-station-project/README.md)
   * [SQSNC001 (U.D)](sq-snc001/readme.md)
   * [SQS-LUV800 (U.D)](sqs-luv800/readme.md)
+* [Remote IO Project](remote-io-project/README.md)
+  * [專案總覽](remote-io-project/sqs-luv800.md)
+  * [SQIO-6I2O 智慧遠端 I/O 模組簡介](remote-io-project/sqs-luv800-1.md)
+  * [資料架構](remote-io-project/sqs-luv800-2.md)
+  * [Example](remote-io-project/example.md)
